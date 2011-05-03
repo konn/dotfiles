@@ -1,13 +1,7 @@
-;; Add pahts to SKK and APEL
-(setq load-path
-      (append "~/.emacs.d/lisp/apel/"
-	       "~/.emacs.d/lisp/emu/"
-	       "~/.emacs.d/lisp/skk/"
-	       load-path))
-
+(load "~/.emacs.d/lisp/skk/ccc.el")
+(ccc-setup)
 (require 'skk-setup)
 (require 'skk-study)
-
 (global-set-key "\C-x\C-j" 'skk-mode)
 
 ;; skk-server AquaSKK
@@ -42,6 +36,5 @@
 	  ((and (<= ?0 c) (>= ?9 c)) ",")
 	  ((and (<= ?０ c) (>= ?９ c)) "，")
 	  (t "、"))))
-
 
 (provide 'init_skk)

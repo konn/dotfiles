@@ -1,13 +1,26 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
-
+(server-start)
 (create-fontset-from-ascii-font "Menlo-16:weight=normal:slant=normal" nil "menlokakugo")
 (set-fontset-font "fontset-menlokakugo"
                   'unicode
                   (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
                    nil
                   'append)
+(create-fontset-from-ascii-font "Ricty-18:weight=normal:slant=normal" nil "rictykakugo")
+(set-fontset-font "fontset-rictykakugo"
+                  'unicode
+                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
+                   nil
+                  'append)
+(create-fontset-from-ascii-font "Menlo-16:weight=normal:slant=normal" nil "menlomincho")
+(set-fontset-font "fontset-menlomincho"
+                  'unicode
+                  (font-spec :family "Hiragino Mincho ProN" :size 16)
+                   nil
+                  'append)
 (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
+;(add-to-list 'default-frame-alist '(font . "ricty-20"))
 
 (unless (boundp 'user-emacs-directory)
   (defvar user-emacs-directory (expand-file-name "~/.emacs.d/")))
@@ -23,6 +36,7 @@
 
 (add-to-load-path "lisp" "local-lisp" "private" "site-start.d")
 (add-to-load-path "ProofGeneral-4.0pre100817")
+(add-to-load-path "lisp/skk")
 
 ;; 終了時バイトコンパイル
 (add-hook 'kill-emacs-query-functions
@@ -50,9 +64,8 @@
 (autoload 'imaxima "imaxima" "Image support for Maxima." t)
 
 
-(setq exec-path (append '("/opt/local/bin" "/usr/local/bin" "~/usr/bin" "~/.cabal/bin/") exec-path))
+(setq exec-path (append '("/usr/local/bin" "~/usr/bin" "~/.cabal/bin/") exec-path))
 (setenv "PATH"
-    (concat '"/opt/local/bin:/usr/local/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
+    (concat '"/Applications/pTeX.app/teTeX/bin:/usr/local/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
 
 
-(server-start)

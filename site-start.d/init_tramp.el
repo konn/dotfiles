@@ -2,4 +2,4 @@
 
 (setq tramp-default-method "sshx")
 
-(provide 'init-tramp)
+(provide 'init_tramp)
