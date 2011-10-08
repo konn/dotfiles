@@ -3,8 +3,18 @@
 (server-start)
 (create-fontset-from-ascii-font "Menlo-16:weight=normal:slant=normal" nil "menlokakugo")
 (set-fontset-font "fontset-menlokakugo"
-                  'unicode
+                  'japanese-jisx0208
                   (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
+                   nil
+                  'append)
+(set-fontset-font "fontset-menlokakugo"
+                  'japanese-jisx0212
+                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
+                   nil
+                  'append)
+(set-fontset-font "fontset-menlokakugo"
+		  'unicode
+		  (font-spec :family "Cambria Math" :size 16)
                    nil
                   'append)
 (create-fontset-from-ascii-font "Ricty-18:weight=normal:slant=normal" nil "rictykakugo")
@@ -49,7 +59,7 @@
             ))
 
 (require 'init_main)
-
+(require 'alloy-mode)
 (require 'agda2)
 
 (load-file (let ((coding-system-for-read 'utf-8))
@@ -66,6 +76,18 @@
 
 (setq exec-path (append '("/usr/local/bin" "~/usr/bin" "~/.cabal/bin/") exec-path))
 (setenv "PATH"
-    (concat '"/Applications/pTeX.app/teTeX/bin:/usr/local/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
+    (concat '"/usr/texbin:/usr/local/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
 
 
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(agda2-include-dirs (quote ("/Users/hiromi/.agda/" "."))))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )

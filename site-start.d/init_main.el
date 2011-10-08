@@ -8,6 +8,7 @@
 (require 'init_tramp)
 (require 'init_snippet)
 (require 'init_skk)
+(require 'init_dired)
 
 (provide 'init_main)
 
