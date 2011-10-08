@@ -19,7 +19,6 @@
 
 (setq skk-rom-kana-rule-list
       (cons '("." nil skk-period) skk-rom-kana-rule-list))
-
 (defun skk-period (arg)
   (let ((c (char-before (point))))
     (cond ((null c) "。")
@@ -36,5 +35,5 @@
 	  ((and (<= ?0 c) (>= ?9 c)) ",")
 	  ((and (<= ?０ c) (>= ?９ c)) "，")
 	  (t "、"))))
-
+(setq skk-kutouten-type 'en)
 (provide 'init_skk)
