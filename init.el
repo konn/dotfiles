@@ -60,11 +60,6 @@
 
 (require 'init_main)
 (require 'alloy-mode)
-(require 'agda2)
-
-(load-file (let ((coding-system-for-read 'utf-8))
-                (shell-command-to-string "/Users/hiromi/.cabal/bin/agda-mode locate")))
-
 (require 'auto-complete)
 (global-auto-complete-mode t)
 
@@ -72,22 +67,8 @@
 (load "rrb")
 
 (autoload 'imaxima "imaxima" "Image support for Maxima." t)
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)
 
-
-(setq exec-path (append '("/usr/local/bin" "~/usr/bin" "~/.cabal/bin/") exec-path))
+(setq exec-path (append '("/usr/texbin"  "/usr/local/bin" "~/usr/bin" "~/.cabal/bin/" "~/Library/Haskell/bin") exec-path))
 (setenv "PATH"
-    (concat '"/usr/texbin:/usr/local/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
-
-
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(agda2-include-dirs (quote ("/Users/hiromi/.agda/" "."))))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+    (concat '"/usr/texbin:/usr/local/bin:~/Library/Haskell/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))

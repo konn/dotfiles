@@ -4,8 +4,10 @@
 ;; してください
 (setq process-coding-system-alist
       (cons '("gosh" utf-8 . utf-8) process-coding-system-alist))
+
 ;; goshインタプリタのパスに合わせます。-iは対話モードを意味します。
 (setq gosh-program-name "/opt/local/bin/gosh -i")
+
 ;; schemeモードとrun-schemeモードにcmuscheme.elを使用します。
 (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 (autoload 'run-scheme "cmuscheme" "Run an inferior Scheme process." t)
