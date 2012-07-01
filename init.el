@@ -1,5 +1,6 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
+(setq locale-coding-system 'utf-8)
 (server-start)
 (create-fontset-from-ascii-font "Menlo-16:weight=normal:slant=normal" nil "menlokakugo")
 (set-fontset-font "fontset-menlokakugo"
@@ -30,7 +31,6 @@
                    nil
                   'append)
 (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
-;(add-to-list 'default-frame-alist '(font . "ricty-20"))
 
 (unless (boundp 'user-emacs-directory)
   (defvar user-emacs-directory (expand-file-name "~/.emacs.d/")))
@@ -58,17 +58,16 @@
             (byte-recompile-directory (concat user-emacs-directory "site-start.d") 0)
             ))
 
+(setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
+(setq exec-path
+      (append '("/usr/texbin"  "/usr/local/bin" "/Users/hiromi/usr/bin" "/Users/hiromi/Library/Haskell/bin")
+	      exec-path))
+(setenv "PATH"
+    (concat '"/usr/texbin:/usr/local/bin:/Users/hiromi/Library/Haskell/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
+
+
 (require 'init_main)
 (require 'alloy-mode)
 (require 'auto-complete)
 (global-auto-complete-mode t)
-
-
-(load "rrb")
-
-(autoload 'imaxima "imaxima" "Image support for Maxima." t)
-(setq browse-url-browser-function 'browse-url-default-macosx-browser)
-
-(setq exec-path (append '("/usr/texbin"  "/usr/local/bin" "~/usr/bin" "~/.cabal/bin/" "~/Library/Haskell/bin") exec-path))
-(setenv "PATH"
-    (concat '"/usr/texbin:/usr/local/bin:~/Library/Haskell/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
