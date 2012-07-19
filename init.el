@@ -66,6 +66,12 @@
 (setenv "PATH"
     (concat '"/usr/texbin:/usr/local/bin:/Users/hiromi/Library/Haskell/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
 
+;; Package Repositories
+(setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
+			 ("gnu" . "http://elpa.gnu.org/packages/")
+			 ("melpa" . "http://melpa.milkbox.net/packages/")
+			 ("marmalade" . "http://marmalade-repo.org/packages/")))
+(package-initialize)
 
 (require 'init_main)
 (require 'alloy-mode)

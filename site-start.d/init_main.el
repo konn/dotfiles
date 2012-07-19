@@ -16,5 +16,7 @@
 (require 'init_markdown)
 (require 'init_sml)
 (require 'init_powerline)
+(require 'init_egison)
+(require 'init_e2wm)
 
 (provide 'init_main)

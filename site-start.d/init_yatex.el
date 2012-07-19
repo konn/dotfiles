@@ -17,8 +17,6 @@
    ("R" "mathbb{R}" "R")
    ("C" "mathbb{C}" "R")
    ("Z" "mathbb{N}" "N")
-   ("E" "{}^{\\exists}" "E")
-   ("A" "{}^{\\forall}" "A")
    ("st" "text{s.t.}" "s.t.")
    ("op" "^{\\text{op}}" "op")
    ("<" "langle" "<")
