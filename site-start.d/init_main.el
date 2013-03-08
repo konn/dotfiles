@@ -18,5 +18,6 @@
 (require 'init_powerline)
 (require 'init_egison)
 (require 'init_e2wm)
+(require 'init_singular)
 
 (provide 'init_main)

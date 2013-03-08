@@ -1,4 +1,4 @@
-(load "~/.emacs.d/lisp/skk/ccc.el")
+(load "/Applications/Emacs.app/Contents/Resources/site-lisp/skk/ccc.el")
 (ccc-setup)
 (require 'skk-setup)
 (require 'skk-study)

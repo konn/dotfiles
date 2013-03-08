@@ -5,9 +5,9 @@
 (global-set-key [f7] 'e2wm:dp-doc)
 (global-set-key [f8] 'e2wm:dp-dashboard)
 (setq windmove-wrap-around t)
-(global-set-key [S-right] 'windmove-right)
-(global-set-key [S-left] 'windmove-left)
-(global-set-key [S-up] 'windmove-up)
-(global-set-key [S-down] 'windmove-down) 
+(global-set-key [M-S-right] 'windmove-right)
+(global-set-key [M-S-left] 'windmove-left)
+(global-set-key [M-S-up] 'windmove-up)
+(global-set-key [M-S-down] 'windmove-down) 
 
 (provide 'init_e2wm)

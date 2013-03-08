@@ -1,7 +1,9 @@
+(add-hook 'yatex-mode-hook'(lambda ()(setq auto-fill-function nil)))
 (setq YaTeX-use-hilit19 nil
         YaTeX-use-font-lock t)
+(setq YaTeX-kanji-code 4)
 (setq auto-mode-alist
-      (cons (cons "\\.tex$" 'yatex-mode) auto-mode-alist))
+      (append '(("\\.tex$" . yatex-mode) ("\\.sty$" . yatex-mode)) auto-mode-alist))
 (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
 (setq YaTeX-use-AMS-LaTeX t)
 
@@ -19,8 +21,8 @@
    ("Z" "mathbb{N}" "N")
    ("st" "text{s.t.}" "s.t.")
    ("op" "^{\\text{op}}" "op")
-   ("<" "langle" "<")
-   (">" "rangle" ">")
+   ("{/" "notin" "∉")
+   ("..." "dots" "...")
    )
  )
 

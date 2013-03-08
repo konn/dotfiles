@@ -46,7 +46,6 @@
 
 (add-to-load-path "lisp" "local-lisp" "private" "site-start.d")
 (add-to-load-path "ProofGeneral-4.0pre100817")
-(add-to-load-path "lisp/skk")
 
 ;; 終了時バイトコンパイル
 (add-hook 'kill-emacs-query-functions
@@ -77,3 +76,6 @@
 (require 'alloy-mode)
 (require 'auto-complete)
 (global-auto-complete-mode t)
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
