@@ -1,0 +1,5 @@
+# contributor: https://github.com/polypus74
+# key: mod
+# --
+module ${Main} where
+$0

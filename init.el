@@ -44,7 +44,7 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-(add-to-load-path "lisp" "local-lisp" "private" "site-start.d")
+(add-to-load-path "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
 (add-to-load-path "ProofGeneral-4.0pre100817")
 
 ;; 終了時バイトコンパイル
@@ -58,6 +58,8 @@
             ))
 
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
+
+(setq install-elisp-repository-directory "~/.emacs.d/lisp")
 
 (setq exec-path
       (append '("/usr/texbin"  "/usr/local/bin" "/Users/hiromi/usr/bin" "/Users/hiromi/Library/Haskell/bin")
@@ -79,3 +81,52 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(agda2-include-dirs (quote ("/Users/hiromi/.agda/lib/stdlib" ".")))
+ '(haskell-interactive-prompt "ghci> ")
+ '(haskell-literate-default (quote latex))
+ '(haskell-notify-p t)
+ '(haskell-process-type (quote ghci))
+ '(haskell-stylish-on-save t)
+ '(haskell-tags-on-save t)
+ '(send-mail-function (quote mailclient-send-it)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; 句読点変換(M-x tenmaru / M-x commamaru / M-x commaperiod)
+;; http://d.hatena.ne.jp/takehikom/20120713/1342122621
+(defun replace-punctuation (a1 a2 b1 b2)
+  "Replace periods and commas"
+  (let ((s1 (if mark-active "選択領域" "バッファ全体"))
+        (s2 (concat a2 b2))
+        (b (if mark-active (region-beginning) (point-min)))
+        (e (if mark-active (region-end) (point-max))))
+    (if (y-or-n-p (concat s1 "の句読点を「" s2 "」にしますがよろしいですか?"))
+        (progn
+          (replace-string a1 a2 nil b e)
+          (replace-string b1 b2 nil b e)))))
+ 
+(defun tenmaru ()
+  "選択領域またはバッファ全体の句読点を「、。」にします"
+  (interactive)
+  (replace-punctuation "，" "、" "．" "。"))
+ 
+(defun commamaru ()
+  "選択領域またはバッファ全体の句読点を「，。」にします"
+  (interactive)
+  (replace-punctuation "、" "，" "．" "。"))
+ 
+(defun commaperiod ()
+  "選択領域またはバッファ全体の句読点を「，．」にします"
+  (interactive)
+  (replace-punctuation "、" "，" "。" "．"))

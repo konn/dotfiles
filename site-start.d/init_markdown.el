@@ -1,11 +1,11 @@
 (require 'markdown-mode)
-(require 'yatex)
+; (require 'yatex)
 (setq auto-mode-alist
    (append '(("\\.md" . markdown-mode) ("\\.markdown" . markdown-mode)) auto-mode-alist))
 (setq markdown-command "/Users/hiromi/usr/bin/markdown")
 (require 'mmm-mode)
-(setq mmm-global-mode 'maybe)
-(mmm-add-mode-ext-class nil "\\.md?\\'" 'markdown-yatex)
+; (setq mmm-global-mode 'maybe)
+;(mmm-add-mode-ext-class nil "\\.md?\\'" 'markdown-yatex)
 (mmm-add-group
  'markdown-yatex
  '((markdown-block-yatex

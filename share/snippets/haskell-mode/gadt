@@ -1,0 +1,5 @@
+# contributor: https://github.com/polypus74
+# key: gadt
+# --
+data ${1:Name} where
+${2:Ctor} :: ${3:T}

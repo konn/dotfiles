@@ -1,7 +1,7 @@
 (require 'psgml)
 
 (setq auto-mode-alist
-     (append (list (cons "\\.html\\'" 'xml-mode))
+     (append (list (cons "\\.html\\'" 'html-mode))
               auto-mode-alist))
 
 (setq auto-mode-alist

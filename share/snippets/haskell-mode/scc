@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: SCC pragma
+# key: scc
+# --
+{-# SCC "$1" #-}$0

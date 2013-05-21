@@ -1,4 +1,9 @@
-(add-hook 'yatex-mode-hook'(lambda ()(setq auto-fill-function nil)))
+(defun yatex-mode-my-hook ()
+  (setq auto-fill-function nil)
+  (add-hook 'before-save-hook 'commaperiod nil t)
+  )
+
+(add-hook 'yatex-mode-hook 'yatex-mode-my-hook)
 (setq YaTeX-use-hilit19 nil
         YaTeX-use-font-lock t)
 (setq YaTeX-kanji-code 4)
@@ -14,7 +19,8 @@
 
 (setq
  YaTeX-math-sign-alist-private
- '(("Q" "mathbb{Q}" "(Q)")
+ '(("T" "top" "T")
+   ("Q" "mathbb{Q}" "(Q)")
    ("Z" "mathbb{Z}" "ZZ")
    ("R" "mathbb{R}" "R")
    ("C" "mathbb{C}" "R")

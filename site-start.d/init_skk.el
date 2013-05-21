@@ -1,5 +1,6 @@
-(load "/Applications/Emacs.app/Contents/Resources/site-lisp/skk/ccc.el")
+(require 'ccc)
 (ccc-setup)
+(require 'skk-cdb)
 (require 'skk-setup)
 (require 'skk-study)
 (global-set-key "\C-x\C-j" 'skk-mode)
