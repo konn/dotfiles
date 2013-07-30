@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Haskell code
+# key: hask
+# --
+\`$1\`{.haskell} $0

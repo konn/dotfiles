@@ -107,14 +107,15 @@
 ;; http://d.hatena.ne.jp/takehikom/20120713/1342122621
 (defun replace-punctuation (a1 a2 b1 b2)
   "Replace periods and commas"
-  (let ((s1 (if mark-active "選択領域" "バッファ全体"))
-        (s2 (concat a2 b2))
-        (b (if mark-active (region-beginning) (point-min)))
-        (e (if mark-active (region-end) (point-max))))
-    (if (y-or-n-p (concat s1 "の句読点を「" s2 "」にしますがよろしいですか?"))
-        (progn
-          (replace-string a1 a2 nil b e)
-          (replace-string b1 b2 nil b e)))))
+  (save-excursion
+    (let ((s1 (if mark-active "選択領域" "バッファ全体"))
+	  (s2 (concat a2 b2))
+	  (b (if mark-active (region-beginning) (point-min)))
+	  (e (if mark-active (region-end) (point-max))))
+      (if (y-or-n-p (concat s1 "の句読点を「" s2 "」にしますがよろしいですか?"))
+	  (progn
+	    (replace-string a1 a2 nil b e)
+	    (replace-string b1 b2 nil b e))))))
  
 (defun tenmaru ()
   "選択領域またはバッファ全体の句読点を「、。」にします"
@@ -130,3 +131,5 @@
   "選択領域またはバッファ全体の句読点を「，．」にします"
   (interactive)
   (replace-punctuation "、" "，" "。" "．"))
+
+(setq initial-major-mode 'fundamental-mode)

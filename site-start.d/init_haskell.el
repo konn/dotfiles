@@ -1,4 +1,4 @@
-(load "haskell-site-file")
+(load "haskell-mode-autoloads")
 
 (setq haskell-program-name "/usr/bin/ghci")
 (autoload 'ghc-init "ghc" nil t)
