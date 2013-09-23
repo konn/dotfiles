@@ -29,6 +29,10 @@
    ("op" "^{\\text{op}}" "op")
    ("{/" "notin" "∉")
    ("..." "dots" "...")
+   ("()" "concat" "⌢")
+   ("|`" "restr" "|`")
+   (">->" "rightarrowtail" ">->")
+   ("->>" "twoheadrightarrow" "->>")
    )
  )
 
