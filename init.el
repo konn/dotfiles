@@ -35,7 +35,7 @@
 (unless (boundp 'user-emacs-directory)
   (defvar user-emacs-directory (expand-file-name "~/.emacs.d/")))
 
-(setq tab-width 4 indent-tabs-mode nil)  
+(setq tab-width 2 indent-tabs-mode nil)  
 (defun add-to-load-path (&rest paths)
   (let (path)
     (dolist (path paths paths)
