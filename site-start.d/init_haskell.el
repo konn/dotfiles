@@ -21,6 +21,7 @@
 
 (defun my-haskell-hook ()
   ;(add-hook 'before-save-hook 'my-before-save-hook)
+  (setq tab-width 2 indent-tabs-mode nil)
   (turn-on-haskell-indent)
   (turn-on-haskell-decl-scan)
   (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-tag-find)
@@ -36,7 +37,6 @@
   ;; Interactively choose the Cabal command to run.
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
 
-  (setq tab-width 2 indent-tabs-mode nil)
   (ghc-init) (flymake-mode))
 
 (defun toggle-ghc-head ()

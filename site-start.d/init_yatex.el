@@ -33,6 +33,23 @@
    ("|`" "restr" "|`")
    (">->" "rightarrowtail" ">->")
    ("->>" "twoheadrightarrow" "->>")
+   ("~>" "leadsto" "~>")
+   )
+ )
+
+(setq
+ YaTeX-font-list-private
+ '(("c"  "mathcal")
+   ("f"  "mathfrak")
+   ("bb" "mathbb")
+   ("bf" "mathbf")
+   ("r"  "mathrm")
+   )
+ )
+
+(setq
+ YaTeX-math-key-list-private
+ '(("@" . YaTeX-font-list-private)
    )
  )
 
