@@ -22,7 +22,7 @@
 (defun my-haskell-hook ()
   ;(add-hook 'before-save-hook 'my-before-save-hook)
   (setq tab-width 2 indent-tabs-mode nil)
-  (turn-on-haskell-indent)
+  (turn-on-haskell-indentation)
   (turn-on-haskell-decl-scan)
   (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-tag-find)
 
@@ -58,6 +58,10 @@
   (define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
   (define-key haskell-cabal-mode-map [?\C-c ?\C-z] 'haskell-interactive-switch))
 
+(eval-after-load "haskell-mode"
+  '(progn
+     (define-key haskell-mode-map (kbd "C-,") 'haskell-move-nested-left)
+     (define-key haskell-mode-map (kbd "C-.") 'haskell-move-nested-right)))
 
 (require 'mmm-mode)
 (add-hook 'haskell-mode-hook 'lhs-mmm-mode)
