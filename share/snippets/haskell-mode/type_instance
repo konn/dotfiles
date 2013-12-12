@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: type_instance
+# key: typi
+# --
+type instance ${1:Name} ${2:a}

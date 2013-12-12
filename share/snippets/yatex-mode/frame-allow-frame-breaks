@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: frame-allow-frame-breaks
+# key: framb
+# --
+\begin{frame}[allowframebreaks]${1:{$2}}
+$0
+\end{frame}
