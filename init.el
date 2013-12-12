@@ -62,10 +62,10 @@
 (setq install-elisp-repository-directory "~/.emacs.d/lisp")
 
 (setq exec-path
-      (append '("/usr/texbin"  "/usr/local/bin" "/Users/hiromi/usr/bin" "/Users/hiromi/Library/Haskell/bin")
+      (append '("/usr/texbin"  "/usr/local/bin" "/Users/hiromi/usr/bin" "/Users/hiromi/Library/Haskell/bin" "/Users/hiromi/prog/idris/.cabal-sandbox/bin" )
 	      exec-path))
 (setenv "PATH"
-    (concat '"/usr/texbin:/usr/local/bin:/Users/hiromi/Library/Haskell/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
+    (concat '"/Users/hiromi/prog/idris/.cabal-sandbox/bin:/usr/texbin:/usr/local/bin:/Users/hiromi/Library/Haskell/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
 
 ;; Package Repositories
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
@@ -81,19 +81,6 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(agda2-include-dirs (quote ("/Users/hiromi/.agda/lib/stdlib" ".")))
- '(haskell-interactive-prompt "ghci> ")
- '(haskell-literate-default (quote latex))
- '(haskell-notify-p t)
- '(haskell-process-type (quote ghci))
- '(haskell-stylish-on-save t)
- '(haskell-tags-on-save t)
- '(send-mail-function (quote mailclient-send-it)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

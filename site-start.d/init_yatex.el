@@ -1,6 +1,6 @@
 (defun yatex-mode-my-hook ()
   (setq auto-fill-function nil)
-  (add-hook 'before-save-hook 'commaperiod nil t)
+  ;(add-hook 'before-save-hook 'commaperiod nil t)
   (YaTeX-define-begend-key "ba" "align*")
   )
 

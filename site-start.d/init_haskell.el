@@ -7,12 +7,13 @@
 
 (custom-set-variables
  '(haskell-interactive-prompt "ghci> ")
- '(haskell-literate-default 'latex)
+ '(haskell-literate-default (quote latex))
  '(haskell-notify-p t)
- '(turn-on-haskell-ghci)
- '(haskell-process-type 'ghci)
+ '(haskell-process-type (quote cabal-repl))
  '(haskell-stylish-on-save t)
- '(haskell-tags-on-save t))
+ '(haskell-tags-on-save t)
+ '(haskell-process-path-cabal "~/Library/Haskell/bin/cabal")
+ '(turn-on-haskell-ghci nil))
 
 (add-hook 'haskell-mode-hook 'my-haskell-hook)
 (add-hook 'haskell-cabal-mode-hook 'haskell-cabal-hook)
@@ -79,10 +80,10 @@
     :include-back nil
     :back-offset (beginning-of-line -1))
    (literate-haskell-markdown
-    :submode markdown-mode
-    :front  "^[^>]"
+    :submode literate-haskell-mode
+    :front  "^```haskell"
     :include-front true
-    :back "^>\\|$")
+    :back "^```")
     ))
 
 (defun lhs-mmm-mode ()

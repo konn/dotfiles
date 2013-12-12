@@ -9,7 +9,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(agda2-include-dirs (quote ("/Users/hiromi/.agda/lib/stdlib" "."))))
-(setq haskell-ghci-program-name "agda2-mode")
+(setq haskell-ghci-program-name "agda-mode")
 
 
 (provide 'init_agda2)
