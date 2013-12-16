@@ -1,4 +1,5 @@
 (require 'init_haskell)
+(require 'init_regex)
 (require 'init_prolog)
 (require 'init_scheme)
 (require 'init_magit)

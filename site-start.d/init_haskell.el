@@ -92,4 +92,10 @@
 
 (setq mmm-submode-decoration-level 0)
 
+(custom-set-faces
+ '(shm-current-face ((t (:background "dark gray")))))
+;(require 'shm)
+;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
+
 (provide 'init_haskell)
+

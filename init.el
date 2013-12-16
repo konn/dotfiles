@@ -44,6 +44,8 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
+(add-to-list 'load-path (expand-file-name "~/install/structured-haskell-mode/elisp/"))
+
 (add-to-load-path "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
 (add-to-load-path "ProofGeneral-4.0pre100817")
 
@@ -87,7 +89,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
- '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil))))
+ '(shm-current-face ((t (:background "dark gray"))))
+ '(shm-quarantine-face ((t (:background "LightPink1")))))
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; 句読点変換(M-x tenmaru / M-x commamaru / M-x commaperiod)
@@ -120,3 +124,18 @@
   (replace-punctuation "、" "，" "。" "．"))
 
 (setq initial-major-mode 'fundamental-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(agda2-include-dirs (quote ("/Users/hiromi/.agda/lib/stdlib" ".")))
+ '(haskell-interactive-prompt "ghci> ")
+ '(haskell-literate-default (quote latex))
+ '(haskell-notify-p t)
+ '(haskell-process-path-cabal "~/Library/Haskell/bin/cabal")
+ '(haskell-process-type (quote cabal-repl))
+ '(haskell-stylish-on-save t)
+ '(haskell-tags-on-save t)
+ '(singular-switches-default (quote ("--browser" "mac")))
+ '(turn-on-haskell-ghci nil))
