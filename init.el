@@ -33,7 +33,7 @@
 (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
 
 (unless (boundp 'user-emacs-directory)
-  (defvar user-emacs-directory (expand-file-name "~/.emacs.d/")))
+  (defvar user-emacs-directory (expand-file-name "/Users/hiromi/.emacs.d/")))
 
 (setq tab-width 2 indent-tabs-mode nil)  
 (defun add-to-load-path (&rest paths)
@@ -44,7 +44,7 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-(add-to-list 'load-path (expand-file-name "~/install/structured-haskell-mode/elisp/"))
+(add-to-list 'load-path (expand-file-name "/Users/hiromi/install/structured-haskell-mode/elisp/"))
 
 (add-to-load-path "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
 (add-to-load-path "ProofGeneral-4.0pre100817")
@@ -61,13 +61,13 @@
 
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
 
-(setq install-elisp-repository-directory "~/.emacs.d/lisp")
+(setq install-elisp-repository-directory "/Users/hiromi/.emacs.d/lisp")
 
 (setq exec-path
-      (append '("/usr/texbin"  "/usr/local/bin" "/Users/hiromi/usr/bin" "/Users/hiromi/Library/Haskell/bin" "/Users/hiromi/prog/idris/.cabal-sandbox/bin" )
+      (append '("/Users/hiromi/.rbenv/shims" "/usr/texbin"  "/usr/local/bin" "/Users/hiromi/usr/bin" "/Users/hiromi/Library/Haskell/bin" "/Users/hiromi/prog/idris/.cabal-sandbox/bin" )
 	      exec-path))
 (setenv "PATH"
-    (concat '"/Users/hiromi/prog/idris/.cabal-sandbox/bin:/usr/texbin:/usr/local/bin:/Users/hiromi/Library/Haskell/bin:~/usr/bin:~/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
+    (concat '"/Users/hiromi/.rbenv/shims:/Users/hiromi/prog/idris/.cabal-sandbox/bin:/usr/texbin:/usr/local/bin:/Users/hiromi/Library/Haskell/bin:/Users/hiromi/usr/bin:/Users/hiromi/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
 
 ;; Package Repositories
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
@@ -133,7 +133,7 @@
  '(haskell-interactive-prompt "ghci> ")
  '(haskell-literate-default (quote latex))
  '(haskell-notify-p t)
- '(haskell-process-path-cabal "~/Library/Haskell/bin/cabal")
+ '(haskell-process-path-cabal "/Users/hiromi/Library/Haskell/bin/cabal")
  '(haskell-process-type (quote cabal-repl))
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
