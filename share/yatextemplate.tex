@@ -1,10 +1,10 @@
-\documentclass[a4j,twocolumn]{jsarticle}
+\documentclass[a4j,uplatex]{jsarticle}
 \usepackage{amsmath,amssymb}
 \usepackage{epstopdf}
 \usepackage{enumitem,mystyle}
 \usepackage{graphicx}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-\bibliographystyle{jplain}
+\usepackage[backend=bibtex, style=numeric]{biblatex}
 \usepackage{bm}
 \usepackage{epstopdf}
 \usepackage{cases}
@@ -15,4 +15,6 @@
 \begin{document}
 \maketitle
 
+\section*{参考文献}
+\printbibliography[heading=none]
 \end{document}
