@@ -1,4 +1,5 @@
 (load "haskell-mode-autoloads")
+(require 'hi2)
 
 (setq haskell-program-name "/usr/bin/ghci")
 (autoload 'ghc-init "ghc" nil t)
@@ -6,14 +7,16 @@
       (append '(("\\.cabal$" . haskell-cabal-mode)) auto-mode-alist))
 
 (custom-set-variables
+ '(haskell-process-type (quote ghci))
  '(haskell-interactive-prompt "ghci> ")
+ '(haskell-ghci-program-name "cab")
+ '(haskell-ghci-program-args "repl")
  '(haskell-literate-default (quote latex))
  '(haskell-notify-p t)
- '(haskell-process-type (quote cabal-repl))
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
  '(haskell-process-path-cabal "~/Library/Haskell/bin/cabal")
- '(turn-on-haskell-ghci nil))
+)
 
 (add-hook 'haskell-mode-hook 'my-haskell-hook)
 (add-hook 'haskell-cabal-mode-hook 'haskell-cabal-hook)
@@ -22,8 +25,8 @@
 
 (defun my-haskell-hook ()
   ;(add-hook 'before-save-hook 'my-before-save-hook)
-  (setq tab-width 2 indent-tabs-mode nil)
-  (turn-on-haskell-indentation)
+  (setq tab-width 2
+	indent-tabs-mode nil)
   (turn-on-haskell-decl-scan)
   (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-tag-find)
 
@@ -39,6 +42,9 @@
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
 
   (ghc-init) (flymake-mode))
+(add-hook 'haskell-mode-hook 'turn-on-hi2)
+
+
 
 (defun toggle-ghc-head ()
   (interactive)
