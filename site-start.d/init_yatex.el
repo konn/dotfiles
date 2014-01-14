@@ -2,8 +2,72 @@
   (setq auto-fill-function nil)
   ;(add-hook 'before-save-hook 'commaperiod nil t)
   (YaTeX-define-begend-key "ba" "align*")
+  (turn-on-reftex)
+  (define-key reftex-mode-map
+    (concat YaTeX-prefix ">") 'YaTeX-comment-region)
+  (define-key reftex-mode-map
+    (concat YaTeX-prefix "<") 'YaTeX-uncomment-region)
+  (define-key reftex-mode-map (concat YaTeX-prefix ")") 'YaTeX-insert-parens-region)
   )
 
+(add-hook 'reftex-mode-hook
+ '(lambda ()
+               (define-key reftex-mode-map "\C-h)" 'reftex-reference)
+               (define-key reftex-mode-map "\C-h=" 'reftex-toc)
+               (define-key reftex-mode-map "\C-h(" 'reftex-label)
+               (define-key reftex-mode-map "\C-h[" 'reftex-citation)
+               (define-key reftex-mode-map "\C-h<" 'reftex-index)
+               (define-key reftex-mode-map "\C-h>" 'reftex-display-index)
+               (define-key reftex-mode-map "\C-h/" 'reftex-index-selection-or-word)
+               (define-key reftex-mode-map "\C-h\\" 'reftex-index-phrase-selection-or-word)
+               (define-key reftex-mode-map "\C-h|" 'reftex-index-visit-phrases-buffer)
+               (define-key reftex-mode-map "\C-h&" 'reftex-view-crossref)
+))
+
+(setq reftex-label-alist 
+      '((nil ?e nil "\\eqref{%s}" nil nil)
+	("section"   ?s "%S" "~\\ref{%s}" (nil . t)
+	 (regexp "parts?" "chapters?" "chap\\." "sections?" "sect?\\."
+		 "paragraphs?" "par\\."
+		 "\\\\S" "\247" "Teile?" "Kapitel" "Kap\\." "Abschnitte?"
+		 "appendi\\(x\\|ces\\)" "App\\."  "Anh\"?ange?" "Anh\\."))
+
+	("enumerate" ?i "item:" "\\ref{%s}" item
+	 (regexp "items?" "Punkte?"))
+	
+	("equation"  ?e "eq:" "\\eqref{%s}" t
+	 (regexp "equations?" "eqs?\\." "eqn\\." "Gleichung\\(en\\)?"  "Gl\\."))
+	("equation*"  ?e "eq:" "\\eqref{%s}" t
+	 (regexp "equations?" "eqs?\\." "eqn\\." "Gleichung\\(en\\)?"  "Gl\\."))
+	("eqnarray*"  ?e "eq:" nil eqnarray-like)
+	("align*"  ?e "eq:" nil eqnarray-like)
+	("align"  ?e "eq:" nil eqnarray-like)
+	
+	("figure"    ?f "fig:" "\\ref{%s}" caption
+	 (regexp "figure?[sn]?" "figs?\\." "Abbildung\\(en\\)?" "Abb\\."))
+	("figure*"   ?f nil nil caption)
+	
+	("table"     ?t "tab:" "\\ref{%s}" caption
+	 (regexp "tables?" "tab\\." "Tabellen?"))
+	("table*"    ?t nil nil caption)
+	
+	("\\footnote[]{}" ?n "fn:" "\\ref{%s}" 2
+	 (regexp "footnotes?" "Fussnoten?"))
+	
+	("theorem" ?h "th:" "\\ref{%s}" t ("定理"))
+	("axiom" ?a "axiom:" "\\ref{%s}" t ("公理"))
+	("prop" ?p "prop:" "\\ref{%s}" nil ("命題"))
+	("lemma" ?l "lem:" "\\ref{%s}" nil ("補題"))
+	("definition" ?d "def:" "\\ref{%s}" nil ("定義"))
+	("corollary" ?c "cor:" "\\ref{%s}" nil ("系"))
+	("any"       ?\  " "   "\\ref{%s}" nil)
+	))
+
+(setq reftex-bibliography-commands '("addbibresource" "bibliography"))
+(setq reftex-default-bibliography '("~/Library/texmf/bibtex/bib/myreference.bib"))
+
+(setenv "BIBINPUTS"
+	(concat (expand-file-name "~/texmf/bibtex/bib") (getenv "BIBINPUTS")))
 (add-hook 'yatex-mode-hook 'yatex-mode-my-hook)
 (setq YaTeX-use-hilit19 nil
         YaTeX-use-font-lock t)
@@ -35,6 +99,9 @@
    (">->" "rightarrowtail" ">->")
    ("->>" "twoheadrightarrow" "->>")
    ("~>" "leadsto" "~>")
+   ("<>" "diamondsuit" "<>")
+   ("<|" "lhd" "<|")
+   ("|>" "rhd" "|>")
    )
  )
 

@@ -33,7 +33,7 @@
 (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
 
 (unless (boundp 'user-emacs-directory)
-  (defvar user-emacs-directory (expand-file-name "/Users/hiromi/.emacs.d/")))
+  (defvar user-emacs-directory (expand-file-name "~/.emacs.d/")))
 
 (setq tab-width 2 indent-tabs-mode nil)  
 (defun add-to-load-path (&rest paths)
@@ -44,7 +44,7 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-(add-to-list 'load-path (expand-file-name "/Users/hiromi/install/structured-haskell-mode/elisp/"))
+(add-to-list 'load-path (expand-file-name "~/install/structured-haskell-mode/elisp/"))
 
 (add-to-load-path "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
 (add-to-load-path "ProofGeneral-4.0pre100817")
@@ -61,13 +61,18 @@
 
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
 
-(setq install-elisp-repository-directory "/Users/hiromi/.emacs.d/lisp")
+(setq install-elisp-repository-directory "~/.emacs.d/lisp")
+
+(setq my-paths 
+      (mapcar 'expand-file-name
+	      '("~/.rbenv/shims" "/usr/texbin"  "/usr/local/bin" "~/usr/bin" "~/Library/Haskell/bin"
+		"~/prog/idris/.cabal-sandbox/bin"
+		)))
 
 (setq exec-path
-      (append '("/Users/hiromi/.rbenv/shims" "/usr/texbin"  "/usr/local/bin" "/Users/hiromi/usr/bin" "/Users/hiromi/Library/Haskell/bin" "/Users/hiromi/prog/idris/.cabal-sandbox/bin" )
-	      exec-path))
+      (append my-paths exec-path))
 (setenv "PATH"
-    (concat '"/Users/hiromi/.rbenv/shims:/Users/hiromi/prog/idris/.cabal-sandbox/bin:/usr/texbin:/usr/local/bin:/Users/hiromi/Library/Haskell/bin:/Users/hiromi/usr/bin:/Users/hiromi/.cabal/bin:/usr/local/bin:" (getenv "PATH")))
+    (concat (mapconcat (lambda (x) x) my-paths ":") '":" (getenv "PATH")))
 
 ;; Package Repositories
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
@@ -129,12 +134,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(agda2-include-dirs (quote ("/Users/hiromi/.agda/lib/stdlib" ".")))
+ '(agda2-include-dirs (list (expand-file-name "~/.agda/lib/stdlib") "."))
  '(haskell-interactive-prompt "ghci> ")
- '(haskell-literate-default (quote latex))
+ '(haskell-literate-default 'latex)
  '(haskell-notify-p t)
- '(haskell-process-path-cabal "/Users/hiromi/Library/Haskell/bin/cabal")
- '(haskell-process-type (quote cabal-repl))
+ '(haskell-process-path-cabal (expand-file-name "~/Library/Haskell/bin/cabal"))
+ '(haskell-process-type 'cabal-repl)
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
  '(singular-switches-default (quote ("--browser" "mac")))
