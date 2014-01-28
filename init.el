@@ -59,6 +59,18 @@
             (byte-recompile-directory (concat user-emacs-directory "site-start.d") 0)
             ))
 
+(add-hook 'kill-emacs-hook 'my-kill-hook)
+
+
+(defun my-kill-hook ()
+  (let ((default-directory "~/.emacs.d/"))
+    (start-process "git-sync" "*sync*" "git" "add" "share")
+    (start-process "git-sync" "*sync*" "git" "add" "site-start.d")
+    (start-process "git-sync" "*sync*" "git" "commit" "-a" "-m" "daily commit")
+    (start-process "git-sync" "*sync*" "git" "push")
+    )
+  )
+
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
 
 (setq install-elisp-repository-directory "~/.emacs.d/lisp")
