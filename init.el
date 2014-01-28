@@ -65,10 +65,10 @@
 
 (defun my-kill-hook ()
   (let ((default-directory "~/.emacs.d/"))
-    (call-process "git" nil "*sync*" "add" "share")
-    (call-process "git" nil "*sync*" "add" "site-start.d")
-    (call-process "git" nil "*sync*" "commit" "-a" "-m" "daily commit")
-    (call-process "git" nil "*sync*" "push")
+    (call-process "git" nil "*sync*" 't "add" "share")
+    (call-process "git" nil "*sync*" 't "add" "site-start.d")
+    (call-process "git" nil "*sync*" 't "commit" "-a" "-m" "daily commit")
+    (call-process "git" nil "*sync*" 't "push")
     )
   )
 
