@@ -61,13 +61,14 @@
 
 (add-hook 'kill-emacs-hook 'my-kill-hook)
 
+(my-kill-hook)
 
 (defun my-kill-hook ()
   (let ((default-directory "~/.emacs.d/"))
-    (start-process "git-sync" "*sync*" "git" "add" "share")
-    (start-process "git-sync" "*sync*" "git" "add" "site-start.d")
-    (start-process "git-sync" "*sync*" "git" "commit" "-a" "-m" "daily commit")
-    (start-process "git-sync" "*sync*" "git" "push")
+    (call-process "git" nil "*sync*" "add" "share")
+    (call-process "git" nil "*sync*" "add" "site-start.d")
+    (call-process "git" nil "*sync*" "commit" "-a" "-m" "daily commit")
+    (call-process "git" nil "*sync*" "push")
     )
   )
 
