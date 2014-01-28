@@ -59,18 +59,16 @@
             (byte-recompile-directory (concat user-emacs-directory "site-start.d") 0)
             ))
 
-(add-hook 'kill-emacs-hook 'my-kill-hook)
-
-(my-kill-hook)
-
-(defun my-kill-hook ()
-  (let ((default-directory "~/.emacs.d/"))
-    (call-process "git" nil "*sync*" 't "add" "share")
-    (call-process "git" nil "*sync*" 't "add" "site-start.d")
-    (call-process "git" nil "*sync*" 't "commit" "-a" "-m" "daily commit")
-    (call-process "git" nil "*sync*" 't "push")
-    )
-  )
+;(add-hook 'kill-emacs-hook 'my-kill-hook)
+;
+;(defun my-kill-hook ()
+;  (let ((default-directory "~/.emacs.d/"))
+;    (call-process "git" nil "*sync*" 't "add" "share")
+;    (call-process "git" nil "*sync*" 't "add" "site-start.d")
+;    (call-process "git" nil "*sync*" 't "commit" "-a" "-m" "daily commit")
+;    (call-process "git" nil "*sync*" 't "push")
+;    )
+;  )
 
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
 
