@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: describe
+# key: desc
+# --
+describe "${1:some function}" $ do
+${2:some}

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: let in
+# key: leti
+# --
+let ${1:a} = ${2:undefined}
+in ${3:undefined}
