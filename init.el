@@ -139,6 +139,9 @@
   (interactive)
   (replace-punctuation "、" "，" "。" "．"))
 
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
+
 (setq initial-major-mode 'fundamental-mode)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
