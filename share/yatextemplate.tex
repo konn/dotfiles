@@ -4,7 +4,8 @@
 \usepackage{enumitem,mystyle}
 \usepackage{graphicx}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
-\usepackage[backend=bibtex, style=numeric]{biblatex}
+\usepackage[backend=biber, style=numeric]{biblatex}
+\addbibresource{myreference.bib}
 \usepackage{bm}
 \usepackage{epstopdf}
 \usepackage{cases}
@@ -15,6 +16,5 @@
 \begin{document}
 \maketitle
 
-\section*{参考文献}
-\printbibliography[heading=none]
+\printbibliography[title=参考文献]
 \end{document}
