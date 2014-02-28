@@ -1,5 +1,7 @@
 (load "haskell-mode-autoloads")
 (require 'hi2)
+(require 'hare)
+(autoload 'hare-init "hare" nil t)
 
 (setq haskell-program-name "/usr/bin/ghci")
 (autoload 'ghc-init "ghc" nil t)
@@ -41,7 +43,7 @@
   ;; Interactively choose the Cabal command to run.
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
 
-  (ghc-init) (flymake-mode))
+  (ghc-init) (flymake-mode) (hare-init))
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
 
 
