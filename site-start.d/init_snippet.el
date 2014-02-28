@@ -1,9 +1,11 @@
 (require 'yasnippet)
 (setq yas-trigger-key "<C-tab>")
 
+(require 'em-glob)
+
 (setq yas-snippet-dirs
-      '("~/.emacs.d/share/snippets" ;; 作成するスニペットはここに入る
-        "~/.emacs.d/elpa/yasnippet-20130218.2229/snippets/"))
+      (list "~/.emacs.d/share/snippets" ;; 作成するスニペットはここに入る
+        (car (eshell-extended-glob "~/.emacs.d/elpa/yasnippet-*/snippets/"))))
 
 (yas-global-mode nil)
 
