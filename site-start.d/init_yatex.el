@@ -102,6 +102,12 @@
    ("<>" "diamondsuit" "<>")
    ("<|" "lhd" "<|")
    ("|>" "rhd" "|>")
+   ("<(" "preccurlyeq" "<(")
+   (">(" "succcurlyeq" ">(")
+   ("|v" "downarrow" "↓")
+   ("|^" "uparrow" "↑")
+   ("||v" "Downarrow" "⇓")
+   ("||^" "Uparrow" "⇑")
    )
  )
 
