@@ -2,6 +2,11 @@
 (prefer-coding-system 'utf-8)
 (setq locale-coding-system 'utf-8)
 (server-start)
+
+;;; ほげふが威風堂々ほげピンチョンfoobar
+;;; 123456789012345678901234567890123456
+;;; ASCII: Menlo、日本語：角ゴ、ユニコード文字：Cambria Math
+;;;               123456789012
 (create-fontset-from-ascii-font "Menlo-16:weight=normal:slant=normal" nil "menlokakugo")
 (set-fontset-font "fontset-menlokakugo"
                   'japanese-jisx0208
@@ -18,18 +23,8 @@
 		  (font-spec :family "Cambria Math" :size 16)
                    nil
                   'append)
-(create-fontset-from-ascii-font "Ricty-18:weight=normal:slant=normal" nil "rictykakugo")
-(set-fontset-font "fontset-rictykakugo"
-                  'unicode
-                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
-                   nil
-                  'append)
-(create-fontset-from-ascii-font "Menlo-16:weight=normal:slant=normal" nil "menlomincho")
-(set-fontset-font "fontset-menlomincho"
-                  'unicode
-                  (font-spec :family "Hiragino Mincho ProN" :size 16)
-                   nil
-                  'append)
+
+;;; Menlo+角ゴ+その他を使う
 (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
 
 (unless (boundp 'user-emacs-directory)
@@ -149,12 +144,16 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(agda2-include-dirs (list (expand-file-name "~/.agda/lib/stdlib") "."))
- '(haskell-interactive-prompt "ghci> ")
- '(haskell-literate-default 'latex)
+ '(foreign-regexp/regexp-type (quote ruby))
+ '(haskell-ghci-program-args "repl")
+ '(haskell-ghci-program-name "cab" t)
+ '(haskell-interactive-prompt "ghci> " t)
+ '(haskell-literate-default (quote latex))
  '(haskell-notify-p t)
  '(haskell-process-path-cabal (expand-file-name "~/Library/Haskell/bin/cabal"))
- '(haskell-process-type 'cabal-repl)
+ '(haskell-process-type (quote cabal-repl))
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
+ '(reb-re-syntax (quote foreign-regexp))
  '(singular-switches-default (quote ("--browser" "mac")))
  '(turn-on-haskell-ghci nil))
