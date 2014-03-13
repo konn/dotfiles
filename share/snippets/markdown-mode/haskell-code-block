@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: haskell-code-block
-# key: `hask
+# key: haskc
 # --
-```haskell
-${1}
-```
+\`\`\`haskell
+$1
+\`\`\`

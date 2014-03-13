@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: unpack-strict
+# key: unps
+# --
+{-# UNPACK #-} !${1:Type}
