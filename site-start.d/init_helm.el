@@ -7,7 +7,7 @@
    '(helm-buffer-max-length 35)
    '(helm-delete-minibuffer-contents-from-point t)
    '(helm-ff-skip-boring-files t)
-   '(helm-boring-file-regexp-list '("~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.o$"))
+   '(helm-boring-file-regexp-list '("~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.o$" "\\.cabal-sandbox$"))
    '(helm-ls-git-show-abs-or-relative 'relative)
    '(helm-command-prefix-key "C-z"))
 

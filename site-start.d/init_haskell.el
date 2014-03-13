@@ -20,6 +20,8 @@
  '(haskell-process-path-cabal "~/Library/Haskell/bin/cabal")
 )
 
+(add-to-list 'ac-modes 'haskell-mode)
+
 (add-hook 'haskell-mode-hook 'my-haskell-hook)
 (add-hook 'haskell-cabal-mode-hook 'haskell-cabal-hook)
 ;(defun my-before-save-hook ()
