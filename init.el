@@ -163,6 +163,12 @@
 (setq mac-option-modifier 'meta)
 (setq mac-command-modifier 'hyper)
 
+(defun myshiftclick (click)
+  (interactive "e")
+  (mouse-set-mark)
+  (mouse-set-point)
+  (mouse-set-mark))
+
 (global-set-key [(hyper a)] 'mark-whole-buffer)
 (global-set-key [(hyper v)] 'yank)
 (global-set-key [(hyper c)] 'kill-ring-save)
@@ -171,8 +177,8 @@
 (global-set-key [(hyper w)] 'delete-frame)
 (global-set-key [(hyper z)] 'undo)
 (global-set-key [(hyper n)] 'new-frame)
-
-(define-key global-map (kbd "<S-mouse-1>") 'mouse-set-mark)
+(setq shift-select-mode 't)
+(define-key global-map (kbd "<S-mouse-1>") 'exchange-point-and-mark)
 (define-key global-map (kbd "<S-down-mouse-1>") 'mouse-set-mark)
 (setq frame-title-format
   '((:eval (if (buffer-file-name)
