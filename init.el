@@ -155,3 +155,26 @@
  '(reb-re-syntax (quote foreign-regexp))
  '(singular-switches-default (quote ("--browser" "mac")))
  '(turn-on-haskell-ghci nil))
+
+(global-set-key (kbd "<home>") 'beginning-of-buffer)
+(global-set-key (kbd "<end>") 'end-of-buffer)
+
+;; Mac switch meta key
+(setq mac-option-modifier 'meta)
+(setq mac-command-modifier 'hyper)
+
+(global-set-key [(hyper a)] 'mark-whole-buffer)
+(global-set-key [(hyper v)] 'yank)
+(global-set-key [(hyper c)] 'kill-ring-save)
+(global-set-key [(hyper s)] 'save-buffer)
+(global-set-key [(hyper l)] 'goto-line)
+(global-set-key [(hyper w)] 'delete-frame)
+(global-set-key [(hyper z)] 'undo)
+(global-set-key [(hyper n)] 'new-frame)
+
+(define-key global-map (kbd "<S-mouse-1>") 'mouse-set-mark)
+(define-key global-map (kbd "<S-down-mouse-1>") 'mouse-set-mark)
+(setq frame-title-format
+  '((:eval (if (buffer-file-name)
+                (abbreviate-file-name (buffer-file-name))
+                  "%b"))))
