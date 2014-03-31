@@ -10,7 +10,7 @@
    '(helm-boring-file-regexp-list '("_flymake\\.hs$" "~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.o$" "\\.cabal-sandbox$"))
    '(helm-ls-git-show-abs-or-relative 'relative)
    '(helm-command-prefix-key "C-z"))
-
+(helm-mode 1)
 (global-set-key (kbd "C-c h") 'helm-mini)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-M-y") 'helm-show-kill-ring)
