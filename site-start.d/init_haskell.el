@@ -37,16 +37,15 @@
 
   (define-key haskell-mode-map [?\C-c ?\C-z] 'haskell-interactive-switch)
   (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
+  (define-key haskell-mode-map [(hyper s)] 'ghc-save-buffer)
 
   ;; Build the Cabal project.
   (define-key haskell-mode-map (kbd "C-c b") 'haskell-process-cabal-build)
   ;; Interactively choose the Cabal command to run.
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
 
-  (ghc-init) (flymake-mode) (hare-init))
+  (ghc-init) (hare-init))
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
-
-
 
 (defun toggle-ghc-head ()
   (interactive)
