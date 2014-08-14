@@ -1,23 +1,23 @@
 (load "haskell-mode-autoloads")
-(require 'hi2)
-(require 'hare)
-(autoload 'hare-init "hare" nil t)
+(autoload 'hi2 "hi2" nil t)
+;(require 'hare)
+;(autoload 'hare-init "hare" nil t)
 
 (setq haskell-program-name "/usr/bin/ghci")
 (autoload 'ghc-init "ghc" nil t)
+(autoload 'ghc-debug "ghc" nil t)
 (setq auto-mode-alist
       (append '(("\\.cabal$" . haskell-cabal-mode)) auto-mode-alist))
 
 (custom-set-variables
- '(haskell-process-type (quote ghci))
+ '(haskell-process-type 'ghci)
  '(haskell-interactive-prompt "ghci> ")
- '(haskell-ghci-program-name "cab")
- '(haskell-ghci-program-args "repl")
- '(haskell-literate-default (quote latex))
+ '(haskell-literate-default 'latex)
  '(haskell-notify-p t)
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
- '(haskell-process-path-cabal "~/Library/Haskell/bin/cabal")
+ '(haskell-process-path-ghci "~/Library/Haskell/bin/cab")
+ '(haskell-process-args-ghci '("ghci"))
 )
 
 (add-hook 'haskell-mode-hook 'my-haskell-hook)
@@ -38,26 +38,18 @@
   (define-key haskell-mode-map [?\C-c ?\C-z] 'haskell-interactive-switch)
   (define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
   (define-key haskell-mode-map [(hyper s)] 'ghc-save-buffer)
-
   ;; Build the Cabal project.
   (define-key haskell-mode-map (kbd "C-c b") 'haskell-process-cabal-build)
   ;; Interactively choose the Cabal command to run.
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
+  (define-key haskell-mode-map (kbd "C-c v c") 'haskell-cabal-visit-file)
 
-  (ghc-init) (hare-init))
+  (ghc-init) ;(hare-init)
+
+  ; Overwrite ghc-mod's document browsing by helm
+  ;(define-key haskell-mode-map (kbd "C-M-d") 'helm-ghc-browse-document)
+)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
-
-(defun toggle-ghc-head ()
-  (interactive)
-  (kill-buffer "*haskell*")
-  (if (string= haskell-program-name "/usr/bin/ghci")
-      (progn
-	(setq haskell-program-name "~/usr/bin/ghci-head")
-	(message "changed to GHC HEAD"))
-    (progn
-      (setq haskell-program-name "/usr/bin/ghci")
-      (message "changed to Haskell Platform's ghci."))
-    ))
 
 (defun haskell-cabal-hook ()
   (setq indent-tabs-mode nil)

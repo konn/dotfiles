@@ -39,10 +39,8 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-(add-to-list 'load-path (expand-file-name "~/install/structured-haskell-mode/elisp/"))
-
 (add-to-load-path "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
-(add-to-load-path "ProofGeneral-4.0pre100817")
+(add-to-load-path "ProofGeneral")
 
 ;; 終了時バイトコンパイル
 (add-hook 'kill-emacs-query-functions
@@ -73,6 +71,7 @@
       (mapcar 'expand-file-name
 	      '("~/.rbenv/shims" "/usr/texbin"  "/usr/local/bin" "~/usr/bin" "~/Library/Haskell/bin"
 		"~/prog/idris/.cabal-sandbox/bin"
+		;"/usr/local/ghc-7.8/bin"
 		)))
 
 (setq exec-path
@@ -143,15 +142,6 @@
  ;; If there is more than one, they won't work right.
  '(agda2-include-dirs (list (expand-file-name "~/.agda/lib/stdlib") "."))
  '(foreign-regexp/regexp-type (quote ruby))
- '(haskell-ghci-program-args "repl")
- '(haskell-ghci-program-name "cab" t)
- '(haskell-interactive-prompt "ghci> " t)
- '(haskell-literate-default (quote latex))
- '(haskell-notify-p t)
- '(haskell-process-path-cabal (expand-file-name "~/Library/Haskell/bin/cabal"))
- '(haskell-process-type (quote cabal-repl))
- '(haskell-stylish-on-save t)
- '(haskell-tags-on-save t)
  '(reb-re-syntax (quote foreign-regexp))
  '(singular-switches-default (quote ("--browser" "mac")))
  '(turn-on-haskell-ghci nil))
@@ -179,6 +169,7 @@
 (global-set-key [(hyper z)] 'undo)
 (global-set-key [(hyper k)] 'kill-this-buffer)
 (global-set-key [(hyper n)] 'new-frame)
+(global-set-key [(hyper q)] 'save-buffers-kill-terminal)
 (setq shift-select-mode 't)
 (define-key global-map (kbd "<S-mouse-1>") 'exchange-point-and-mark)
 (define-key global-map (kbd "<S-down-mouse-1>") 'mouse-set-mark)
