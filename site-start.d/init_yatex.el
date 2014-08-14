@@ -58,6 +58,7 @@
 	("axiom" ?a "axiom:" "\\ref{%s}" t ("公理"))
 	("prop" ?p "prop:" "\\ref{%s}" nil ("命題"))
 	("lemma" ?l "lem:" "\\ref{%s}" nil ("補題"))
+	("claim" ?l "cla:" "\\ref{%s}" nil ("主張"))
 	("definition" ?d "def:" "\\ref{%s}" nil ("定義"))
 	("corollary" ?c "cor:" "\\ref{%s}" nil ("系"))
 	("any"       ?\  " "   "\\ref{%s}" nil)
@@ -72,6 +73,7 @@
 (setq YaTeX-use-hilit19 nil
         YaTeX-use-font-lock t)
 (setq YaTeX-kanji-code 4)
+(setq YaTeX-search-file-from-top-directory t)
 (setq auto-mode-alist
       (append '(("\\.tex$" . yatex-mode) ("\\.sty$" . yatex-mode)) auto-mode-alist))
 (autoload 'yatex-mode "yatex" "Yet Another LaTeX mode" t)
@@ -90,6 +92,7 @@
    ("R" "mathbb{R}" "R")
    ("C" "mathbb{C}" "R")
    ("Z" "mathbb{N}" "N")
+   ("||" "mathrel{\\|}" "||")
    ("st" "text{s.t.}" "s.t.")
    ("op" "^{\\text{op}}" "op")
    ("{/" "notin" "∉")
@@ -108,16 +111,24 @@
    ("|^" "uparrow" "↑")
    ("||v" "Downarrow" "⇓")
    ("||^" "Uparrow" "⇑")
+   ("||-" "\Vdash" "||-")
+   ("||-*" "mathrel{\\Vdash^*}" "||-*")
+   ("~~-" "approxeq" "~~-")
+   ("[[" "llbracket" "[|")
+   ("[|" "llbracket" "[|")
+   ("]]" "rrbracket" "|]")
+   ("|]" "rrbracket" "|]")
    )
  )
 
 (setq
  YaTeX-font-list-private
- '(("c"  "mathcal")
-   ("f"  "mathfrak")
-   ("bb" "mathbb")
-   ("bf" "mathbf")
-   ("r"  "mathrm")
+ '(("c"  "mathcal"  "\\mathcal{}")
+   ("f"  "mathfrak" "\\mathfrak{}")
+   ("d"  "mathds"   "\\mathds{}")
+   ("b"  "mathbb"   "\\mathbb{}")
+   ("B"  "mathbf"   "\\mathbf{}")
+   ("r"  "mathrm"   "\\mathrm{}")
    )
  )
 
