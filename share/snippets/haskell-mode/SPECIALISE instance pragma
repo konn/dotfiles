@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: SPECIALISE instance pragma
+# key: specializei
+# --
+{-# SPECIALISE instance ${1:C} ${2:a} #-}$0
