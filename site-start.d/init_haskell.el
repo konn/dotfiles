@@ -1,5 +1,4 @@
 (load "haskell-mode-autoloads")
-(autoload 'hi2 "hi2" nil t)
 ;(require 'hare)
 ;(autoload 'hare-init "hare" nil t)
 
@@ -9,8 +8,13 @@
 (setq auto-mode-alist
       (append '(("\\.cabal$" . haskell-cabal-mode)) auto-mode-alist))
 
+(require 'company)
+(add-to-list 'company-backends 'company-ghc)
+(custom-set-variables '(company-ghc-show-info t))
+(add-hook 'haskell-mode-hook 'company-mode)
+
 (custom-set-variables
- '(haskell-process-type 'ghci)
+ '(haskell-process-type 'cabal-repl)
  '(haskell-interactive-prompt "ghci> ")
  '(haskell-literate-default 'latex)
  '(haskell-notify-p t)
@@ -43,13 +47,22 @@
   ;; Interactively choose the Cabal command to run.
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
   (define-key haskell-mode-map (kbd "C-c v c") 'haskell-cabal-visit-file)
+  (define-key haskell-mode-map (kbd "C-,") 'company-complete-common)
 
   (ghc-init) ;(hare-init)
 
   ; Overwrite ghc-mod's document browsing by helm
   ;(define-key haskell-mode-map (kbd "C-M-d") 'helm-ghc-browse-document)
-)
+  )
+
+;; Indentation
+(autoload 'hi2 "hi2" nil t)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
+
+;(custom-set-faces
+; '(shm-current-face ((t (:background "dark gray")))))
+;(require 'shm)
+;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
 (defun haskell-cabal-hook ()
   (setq indent-tabs-mode nil)
@@ -90,11 +103,6 @@
   (setq mmm-global-mode 'true))
 
 (setq mmm-submode-decoration-level 0)
-
-(custom-set-faces
- '(shm-current-face ((t (:background "dark gray")))))
-;(require 'shm)
-;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
 
 (provide 'init_haskell)
 

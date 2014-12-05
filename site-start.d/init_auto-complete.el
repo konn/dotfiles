@@ -1,12 +1,12 @@
-(require 'auto-complete-config)
-(ac-config-default)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/share/ac-dict")
+;(require 'auto-complete-config)
+;(ac-config-default)
+;(add-to-list 'ac-dictionary-directories "~/.emacs.d/share/ac-dict")
 ; (global-auto-complete-mode t)
 
-(setq-default ac-sources (append '(ac-source-yasnippet
-                ac-source-abbrev
-                ac-source-dictionary
-                ac-source-words-in-same-mode-buffers) ac-sources))
+;(setq-default ac-sources (append '(ac-source-yasnippet
+;                ac-source-abbrev
+;                ac-source-dictionary
+;                ac-source-words-in-same-mode-buffers) ac-sources))
 
 ; (add-to-list 'ac-sources 'ac-source-yasnippet)
 ;  

@@ -54,7 +54,7 @@
 	("\\footnote[]{}" ?n "fn:" "\\ref{%s}" 2
 	 (regexp "footnotes?" "Fussnoten?"))
 	
-	("theorem" ?h "th:" "\\ref{%s}" t ("定理"))
+	("theorem" ?h "thm:" "\\ref{%s}" t ("定理"))
 	("axiom" ?a "axiom:" "\\ref{%s}" t ("公理"))
 	("prop" ?p "prop:" "\\ref{%s}" nil ("命題"))
 	("lemma" ?l "lem:" "\\ref{%s}" nil ("補題"))
