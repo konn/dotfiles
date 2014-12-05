@@ -24,6 +24,8 @@
                    nil
                   'append)
 
+;;; Return 押すと勝手に Tab も押される（24.4〜）クソ機能をオフに
+(setq electric-indent-mode nil)
 ;;; Menlo+角ゴ+その他を使う
 (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
 
@@ -86,7 +88,6 @@
 			 ("marmalade" . "http://marmalade-repo.org/packages/")))
 (package-initialize)
 
-(require 'init_main)
 (require 'alloy-mode)
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
@@ -177,3 +178,5 @@
   '((:eval (if (buffer-file-name)
                 (abbreviate-file-name (buffer-file-name))
                   "%b"))))
+
+(require 'init_main)
