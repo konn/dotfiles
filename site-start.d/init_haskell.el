@@ -47,7 +47,7 @@
   ;; Interactively choose the Cabal command to run.
   (define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
   (define-key haskell-mode-map (kbd "C-c v c") 'haskell-cabal-visit-file)
-  (define-key haskell-mode-map (kbd "C-,") 'company-complete-common)
+  (define-key haskell-mode-map (kbd "C-:") 'company-complete-common)
 
   (ghc-init) ;(hare-init)
 
