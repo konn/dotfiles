@@ -8,6 +8,8 @@
   (define-key reftex-mode-map
     (concat YaTeX-prefix "<") 'YaTeX-uncomment-region)
   (define-key reftex-mode-map (concat YaTeX-prefix ")") 'YaTeX-insert-parens-region)
+  ; forward search for Skim
+  (define-key YaTeX-mode-map (kbd "C-c C-g") 'skim-forward-search)
   )
 
 (add-hook 'reftex-mode-hook
@@ -80,8 +82,7 @@
 (setq YaTeX-use-AMS-LaTeX t)
 
 (setq YaTeX-template-file "~/.emacs.d/share/yatextemplate.tex")
-(setq tex-command "~/usr/bin/platex2pdf"
-     dvi2-command "open -a Skim"
+(setq tex-command "latexmk"
      makeindex-command "mendex -U")
 
 (setq
@@ -137,5 +138,32 @@
  '(("@" . YaTeX-font-list-private)
    )
  )
+
+;; synctex setup
+(defun skim-forward-search ()
+  (interactive)
+  (progn
+    (process-kill-without-query
+     (start-process
+      "displayline"
+      nil
+      "/Applications/Skim.app/Contents/SharedSupport/displayline"
+      (number-to-string (save-restriction
+                          (widen)
+                          (count-lines (point-min) (point))))
+      (expand-file-name
+       (concat (file-name-sans-extension (or YaTeX-parent-file
+                                             (save-excursion
+                                               (YaTeX-visit-main t)
+                                               buffer-file-name)))
+               ".pdf"))
+      buffer-file-name))))
+
+
+(setq YaTeX-inhibit-prefix-letter t)
+(setq YaTeX-dvi2-command-ext-alist
+      '(("Skim" . ".pdf")))
+(setq dvi2-command "/usr/bin/open -a Skim")
+(setq tex-pdfview-command "/usr/bin/open -a Skim")
 
 (provide 'init_yatex)
