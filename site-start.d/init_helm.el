@@ -2,14 +2,7 @@
 (require 'helm-config)
 (global-unset-key (kbd "C-z"))
 
-(custom-set-variables
-   '(helm-truncate-lines t)
-   '(helm-buffer-max-length 35)
-   '(helm-delete-minibuffer-contents-from-point t)
-   '(helm-ff-skip-boring-files t)
-   '(helm-boring-file-regexp-list '("_flymake\\.hs$" "~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.fdb_latexmk$" "\\.o$" "\\.cabal-sandbox$" "\.darcs$" "\\.dvdcss$" "\\.haste$" "\\.synctex\\.gz$"))
-   '(helm-ls-git-show-abs-or-relative 'relative)
-   '(helm-command-prefix-key "C-z"))
+
 (helm-mode 1)
 (global-set-key (kbd "C-c h") 'helm-mini)
 (global-set-key (kbd "M-x") 'helm-M-x)
@@ -18,6 +11,16 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 
+(custom-set-variables
+   '(helm-truncate-lines t)
+   '(helm-buffer-max-length 35)
+   '(helm-delete-minibuffer-contents-from-point t)
+   '(helm-ff-skip-boring-files t)
+   '(helm-boring-file-regexp-list '("_flymake\\.hs$" "~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.fdb_latexmk$" "\\.o$" "\\.cabal-sandbox$" "\.darcs$" "\\.dvdcss$" "\\.haste$" "\\.synctex\\.gz$"))
+   '(helm-ls-git-show-abs-or-relative 'relative)
+   '(helm-command-prefix-key "C-z")
+   '(helm-exit-idle-delay 0)
+   )
 (defvar helm-c-source-ghc-mod
   '((name . "GHC Browse Documennt")
     (init . helm-c-source-ghc-mod)
