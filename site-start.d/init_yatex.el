@@ -8,8 +8,6 @@
   (define-key reftex-mode-map
     (concat YaTeX-prefix "<") 'YaTeX-uncomment-region)
   (define-key reftex-mode-map (concat YaTeX-prefix ")") 'YaTeX-insert-parens-region)
-  ; forward search for Skim
-  (define-key YaTeX-mode-map (kbd "C-c C-g") 'skim-forward-search)
   )
 
 (add-hook 'reftex-mode-hook
@@ -24,6 +22,11 @@
                (define-key reftex-mode-map "\C-h\\" 'reftex-index-phrase-selection-or-word)
                (define-key reftex-mode-map "\C-h|" 'reftex-index-visit-phrases-buffer)
                (define-key reftex-mode-map "\C-h&" 'reftex-view-crossref)
+
+	       ;; forward-search for Skim
+	       (define-key YaTeX-mode-map [?\s-R] 'skim-forward-search)
+	       (define-key YaTeX-mode-map (kbd "C-c C-g") 'skim-forward-search)
+
 ))
 
 (setq reftex-label-alist 
@@ -139,30 +142,31 @@
    )
  )
 
-;; synctex setup
+;; synctex forward search for Skim
+;; from http://d.hatena.ne.jp/setoryohei/20110102/1294003836
 (defun skim-forward-search ()
   (interactive)
-  (progn
-    (process-kill-without-query
-     (start-process
-      "displayline"
-      nil
-      "/Applications/Skim.app/Contents/SharedSupport/displayline"
-      (number-to-string (save-restriction
-                          (widen)
-                          (count-lines (point-min) (point))))
-      (expand-file-name
-       (concat (file-name-sans-extension (or YaTeX-parent-file
-                                             (save-excursion
-                                               (YaTeX-visit-main t)
-                                               buffer-file-name)))
-               ".pdf"))
-      buffer-file-name))))
+  (process-kill-without-query
+   (start-process  
+    "displayline"
+    nil
+    "/Applications/Skim.app/Contents/SharedSupport/displayline"
+    (number-to-string (save-restriction
+                        (widen)
+                        (count-lines (point-min) (point))))
+    (expand-file-name
+     (concat (file-name-sans-extension (or YaTeX-parent-file
+                                           (save-excursion
+                                             (YaTeX-visit-main t)
+                                             buffer-file-name)))
+             ".pdf"))
+    buffer-file-name)))
+ 
 
-
+;; synctex forward search for Skim
 (setq YaTeX-inhibit-prefix-letter t)
 (setq YaTeX-dvi2-command-ext-alist
-      '(("Skim" . ".pdf")))
+      '(("TeXworks\\|texworks\\|texstudio\\|mupdf\\|SumatraPDF\\|Preview\\|Skim\\|TeXShop\\|evince\\|okular\\|zathura\\|qpdfview\\|Firefox\\|firefox\\|chrome\\|chromium\\|Adobe\\|Acrobat\\|AcroRd32\\|acroread\\|pdfopen\\|xdg-open\\|open\\|start" . ".pdf")))
 (setq dvi2-command "/usr/bin/open -a Skim")
 (setq tex-pdfview-command "/usr/bin/open -a Skim")
 
