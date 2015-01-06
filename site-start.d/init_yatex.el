@@ -164,7 +164,7 @@
  
 
 ;; synctex forward search for Skim
-(setq YaTeX-inhibit-prefix-letter t)
+;(setq YaTeX-inhibit-prefix-letter t)
 (setq YaTeX-dvi2-command-ext-alist
       '(("TeXworks\\|texworks\\|texstudio\\|mupdf\\|SumatraPDF\\|Preview\\|Skim\\|TeXShop\\|evince\\|okular\\|zathura\\|qpdfview\\|Firefox\\|firefox\\|chrome\\|chromium\\|Adobe\\|Acrobat\\|AcroRd32\\|acroread\\|pdfopen\\|xdg-open\\|open\\|start" . ".pdf")))
 (setq dvi2-command "/usr/bin/open -a Skim")
