@@ -8,11 +8,14 @@
 ;;; ASCII: Menlo、日本語：角ゴ、ユニコード文字：Cambria Math
 ;;;               123456789012
 (create-fontset-from-ascii-font "Menlo-16:weight=normal:slant=normal" nil "menlokakugo")
+;(set-face-attribute 'default nil
+;                     :family "menlo"
+;                     :height 140)
 (set-fontset-font "fontset-menlokakugo"
                   'japanese-jisx0208
                   (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
-                   nil
-                  'append)
+		  nil
+		  'append)
 (set-fontset-font "fontset-menlokakugo"
                   'japanese-jisx0212
                   (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
@@ -88,7 +91,7 @@
 			 ("marmalade" . "http://marmalade-repo.org/packages/")))
 (package-initialize)
 
-(require 'alloy-mode)
+;(require 'alloy-mode)
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
@@ -141,11 +144,37 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(agda-input-user-translations (\` (("bb" "𝔹"))))
  '(agda2-include-dirs (list (expand-file-name "~/.agda/lib/stdlib") "."))
+ '(company-ghc-show-info t)
  '(foreign-regexp/regexp-type (quote ruby))
+ '(haskell-interactive-prompt "ghci> " t)
+ '(haskell-literate-default (quote latex))
+ '(haskell-notify-p t)
+ '(haskell-process-args-ghci (quote ("ghci")))
+ '(haskell-process-path-ghci "~/Library/Haskell/bin/cab")
+ '(haskell-process-type (quote cabal-repl))
+ '(haskell-stylish-on-save t)
+ '(haskell-tags-on-save t)
+ '(helm-boring-file-regexp-list
+   (quote
+    ("_flymake\\.hs$" "~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.fdb_latexmk$" "\\.o$" "\\.cabal-sandbox$" ".darcs$" "\\.dvdcss$" "\\.haste$" "\\.synctex\\.gz$")))
+ '(helm-buffer-max-length 35)
+ '(helm-command-prefix-key "C-z")
+ '(helm-delete-minibuffer-contents-from-point t)
+ '(helm-exit-idle-delay 0)
+ '(helm-ff-skip-boring-files t)
+ '(helm-ls-git-show-abs-or-relative (quote relative))
+ '(helm-truncate-lines t)
  '(reb-re-syntax (quote foreign-regexp))
+ '(safe-local-variable-values
+   (quote
+    ((TeX-master . "main.tex")
+     (TeX-master . t)
+     (TeX-master . "report02.tex"))))
  '(singular-switches-default (quote ("--browser" "mac")))
- '(turn-on-haskell-ghci nil))
+ '(turn-on-haskell-ghci nil)
+ '(yas-prompt-functions (quote (my-yas/prompt))))
 
 (global-set-key (kbd "<home>") 'beginning-of-buffer)
 (global-set-key (kbd "<end>") 'end-of-buffer)
