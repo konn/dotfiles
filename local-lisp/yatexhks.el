@@ -87,6 +87,15 @@
       (concat "[" postnote "]" "[" prenote "]")
       )))
 
+(defun YaTeX:pbox ()
+  (let ((kind (char-to-string (read-char "Enter kumi mode (default y): "))))
+    (cond
+     ((string= kind "y") "<y>")
+     ((string= kind "t") "<t>")
+     ((string= kind "z") "<z>")
+     (t "<y>")
+      )))
+
 (defun YaTeX::mathds (&optional argp)
   ;(cond
    ;((equal argp 1)

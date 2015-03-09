@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: parent
+# key: parent
+# --
+%#!xelatex -src-specials ${1:file}
+
+$0
+
+% Local Variables:
+% mode: yatex
+% TeX-master: "$1"
+% End:

@@ -1,7 +1,12 @@
-\documentclass[a4j,uplatex]{jsarticle}
+\documentclass[xelatex,a4j,jadriver=standard]{bxjsarticle}
+\usepackage{zxjatype}
+\usepackage[hiragino]{zxjafont}
 \usepackage{amsmath,amssymb}
-\usepackage{epstopdf}
-\usepackage{enumitem,mystyle}
+\usepackage{epstopdf,tikz}
+\usepackage{mystyle}
+\usepackage[inline]{enumitem}
+\usepackage[pdfauthor={石井大海},pdfproducer={XeLaTeX},xetex,%
+            pdftitle={タイトル}]{hyperref}
 \usepackage{graphicx}
 \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 \usepackage[backend=biber, style=numeric]{biblatex}
@@ -9,12 +14,14 @@
 \usepackage{bm}
 \usepackage{epstopdf}
 \usepackage{cases}
+\usetikzlibrary{matrix,arrows,shapes,backgrounds}
+\setlist[enumerate,1]{label=\textup{(\arabic*)}}
+\setlist[enumerate,2]{label=\textup{(\alph*)}}
 
-\title{タイトル}
+\title{ほげ}
 \author{石井大海}
 
 \begin{document}
 \maketitle
-
 \printbibliography[title=参考文献]
 \end{document}

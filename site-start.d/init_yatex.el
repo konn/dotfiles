@@ -2,6 +2,8 @@
   (setq auto-fill-function nil)
   ;(add-hook 'before-save-hook 'commaperiod nil t)
   (YaTeX-define-begend-key "ba" "align*")
+  (YaTeX-define-begend-key "bl" "lemma")
+  (YaTeX-define-begend-key "bp" "proof")
   (turn-on-reftex)
   (define-key reftex-mode-map
     (concat YaTeX-prefix ">") 'YaTeX-comment-region)
@@ -25,10 +27,11 @@
 
 	       ;; forward-search for Skim
 	       (define-key YaTeX-mode-map [?\s-R] 'skim-forward-search)
-	       (define-key YaTeX-mode-map (kbd "C-c C-g") 'skim-forward-search)
+	       (define-key YaTeX-mode-map (kbd "C-c C-j") 'skim-forward-search)
 
 ))
 
+(setq TeX-active-styles "biblatex")
 (setq reftex-label-alist 
       '((nil ?e nil "\\eqref{%s}" nil nil)
 	("section"   ?s "%S" "~\\ref{%s}" (nil . t)
@@ -37,8 +40,8 @@
 		 "\\\\S" "\247" "Teile?" "Kapitel" "Kap\\." "Abschnitte?"
 		 "appendi\\(x\\|ces\\)" "App\\."  "Anh\"?ange?" "Anh\\."))
 
-	("enumerate" ?i "item:" "\\ref{%s}" item
-	 (regexp "items?" "Punkte?"))
+	("enumerate" ?i "item:" "~\\ref{%s}" item
+	 (regexp "items?" "Punkte?" "条件"))
 	
 	("equation"  ?e "eq:" "\\eqref{%s}" t
 	 (regexp "equations?" "eqs?\\." "eqn\\." "Gleichung\\(en\\)?"  "Gl\\."))
@@ -59,14 +62,14 @@
 	("\\footnote[]{}" ?n "fn:" "\\ref{%s}" 2
 	 (regexp "footnotes?" "Fussnoten?"))
 	
-	("theorem" ?h "thm:" "\\ref{%s}" t ("定理"))
-	("axiom" ?a "axiom:" "\\ref{%s}" t ("公理"))
-	("prop" ?p "prop:" "\\ref{%s}" nil ("命題"))
-	("lemma" ?l "lem:" "\\ref{%s}" nil ("補題"))
-	("claim" ?l "cla:" "\\ref{%s}" nil ("主張"))
-	("definition" ?d "def:" "\\ref{%s}" nil ("定義"))
-	("corollary" ?c "cor:" "\\ref{%s}" nil ("系"))
-	("any"       ?\  " "   "\\ref{%s}" nil)
+	("theorem" ?h "thm:" "~\\ref{%s}" t ("定理"))
+	("axiom" ?a "axiom:" "~\\ref{%s}" t ("公理"))
+	("prop" ?p "prop:" "~\\ref{%s}" nil ("命題"))
+	("lemma" ?l "lem:" "~\\ref{%s}" nil ("補題"))
+	("claim" ?l "cla:" "~\\ref{%s}" nil ("主張"))
+	("definition" ?d "def:" "~\\ref{%s}" nil ("定義"))
+	("corollary" ?c "cor:" "~\\ref{%s}" nil ("系"))
+	("any"       ?\  " "   "~\\ref{%s}" nil)
 	))
 
 (setq reftex-bibliography-commands '("addbibresource" "bibliography"))
@@ -122,6 +125,7 @@
    ("[|" "llbracket" "[|")
    ("]]" "rrbracket" "|]")
    ("|]" "rrbracket" "|]")
+   ("]" "beth" "コ")
    )
  )
 
