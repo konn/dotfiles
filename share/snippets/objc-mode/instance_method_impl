@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: instance_method_impl
+# key: -
+# --
+-(${1:void}) ${2:selector}${3::(${4:id})${5:arg}}
+${6:{
+$0
+}}
