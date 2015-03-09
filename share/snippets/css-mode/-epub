@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: -epub
+# key: -e
+# binding: direct-keybinding
+# --
+$1: $2;
+-webkit-$1: $2;
+-epub-$1: $2;
