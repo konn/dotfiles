@@ -14,5 +14,11 @@
 (setq auto-mode-alist
       (append '(("\\.agda$" . agda2-mode)) auto-mode-alist))
 
+(add-hook 'agda2-mode-hook 'my-agda2-hook)
+
+
+(defun my-agda2-hook ()
+  (define-key agda2-mode-map (kbd "C-c C-g") 'agda2-give)
+  )
 
 (provide 'init_agda2)

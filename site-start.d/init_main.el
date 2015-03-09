@@ -14,7 +14,7 @@
 ; (require 'init_skk)
 (require 'init_dired)
 (require 'init_idris)
-;(require 'init_agda2)
+(require 'init_agda2)
 (require 'init_scala)
 (require 'init_hamlet)
 (require 'init_sml)
