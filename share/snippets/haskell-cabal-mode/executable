@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: executable
+# key: exe
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+executable ${1:name}
+  Main-is:             $1.hs
+  build-depends:       base${2:
+                     , ${3:package}}${4:
+  other-modules:       ${5:Utils.hs}}
+  default-language:    ${6:Haskell2010}
+$0
