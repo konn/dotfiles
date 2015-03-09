@@ -63,7 +63,7 @@
 ; '(shm-current-face ((t (:background "dark gray")))))
 ;(require 'shm)
 ;(add-hook 'haskell-mode-hook 'structured-haskell-mode)
-
+(setq-default indent-tabs-mode nil)
 (defun haskell-cabal-hook ()
   (setq indent-tabs-mode nil)
   (define-key haskell-cabal-mode-map (kbd "C-c b") 'haskell-process-cabal-build)
