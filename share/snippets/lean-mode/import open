@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: import open
+# key: oimp
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+import ${1:data.nat}
+open ${2:${1:$(let ((ans (split-string yas-text "\\\\.")))
+                   (message (format "%s" ans)) (car (last ans)))}}
+$0

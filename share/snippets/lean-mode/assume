@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: assume
+# key: ass
+# --
+assume ${1:H0} : ${2:p}, ${3:sorry}

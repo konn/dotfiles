@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: definition
+# key: defn
+# --
+definition ${1:fun} ${2:: ${3:Type} }:= ${4:sorry}
+$0

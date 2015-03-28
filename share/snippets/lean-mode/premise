@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: premise
+# key: prem
+# --
+premise ${1:x} : ${2:Type}
+$0
