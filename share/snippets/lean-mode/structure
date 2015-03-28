@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: structure
+# key: str
+# --
+structure ${1:name} (${2:A B C}: ${3:Type}) :=
+  ${4:${5:mk} :: }${2:$(let ((i 0))
+                   (mapconcat (lambda (x) (setq i (+ i 1)) (format "(pr%d : %s)" i x))
+                              (split-string yas-text " ") " "))}
+$0
