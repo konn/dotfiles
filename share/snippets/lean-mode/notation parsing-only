@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: notation parsing-only
+# key: notap
+# --
+notation [parsing-only] ${1:defn} := ${2:body}
+$0

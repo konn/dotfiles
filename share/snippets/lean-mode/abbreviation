@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: abbreviation
+# key: abbr
+# --
+abbreviation ${1:abbr} := ${2:body}
+$0

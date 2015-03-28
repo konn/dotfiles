@@ -3,5 +3,5 @@
 # key: imp
 # binding: direct-keybinding
 # --
-import ${1:data.nat}
+import ${1:standard}
 $0

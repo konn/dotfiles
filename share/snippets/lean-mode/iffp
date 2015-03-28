@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: iffp
+# key: iffp
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+have forward  : _, from sorry,
+have converse : _, from sorry,
+show _, from iff.intro forward converse

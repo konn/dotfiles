@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: have
+# key: have
+# --
+have ${1:Hp} : ${2:p}, from ${3:sorry}, 

@@ -2,5 +2,5 @@
 # name: example
 # key: ex
 # --
-example ${1:(${2:Hp} : ${3:p})} : ${4:p} := ${5:sorry}
+example ${1:(${2:Hp} : ${3:p}$4) }: ${5:p} := ${6:sorry}
 $0

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: notation
+# key: nota
+# --
+notation ${1:defn} := ${2:body}
+$0

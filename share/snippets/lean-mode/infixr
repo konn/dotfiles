@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: infixr
+# key: infixr
+# --
+infixr \`${1:<@>}\`:${2:50} := ${3:name}
+$0
