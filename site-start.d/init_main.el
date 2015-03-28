@@ -24,4 +24,5 @@
 (require 'init_singular)
 (require 'init_CoCoA)
 (require 'init_markdown)
+(require 'init_lean)
 (provide 'init_main)
