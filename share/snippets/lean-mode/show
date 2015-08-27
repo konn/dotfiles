@@ -2,4 +2,4 @@
 # name: show
 # key: show
 # --
-show ${1:p}, from 
+show ${1:p}, ${3:using ${4:H}, }from sorry

@@ -3,5 +3,6 @@
 # key: ind
 # expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
-inductive ${1:name}$2${3: : ${4:Type}} :=
-| ${5:cons}${6: : ${7:arg -> }$1}
+Inductive ${1:type}${2: ${3:A}}${4: : ${5:Set}} :=
+| ${6:Constr} : ${7:${8:A} ->} $1.
+$0

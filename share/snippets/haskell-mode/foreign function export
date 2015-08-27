@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: foreign function export
+# key: ffe
+# --
+foreign export ${1:ccall} ${2:ffifunc} :: ${3:Type}
+$0

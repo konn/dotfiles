@@ -2,5 +2,5 @@
 # name: infixr
 # key: infixr
 # --
-infixr \`${1:<@>}\`:${2:50} := ${3:name}
+infixr \`${1:<@>}\`${2::${3:50}} := ${4:name}
 $0

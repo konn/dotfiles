@@ -10,18 +10,22 @@
 
 (require 'company)
 (add-to-list 'company-backends 'company-ghc)
-(custom-set-variables '(company-ghc-show-info t))
 (add-hook 'haskell-mode-hook 'company-mode)
 
 (custom-set-variables
  '(haskell-process-type 'cabal-repl)
- '(haskell-interactive-prompt "ghci> ")
+ '(company-ghc-show-info t)
+ '(haskell-interactive-prompt "λ> " t)
  '(haskell-literate-default 'latex)
  '(haskell-notify-p t)
  '(haskell-stylish-on-save t)
  '(haskell-tags-on-save t)
- '(haskell-process-path-ghci "~/Library/Haskell/bin/cab")
- '(haskell-process-args-ghci '("ghci"))
+ ;'(haskell-process-path-ghci "~/Library/Haskell/bin/stack")
+ ;'(haskell-process-args-ghci '("ghci"))
+ ;'(ghc-interactive-command "~/.local/bin/ghc-modi")
+ ;'(ghc-module-command "~/.local/bin/ghc-modi")
+ ;'(ghc-command "~/.local/bin/ghc-modi")
+ '(company-ghc-show-info t)
 )
 
 (add-hook 'haskell-mode-hook 'my-haskell-hook)
@@ -29,7 +33,14 @@
 ;(defun my-before-save-hook ()
 ;  (ignore-errors (call-process "cabal2ghci")))
 
+;; -- Conf for Liquid Haskell
+(require 'flycheck)
+(setq flycheck-check-syntax-automatically
+      '(mode-enabled idle-change save))
+(require 'liquid-tip)
+
 (defun my-haskell-hook ()
+  (ghc-init) ;(hare-init)
   ;(add-hook 'before-save-hook 'my-before-save-hook)
   (setq tab-width 2
 	indent-tabs-mode nil)
@@ -49,7 +60,7 @@
   (define-key haskell-mode-map (kbd "C-c v c") 'haskell-cabal-visit-file)
   (define-key haskell-mode-map (kbd "C-:") 'company-complete-common)
 
-  (ghc-init) ;(hare-init)
+  (liquid-tip-mode) ; for Liquid Haskell
 
   ; Overwrite ghc-mod's document browsing by helm
   ;(define-key haskell-mode-map (kbd "C-M-d") 'helm-ghc-browse-document)
@@ -58,6 +69,7 @@
 ;; Indentation
 (autoload 'hi2 "hi2" nil t)
 (add-hook 'haskell-mode-hook 'turn-on-hi2)
+
 
 ;(custom-set-faces
 ; '(shm-current-face ((t (:background "dark gray")))))
@@ -105,4 +117,3 @@
 (setq mmm-submode-decoration-level 0)
 
 (provide 'init_haskell)
-

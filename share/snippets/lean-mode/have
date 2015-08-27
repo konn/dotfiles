@@ -2,4 +2,4 @@
 # name: have
 # key: have
 # --
-have ${1:Hp} : ${2:p}, from ${3:sorry}, 
+have ${1:Hp} : ${2:p}, ${3:using ${4:H}, }from ${5:sorry}, 

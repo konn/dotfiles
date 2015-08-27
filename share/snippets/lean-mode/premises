@@ -2,5 +2,5 @@
 # name: premises
 # key: prems
 # --
-premises (${1:A} : ${2:Type}) $3
+premises ${1:(${2:A} : ${3:Type})}${4: }
 $0

@@ -1,7 +1,8 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: inductive
-# key: ind
+# name: have pattern
+# key: havep
 # expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
-inductive ${1:name}$2${3: : ${4:Type}} :=
-| ${5:cons}${6: : ${7:arg -> }$1}
+have ${1:name} : ${2:typ}
+| ${3:case1} := ${4:sorry}${5:
+$6},

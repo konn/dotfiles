@@ -45,7 +45,7 @@
             (normal-top-level-add-subdirs-to-load-path))))))
 
 (add-to-load-path "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
-(add-to-load-path "ProofGeneral")
+(add-to-load-path "ProofGeneral" "lisp/liquid-types.el")
 
 ;; 終了時バイトコンパイル
 (add-hook 'kill-emacs-query-functions
@@ -74,7 +74,7 @@
 
 (setq my-paths 
       (mapcar 'expand-file-name
-	      '("~/.rbenv/shims" "/usr/texbin"  "/usr/local/bin" "~/usr/bin" "~/Library/Haskell/bin"
+	      '("~/.local/bin" "~/.rbenv/shims" "/usr/texbin"  "/usr/local/bin" "~/usr/bin" "~/Library/Haskell/bin"
 		"~/prog/idris/.cabal-sandbox/bin"
 		;"/usr/local/ghc-7.8/bin"
 		)))
@@ -87,8 +87,8 @@
 ;; Package Repositories
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "http://melpa.milkbox.net/packages/")
-			 ("marmalade" . "http://marmalade-repo.org/packages/")))
+			 ("melpa" . "http://melpa-stable.milkbox.net/packages/")
+                         ))
 (package-initialize)
 
 ;(require 'alloy-mode)
@@ -146,16 +146,8 @@
  ;; If there is more than one, they won't work right.
  '(agda-input-user-translations (\` (("bb" "𝔹"))))
  '(agda2-include-dirs (list (expand-file-name "~/.agda/lib/stdlib") "."))
- '(company-ghc-show-info t)
+ '(coq-compile-before-require t)
  '(foreign-regexp/regexp-type (quote ruby))
- '(haskell-interactive-prompt "ghci> " t)
- '(haskell-literate-default (quote latex))
- '(haskell-notify-p t)
- '(haskell-process-args-ghci (quote ("ghci")))
- '(haskell-process-path-ghci "~/Library/Haskell/bin/cab")
- '(haskell-process-type (quote cabal-repl))
- '(haskell-stylish-on-save t)
- '(haskell-tags-on-save t)
  '(helm-boring-file-regexp-list
    (quote
     ("_flymake\\.hs$" "~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.fdb_latexmk$" "\\.o$" "\\.cabal-sandbox$" ".darcs$" "\\.dvdcss$" "\\.haste$" "\\.synctex\\.gz$")))
@@ -165,16 +157,276 @@
  '(helm-exit-idle-delay 0)
  '(helm-ff-skip-boring-files t)
  '(helm-ls-git-show-abs-or-relative (quote relative))
- '(helm-truncate-lines t)
+ '(helm-truncate-lines t t)
  '(reb-re-syntax (quote foreign-regexp))
  '(safe-local-variable-values
    (quote
-    ((TeX-master . "main.tex")
+    ((eval setq-local exec-path
+           (append
+            (quote
+             ("/Users/hiromi/.stack/programs/x86_64-osx/ghc-7.8.4/bin/"))
+            exec-path))
+     (haskell-process-path-ghci . "/Users/hiromi/.local/bin/stack")
+     (eval setq exec-path
+           (append
+            (quote
+             ("/Users/hiromi/.stack/programs/x86_64-osx/ghc-7.8.4/bin/"))
+            exec-path))
+     (eval setq exec-path
+           (append
+            (quote
+             ("Users/hiromi/.stack/programs/x86_64-osx/ghc-7.8.4/bin/"))
+            exec-path))
+     (haskell-process-args-ghci . "ghci")
+     (haskell-process-path-ghci . "~/.local/bin/stack")
+     (haskell-indent-spaces . 2)
+     (eval setenv "HASKELL_PACKAGE_SANDBOX"
+           (expand-file-name "~/.stackage/sandboxes/ghc-7.8.3/lts-2.15/x86_64-osx-ghc-7.8.3-packages.conf.d"))
+     (eval
+      (let
+          ((local
+            (concat
+             (substring
+              (shell-command-to-string "stack path --local-install-root")
+              0 -2)
+             "/bin"))
+           (snaps
+            (concat
+             (substring
+              (shell-command-to-string "stack path --snapshot-install-root")
+              0 -2)
+             "/bin")))
+        (append
+         (list local snaps)
+         exec-path)))
+     (eval setenv "PATH"
+           (substring
+            (shell-command-to-string "stack path --bin-path")
+            0 -2))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             (concat
+              (substring
+               (shell-command-to-string "stack path --snapshot-install-root")
+               0 -2)
+              "/bin")))
+           (progn
+             (setenv "PATH"
+                     (substring
+                      (shell-command-to-string "stack path --bin-path")
+                      0 -2))
+             (setq exec-path
+                   (append
+                    (list local snaps)
+                    exec-path))))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             (concat
+              (substring
+               (shell-command-to-string "stack path --snapshot-install-root")
+               0 -2)
+              "/bin")))
+           (progn
+             (setenv "PATH"
+                     (concat local ":" snaps ":"
+                             (getenv "PATH")))
+             (setq exec-path
+                   (append
+                    (list local snaps)
+                    exec-path))))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             (concat
+              (substring
+               (shell-command-to-string "stack path --snapshot-install-root")
+               0 -2)
+              "/bin")))
+           (progn
+             (setenv "PATH"
+                     (concat local ":" snaps ":"
+                             (getenv "PATH")))
+             (setq load-path
+                   (append
+                    (list local snaps)
+                    load-path))))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             (concat
+              (substring
+               (shell-command-to-string "stack path --snapshot-install-root")
+               0 -2)
+              "/bin")))
+           (progn
+             (setenv "PATH"
+                     (concat local ":" snaps ":"
+                             (getenv "PATH")))
+             (setq load-path
+                   (append
+                    (quote
+                     (local snaps))
+                    load-path))))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             (concat
+              (substring
+               (shell-command-to-string "stack path --snapshot-install-root")
+               0 -2)
+              "/bin")))
+           (progn
+             (setenv "PATH"
+                     (concat local ":" snaps ":"
+                             (getenv "PATH")))
+             (add-to-list
+              (quote load-path)
+              (expand-file-name local)
+              (quote t))))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             (concat
+              (substring
+               (shell-command-to-string "stack path --snapshot-install-root")
+               0 -2)
+              "/bin")))
+           (progn
+             (setenv "PATH"
+                     (concat local ":" snaps ":"
+                             (getenv "PATH")))
+             (add-to-list
+              (quote load-path)
+              (expand-file-name local)
+              (expand-file-name snaps))))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             (concat
+              (substring
+               (shell-command-to-string "stack path --snapshot-install-root")
+               0 -2)
+              "/bin")))
+           (progn
+             (setenv "PATH"
+                     (concat local ":" snaps ":"
+                             (getenv "PATH")))
+             (add-to-list
+              (quote load-path)
+              (list
+               (expand-file-name local)
+               (expand-file-name snaps)))))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             (concat
+              (substring
+               (shell-command-to-string "stack path --snapshot-install-root")
+               0 -2)
+              "/bin")))
+           (progn
+             (setenv "PATH"
+                     (concat local ":" snaps ":"
+                             (getenv "PATH")))
+             (add-to-load-path local snaps)))
+     (eval let
+           ((local
+             (concat
+              (substring
+               (shell-command-to-string "stack path --local-install-root")
+               0 -2)
+              "/bin"))
+            (snaps
+             ((concat
+               (substring
+                (shell-command-to-string "stack path --snapshot-install-root")
+                0 -2)
+               "/bin"))))
+           (progn
+             (setenv "PATH"
+                     (concat local ":" snaps ":"
+                             (getenv "PATH")))
+             (add-to-load-path local snaps)))
+     (eval add-to-load-path ".stack-work/install/x86_64-osx/lts-2.15/7.8.4/bin/" "~/.local/bin")
+     (eval setenv "PATH"
+           (concat ".stack-work/install/x86_64-osx/lts-2.15/7.8.4/bin/:"
+                   (getenv "PATH")))
+     (haskell-process-type . cabal-ghci)
+     (haskell-process-type . cabal-repl)
+     (haskell-process-type quote cabal-repl)
+     (eval setenv "PATH"
+           (concat "/Users/hiromi/.local/bin:"
+                   (getenv "PATH")))
+     (haskell-process-args-ghci "ghci")
+     (haskell-process-path-ghci . "/Users/hiromi/Library/Haskell/bin/stack")
+     (haskell-process-type . ghci)
+     (haskell-process-args-ghci quote
+                                ("ghci"))
+     (haskell-process-path-ghci . "~/Library/Haskell/bin/stack")
+     (haskell-process-type quote ghci)
+     (haskell-process-args-ghci
+      ("ghci"))
+     (haskell-process-type
+      (quote ghci))
+     (haskell-process-args-ghci
+      (quote
+       ("ghci")))
+     (haskell-process-path-ghci "~/Library/Haskell/bin/stack")
+     (ghc-ghc-options quote
+                      ("--with-ghc=/Users/hiromi/.stack/programs/x86_64-osx/ghc-7.8.4/bin/ghc"))
+     (eval setenv "HASKELL_PACKAGE_SANDBOX" "/Users/hiromi/.stack/snapshots/x86_64-osx/lts-2.15/7.8.4/pkgdb")
+     (hamlet/basic-offset . 4)
+     (haskell-process-use-ghci . t)
+     (haskell-indent-spaces . 4)
+     (TeX-master . "config.tex")
+     (TeX-master . "main.tex")
      (TeX-master . t)
      (TeX-master . "report02.tex"))))
  '(singular-switches-default (quote ("--browser" "mac")))
- '(turn-on-haskell-ghci nil)
- '(yas-prompt-functions (quote (my-yas/prompt))))
+ '(yas-prompt-functions (quote (my-yas/prompt)))
+ '(yas-triggers-in-field t))
 
 (global-set-key (kbd "<home>") 'beginning-of-buffer)
 (global-set-key (kbd "<end>") 'end-of-buffer)

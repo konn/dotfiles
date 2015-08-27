@@ -2,5 +2,5 @@
 # name: theorem
 # key: thm
 # --
-theorem ${1:thm} : ${2:p} := ${3:sorry}
+theorem ${1:thm}${2: ${3:A}} : ${4:p} := ${5:sorry}
 $0

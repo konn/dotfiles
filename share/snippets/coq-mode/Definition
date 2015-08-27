@@ -1,7 +1,7 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: inductive
-# key: ind
+# name: Definition
+# key: defn
 # expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
-inductive ${1:name}$2${3: : ${4:Type}} :=
-| ${5:cons}${6: : ${7:arg -> }$1}
+Definition ${1:func}${2: ${3:A}}${4: : ${5:Type}} :=
+  $0.

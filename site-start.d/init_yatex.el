@@ -4,6 +4,8 @@
   (YaTeX-define-begend-key "ba" "align*")
   (YaTeX-define-begend-key "bl" "lemma")
   (YaTeX-define-begend-key "bp" "proof")
+  (YaTeX-define-begend-key "bd" "definition")
+  (YaTeX-define-begend-key "bC" "claim")
   (turn-on-reftex)
   (define-key reftex-mode-map
     (concat YaTeX-prefix ">") 'YaTeX-comment-region)
@@ -62,13 +64,13 @@
 	("\\footnote[]{}" ?n "fn:" "\\ref{%s}" 2
 	 (regexp "footnotes?" "Fussnoten?"))
 	
-	("theorem" ?h "thm:" "~\\ref{%s}" t ("定理"))
-	("axiom" ?a "axiom:" "~\\ref{%s}" t ("公理"))
-	("prop" ?p "prop:" "~\\ref{%s}" nil ("命題"))
-	("lemma" ?l "lem:" "~\\ref{%s}" nil ("補題"))
-	("claim" ?l "cla:" "~\\ref{%s}" nil ("主張"))
-	("definition" ?d "def:" "~\\ref{%s}" nil ("定義"))
-	("corollary" ?c "cor:" "~\\ref{%s}" nil ("系"))
+	("theorem" ?h "thm:" "~\\ref{%s}" t (regexp "theorems?" "定理"))
+	("axiom" ?a "axiom:" "~\\ref{%s}" t (regexp "axioms?" "公理"))
+	("prop" ?p "prop:" "~\\ref{%s}" nil (regexp "prop" "propsitions?" "命題"))
+	("lemma" ?l "lem:" "~\\ref{%s}" nil (regexp "lemmas?" "lemmata" "補題"))
+	("claim" ?l "cla:" "~\\ref{%s}" nil (regexp "claims?" "主張"))
+	("definition" ?d "def:" "~\\ref{%s}" nil (regexp "definitions?" "定義"))
+	("corollary" ?c "cor:" "~\\ref{%s}" nil (regexp "cor" "corollary" "corollaries" "系"))
 	("any"       ?\  " "   "~\\ref{%s}" nil)
 	))
 
@@ -111,7 +113,10 @@
    ("~>" "leadsto" "~>")
    ("<>" "diamondsuit" "<>")
    ("<|" "lhd" "<|")
+   ("U" "bigcup" "∪")
+   ("@" "bigcup" "∩")
    ("|>" "rhd" "|>")
+   ("/>" "nearrow" "↗︎")
    ("<(" "preccurlyeq" "<(")
    (">(" "succcurlyeq" ">(")
    ("|v" "downarrow" "↓")
@@ -137,6 +142,7 @@
    ("b"  "mathbb"   "\\mathbb{}")
    ("B"  "mathbf"   "\\mathbf{}")
    ("r"  "mathrm"   "\\mathrm{}")
+   ("s"  "mathscr"   "\\mathscr{}")
    )
  )
 

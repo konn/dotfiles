@@ -2,5 +2,5 @@
 # name: variables
 # key: vars
 # --
-variables (${1:A} : ${2:Type}) $3
+variables ${1:(${2:A} : ${3:Type}) }$4
 $0

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: parameter
+# key: param
+# --
+parameter ${1:A} : ${2:Type}
+$0

@@ -11,6 +11,7 @@
 ; (require 'init_psgml)
 (require 'init_yatex)
 (require 'init_snippet)
+(require 'init_teyjus)
 ; (require 'init_skk)
 (require 'init_dired)
 (require 'init_idris)

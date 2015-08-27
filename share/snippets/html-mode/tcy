@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: tcy
+# key: tcy
+# --
+<span class="tcy">$1</span>$0

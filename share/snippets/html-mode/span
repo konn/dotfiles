@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: span
+# key: span
+# --
+<span${1: class="$2"}$3>$0</span>

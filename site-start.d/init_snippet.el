@@ -9,6 +9,9 @@
 
 (yas-global-mode nil)
 
+(custom-set-variables
+ '(yas-triggers-in-field t))
+
 ;; 既存スニペットを挿入する
 (define-key yas-minor-mode-map (kbd "C-x i i") 'yas-insert-snippet)
 ;; 新規スニペットを作成するバッファを用意する

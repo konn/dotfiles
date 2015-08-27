@@ -1,7 +1,7 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: inductive
-# key: ind
+# name: match clause
+# key: |:=
 # expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
-inductive ${1:name}$2${3: : ${4:Type}} :=
-| ${5:cons}${6: : ${7:arg -> }$1}
+| ${1:pat} := ${2:body}
+$0

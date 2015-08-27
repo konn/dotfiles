@@ -1,7 +1,8 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: inductive
-# key: ind
+# name: theorem+pattern
+# key: thmp
 # expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
-inductive ${1:name}$2${3: : ${4:Type}} :=
-| ${5:cons}${6: : ${7:arg -> }$1}
+theorem ${1:thm} : ∀ (${2:a} : ${3:A}), ${4:p}
+| $1 ${5:pat} := ${6:sorry}
+$0

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: div-class
+# key: d.
+# --
+<div class="$1"$2>$3</div>
+$0
