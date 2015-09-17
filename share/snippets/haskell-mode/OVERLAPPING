@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: OVERLAPPING
+# key: ovl
+# --
+{-# ${1:$$(yas-choose-value '("OVERLAPPING" "OVERLAPPABLE"))} #-} $0

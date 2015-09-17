@@ -2,4 +2,4 @@
 # name: context
 # key: =>
 # --
-(${1:Pred} ${2:a}) => ${3:Class} ${4:$3}
+(${1:Pred} ${2:a}) => $0

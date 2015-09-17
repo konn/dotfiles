@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: require
+# key: req
+# --
+(require '${1:init_${2:foobar}})$0
