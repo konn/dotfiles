@@ -4,4 +4,3 @@
 # expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
 defineClass "${1:NSClass}" (Just ''${2:NSObject})
-idMarshaller ''$1

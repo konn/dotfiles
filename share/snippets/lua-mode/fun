@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: fun
+# key: fun
+# --
+function ${1:name}(${2:arg})
+    ${3:return something}$0
+end
