@@ -21,18 +21,19 @@
    '(helm-command-prefix-key "C-z")
    '(helm-exit-idle-delay 0)
    )
+
 (defvar helm-c-source-ghc-mod
   '((name . "GHC Browse Documennt")
     (init . helm-c-source-ghc-mod)
     (candidates-in-buffer)
     (candidate-number-limit . 9999)
     (action . helm-c-source-ghc-mod-action)))
- 
+
 (defun helm-c-source-ghc-mod ()
   (with-current-buffer (helm-candidate-buffer 'global)
     (unless (call-process-shell-command "ghc-mod list" nil t t)
       (error "Failed 'ghc-mod list'"))))
- 
+
 (defun helm-c-source-ghc-mod-action (candidate)
   (let ((pkg (ghc-resolve-document-path candidate)))
     (if (and pkg candidate)
