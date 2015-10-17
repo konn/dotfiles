@@ -35,7 +35,7 @@
 (unless (boundp 'user-emacs-directory)
   (defvar user-emacs-directory (expand-file-name "~/.emacs.d/")))
 
-(setq tab-width 2 indent-tabs-mode nil)  
+(setq tab-width 2 indent-tabs-mode nil)
 (defun add-to-load-path (&rest paths)
   (let (path)
     (dolist (path paths paths)
@@ -44,7 +44,7 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-(add-to-load-path "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
+(add-to-load-path "lisp/stack-mode" "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
 (add-to-load-path "ProofGeneral" "lisp/liquid-types.el")
 
 ;; 終了時バイトコンパイル
@@ -74,7 +74,7 @@
 
 (setq my-paths 
       (mapcar 'expand-file-name
-	      '("~/.local/bin" "~/.rbenv/shims" "/usr/texbin"  "/usr/local/bin" "~/usr/bin" "~/Library/Haskell/bin"
+	      '("~/.emacs.d/bin" "~/.local/bin" "~/.rbenv/shims" "/Library/TeX/texbin"  "/usr/local/bin" "~/usr/bin" "~/Library/Haskell/bin"
 		"~/prog/idris/.cabal-sandbox/bin"
 		;"/usr/local/ghc-7.8/bin"
 		)))
@@ -88,6 +88,7 @@
 (setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ("melpa" . "http://melpa-stable.milkbox.net/packages/")
+			 ("melpa-unstable" . "http://melpa.milkbox.net/packages/")
                          ))
 (package-initialize)
 
@@ -147,7 +148,6 @@
  '(agda-input-user-translations (\` (("bb" "𝔹"))))
  '(agda2-include-dirs (list (expand-file-name "~/.agda/lib/stdlib") "."))
  '(coq-compile-before-require t)
- '(foreign-regexp/regexp-type (quote ruby))
  '(helm-boring-file-regexp-list
    (quote
     ("_flymake\\.hs$" "~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.fdb_latexmk$" "\\.o$" "\\.cabal-sandbox$" ".darcs$" "\\.dvdcss$" "\\.haste$" "\\.synctex\\.gz$")))
@@ -158,7 +158,6 @@
  '(helm-ff-skip-boring-files t)
  '(helm-ls-git-show-abs-or-relative (quote relative))
  '(helm-truncate-lines t t)
- '(reb-re-syntax (quote foreign-regexp))
  '(safe-local-variable-values
    (quote
     ((eval setq-local exec-path
@@ -450,7 +449,7 @@
 (global-set-key [(hyper x)] 'kill-region)
 (global-set-key [(hyper z)] 'undo)
 (global-set-key [(hyper k)] 'kill-this-buffer)
-(global-set-key [(hyper n)] 'new-frame)
+(global-set-key [(hyper n)] 'make-frame)
 (global-set-key [(hyper q)] 'save-buffers-kill-terminal)
 (setq shift-select-mode 't)
 (define-key global-map (kbd "<S-mouse-1>") 'exchange-point-and-mark)
@@ -461,3 +460,4 @@
                   "%b"))))
 
 (require 'init_main)
+(put 'downcase-region 'disabled nil)
