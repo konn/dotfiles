@@ -5,6 +5,7 @@
   (YaTeX-define-begend-key "bl" "lemma")
   (YaTeX-define-begend-key "bp" "proof")
   (YaTeX-define-begend-key "bd" "definition")
+  (YaTeX-define-begend-key "bh" "theorem")
   (YaTeX-define-begend-key "bC" "claim")
   (turn-on-reftex)
   (define-key reftex-mode-map
@@ -145,6 +146,15 @@
    ("s"  "mathscr"   "\\mathscr{}")
    )
  )
+
+(setq YaTeX-greek-key-alist-private
+      '(("SS" "\boldface{Sigma}" "ΣΣ")
+        ("PP" "\boldface{Pi}"    "ΠΠ")
+        ("DD" "\boldface{Delta}" "ΔΔ")
+        ("S~" "\boldface{Sigma}" "ΣΣ")
+        ("P~" "\boldface{Pi}"    "ΠΠ")
+        ("D~" "\boldface{Delta}" "ΔΔ")
+        ))
 
 (setq
  YaTeX-math-key-list-private
