@@ -27,4 +27,6 @@
 (require 'init_CoCoA)
 (require 'init_markdown)
 (require 'init_lean)
+(require 'init_spell)
+(require 'init_point)
 (provide 'init_main)
