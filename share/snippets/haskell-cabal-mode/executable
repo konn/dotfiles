@@ -9,4 +9,5 @@ executable ${1:name}
                      , ${3:package}}${4:
   other-modules:       ${5:Utils.hs}}
   default-language:    ${6:Haskell2010}
+  ghc-options:         -Wall
 $0

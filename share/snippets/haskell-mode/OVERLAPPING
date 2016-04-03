@@ -2,4 +2,4 @@
 # name: OVERLAPPING
 # key: ovl
 # --
-{-# ${1:$$(yas-choose-value '("OVERLAPPING" "OVERLAPPABLE"))} #-} $0
+{-# ${1:$$(yas-choose-value '("OVERLAPPING" "OVERLAPPABLE" "OVERLAPS" "INCOHERENT"))} #-} $0

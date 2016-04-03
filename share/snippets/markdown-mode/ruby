@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: ruby
+# key: ruby
+# --
+<ruby><rb>${1:漢字}</rb><rp>（</rp><rt>${2:ルビ}</rt><rp>）</rp></ruby>$0
