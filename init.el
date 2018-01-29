@@ -108,17 +108,6 @@
             (byte-recompile-directory (concat user-emacs-directory "site-start.d") 0)
             ))
 
-;(add-hook 'kill-emacs-hook 'my-kill-hook)
-;
-;(defun my-kill-hook ()
-;  (let ((default-directory "~/.emacs.d/"))
-;    (call-process "git" nil "*sync*" 't "add" "share")
-;    (call-process "git" nil "*sync*" 't "add" "site-start.d")
-;    (call-process "git" nil "*sync*" 't "commit" "-a" "-m" "daily commit")
-;    (call-process "git" nil "*sync*" 't "push")
-;    )
-;  )
-
 (setq browse-url-browser-function 'browse-url-default-macosx-browser)
 
 (setq install-elisp-repository-directory "~/.emacs.d/lisp")
@@ -135,15 +124,6 @@
 (setenv "PATH"
     (concat (mapconcat (lambda (x) x) my-paths ":") '":" (getenv "PATH")))
 
-;; Package Repositories
-(setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
-			 ("gnu" . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "http://melpa-stable.milkbox.net/packages/")
-			 ("melpa-unstable" . "http://melpa.milkbox.net/packages/")
-                         ))
-(package-initialize)
-
-;(require 'alloy-mode)
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
@@ -154,6 +134,7 @@
  ;; If there is more than one, they won't work right.
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil))))
+ '(satysfi-literal-area ((t (:background "dark" :foreground "orange"))))
  '(shm-current-face ((t (:background "dark gray"))))
  '(shm-quarantine-face ((t (:background "LightPink1")))))
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -196,9 +177,20 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(agda-input-user-translations (\` (("bb" "𝔹"))))
- '(agda2-include-dirs (list (expand-file-name "~/.agda/lib/stdlib") "."))
+ '(agda-input-user-translations (\` (("bb" "𝔹") (";_" "⍮"))))
+ '(agda2-include-dirs (quote (".")))
+ '(agda2-program-args (quote ("-l" "standard-library" "-i.")))
+ '(coffee-tab-width 4)
+ '(company-ghc-show-info t)
  '(coq-compile-before-require t)
+ '(haskell-interactive-prompt "λ> " t)
+ '(haskell-literate-default (quote latex))
+ '(haskell-notify-p t)
+ '(haskell-process-suggest-hoogle-imports t)
+ '(haskell-process-suggest-remove-import-lines t)
+ '(haskell-process-type (quote stack-ghci))
+ '(haskell-stylish-on-save t)
+ '(haskell-tags-on-save t)
  '(helm-boring-file-regexp-list
    (quote
     ("_flymake\\.hs$" "~$" "\\.elc$" "\\.hi$" "\\.DS_Store$" "\\.fdb_latexmk$" "\\.o$" "\\.cabal-sandbox$" ".darcs$" "\\.dvdcss$" "\\.haste$" "\\.synctex\\.gz$")))
@@ -209,9 +201,35 @@
  '(helm-ff-skip-boring-files t)
  '(helm-ls-git-show-abs-or-relative (quote relative))
  '(helm-truncate-lines t t)
+ '(package-selected-packages
+   (quote
+    (flymake-less less flymake-coffee sass-mode company-flow flycheck-flow rust-mode cubicaltt redpen-paragraph magit magit-filenotify magit-find-file wolfram-mode intero dashboard flycheck-liquidhs liquid-types yasnippet yaml-mode visual-regexp-steroids tuareg swift-mode shm rw-language-and-country-codes rw-ispell rw-hunspell prolog pos-tip point-undo pcre2el mmm-mode mc-extras math-symbol-lists lua-mode langtool hi2 helm-idris helm-ghc foreign-regexp flycheck-color-mode-line fill-column-indicator f e2wm dash-functional company-ghc company-cabal color-theme coffee-mode button-lock bm auto-complete)))
+ '(rw-hunspell-default-dictionary "en_GB-ise")
+ '(rw-hunspell-dicpath-list (quote ("/Users/hiromi/Library/Spelling")))
+ '(rw-hunspell-make-dictionary-menu t)
+ '(rw-hunspell-use-rw-ispell t)
  '(safe-local-variable-values
    (quote
-    ((eval setq-local exec-path
+    ((TeX-master . "saturated-filters.tex")
+     (intero-targets "ghc-typelits-presburger:exe:simple-arith")
+     (tex-main-file . "root.tex")
+     (TeX-master . "root.tex")
+     (TeX-master . "04-naturals-and-dc.tex")
+     (TeX-master . "realisability.tex")
+     (TeX-master . "03-naturals-and-dc.tex")
+     (TeX-master . "realizability.tex")
+     (TeX-master . "slide.tex")
+     (TeX-master . "../00-zenshu.tex")
+     (TeX-master . "00-zenshu.tex")
+     (haskell-process-path-ghci . "stack")
+     (coq-prog-args "-I" ".")
+     (coq-project-filename . "_CoqProject")
+     (agda2-include-dirs quote
+                         ("~/Documents/University/measure-on-computer/agda"))
+     (agda2-include-dirs . "$HOME/Documents/University/measure-on-computer/agda")
+     (TeX-master . "../dc.tex")
+     (TeX-master . "dc.tex")
+     (eval setq-local exec-path
            (append
             (quote
              ("/Users/hiromi/.stack/programs/x86_64-osx/ghc-7.8.4/bin/"))
@@ -475,6 +493,14 @@
      (TeX-master . t)
      (TeX-master . "report02.tex"))))
  '(singular-switches-default (quote ("--browser" "mac")))
+ '(tramp-default-user-alist
+   (quote
+    (("\\`\\(?:ksu\\|su\\(?:do\\)?\\)\\'" "sakura-vps" "hiromi")
+     ("\\`\\(?:ksu\\|su\\(?:do\\)?\\)\\'" nil "hiromi")
+     ("\\`smb\\'" nil nil)
+     ("\\`\\(?:fcp\\|krlogin\\|nc\\|r\\(?:cp\\|emcp\\|sh\\)\\|telnet\\)\\'" nil "hiromi")
+     ("\\`\\(?:socks\\|tunnel\\)\\'" nil "hiromi")
+     ("\\`synce\\'" nil nil))))
  '(yas-prompt-functions (quote (my-yas/prompt)))
  '(yas-triggers-in-field t))
 
@@ -483,6 +509,7 @@
 
 ;; Mac switch meta key
 (setq mac-option-modifier 'meta)
+(setq mac-right-option-modifier nil)
 (setq mac-command-modifier 'hyper)
 
 (defun myshiftclick (click)
@@ -503,6 +530,7 @@
 (global-set-key [(hyper n)] 'make-frame)
 (global-set-key [(hyper q)] 'save-buffers-kill-terminal)
 (setq shift-select-mode 't)
+(define-key global-map (kbd "C-¥") 'toggle-input-method)
 (define-key global-map (kbd "<S-mouse-1>") 'exchange-point-and-mark)
 (define-key global-map (kbd "<S-down-mouse-1>") 'mouse-set-mark)
 (setq frame-title-format
@@ -510,5 +538,12 @@
                 (abbreviate-file-name (buffer-file-name))
                   "%b"))))
 
+(setq undo-limit 100000)
+(setq undo-strong-limit 130000)
+
 (require 'init_main)
 (put 'downcase-region 'disabled nil)
+(show-paren-mode)
+
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda-mode locate")))
