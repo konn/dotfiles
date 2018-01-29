@@ -21,11 +21,9 @@ for dir_name in ${overlays}; do
 done
 
 # Single dot files
-dots=(.gitattributes_global .gitconfig .gitignore_global)
-dots=($dots .latexmkrc .ghci .inputrc)
-dots=($dots .irbrc .languagetool.cfg .nethackrc .profile)
-dots=($dots .stylish-haskell.yaml)
-dots=($dots .zshrc)
+dots=(.ghci .gitattributes_global .gitconfig .gitignore_global)
+dots=($dots .inputrc .irbrc .languagetool.cfg .latexmkrc)
+dots=($dots .nethackrc .profile .stylish-haskell.yaml .zshrc)
 for dot in ${dots}; do
   ln -sf "$(pwd)/${dot}" "${HOME}/${dot}"
 done
