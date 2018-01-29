@@ -1,36 +1,87 @@
 (set-language-environment 'Japanese)
 (prefer-coding-system 'utf-8)
 (setq locale-coding-system 'utf-8)
+(define-coding-system-alias 'UTF-8 'utf-8)
 (server-start)
-
-;;; ほげふが威風堂々ほげピンチョンfoobar
-;;; 123456789012345678901234567890123456
-;;; ASCII: Menlo、日本語：角ゴ、ユニコード文字：Cambria Math
-;;;               123456789012
-(create-fontset-from-ascii-font "Menlo-16:weight=normal:slant=normal" nil "menlokakugo")
-;(set-face-attribute 'default nil
-;                     :family "menlo"
-;                     :height 140)
-(set-fontset-font "fontset-menlokakugo"
-                  'japanese-jisx0208
-                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
-		  nil
-		  'append)
-(set-fontset-font "fontset-menlokakugo"
-                  'japanese-jisx0212
-                  (font-spec :family "Hiragino Kaku Gothic ProN" :size 16)
-                   nil
-                  'append)
-(set-fontset-font "fontset-menlokakugo"
-		  'unicode
-		  (font-spec :family "Cambria Math" :size 16)
-                   nil
-                  'append)
-
+;; Package Repositories
+(setq package-archives '(("ELPA" . "http://tromey.com/elpa/")
+			 ("gnu" . "http://elpa.gnu.org/packages/")
+			 ("melpa" . "http://melpa-stable.milkbox.net/packages/")
+			 ("melpa-unstable" . "http://melpa.milkbox.net/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ))
+(package-initialize)
 ;;; Return 押すと勝手に Tab も押される（24.4〜）クソ機能をオフに
 (setq electric-indent-mode nil)
-;;; Menlo+角ゴ+その他を使う
-(add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
+(setq use-default-font-for-symbols nil)
+
+;;; ほげふが威風堂々ほげピンチョンfoobar𝔹ℕℤ⟶→∫∈
+;;; 123456789012345678901234567890123456ℤ
+;;;          , <- 本当は0に合っているべき
+;;; ASCII: Menlo、日本語：ヒラギノ角ゴ
+;;;               123456789012
+;;; ユニコード文字：Cambria Math……は何故か動かない……。
+
+;; (create-fontset-from-ascii-font
+;;  "Menlo-18:weight=normal:slant=normal:height=140"
+;;  nil "menlokakugo")
+
+;; (set-face-attribute
+;;   'default nil
+;;   :family "Menlo"
+;;   :height 180
+;;  )
+
+;; (set-fontset-font
+;;  t 'unicode (font-spec :family "Cambria Math")
+;;  )
+;; (set-fontset-font 
+;;  t 'symbol (font-spec :family "Cambria Math")
+;;  )
+
+;; (mapc
+;;  (lambda (cat)
+;;    (set-fontset-font
+;;     t cat
+;;     (font-spec :family "Hiragino Kaku Gothic ProN")))
+;;  (list
+;;   'katakana-jisx0201 'japanese-jisx0208 'japanese-jisx0212
+;;   'japanese-jisx0213-1 'japanese-jisx0213-2))
+;; (set-fontset-font t '(#x0080 . #x024F) "Menlo")
+
+;; (add-to-list 'face-font-rescale-alist
+;;              '(".*Hiragino Kaku Gothic ProN.*" . 1.275)
+;;              ;; '(".*Cambria Math.*" . 1.2)
+;;              )
+
+;; (set-fontset-font t '(#x2115 . #x2115) "Cambria Math")
+;; (set-fontset-font t '(#x2192 . #x2192) "Cambria Math")
+
+;; ;;; Menlo+角ゴ+その他を使う
+;; ;; (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
+
+
+(let* ((size 17) ; ASCIIフォントのサイズ [9/10/12/14/15/17/19/20/...]
+       (asciifont "Menlo") ; ASCIIフォント
+       (jpfont "Hiragino Kaku Gothic ProN") ; 日本語フォント
+       (h (* size 10))
+       (fontspec (font-spec :family asciifont))
+       (jp-fontspec (font-spec :family jpfont)))
+  (set-face-attribute 'default nil :family asciifont :height h)
+  (set-fontset-font nil 'japanese-jisx0213.2004-1 jp-fontspec)
+  (set-fontset-font nil 'japanese-jisx0213-2 jp-fontspec)
+  (set-fontset-font nil 'katakana-jisx0201 jp-fontspec) ; 半角カナ
+  (set-fontset-font nil '(#x0080 . #x024F) fontspec) ; 分音符付きラテン 
+  (set-fontset-font nil '(#x0370 . #x03FF) fontspec) ; ギリシャ文字
+  )
+;;; フォントサイズの比を設定
+(dolist (elt '(("^-apple-hiragino.*" . 1.2)
+	       (".*osaka-bold.*" . 1.2)
+	       (".*osaka-medium.*" . 1.2)
+	       (".*courier-bold-.*-mac-roman" . 1.0)
+	       (".*monaco cy-bold-.*-mac-cyrillic" . 0.9)
+	       (".*monaco-bold-.*-mac-roman" . 0.9)))
+  (add-to-list 'face-font-rescale-alist elt))
 
 (unless (boundp 'user-emacs-directory)
   (defvar user-emacs-directory (expand-file-name "~/.emacs.d/")))
