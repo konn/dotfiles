@@ -1,0 +1,4 @@
+:m - Prelude
+:set prompt  "\n[%s]\nghci> "
+:set prompt2 "ghci| "
+:set -XLambdaCase

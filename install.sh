@@ -16,3 +16,5 @@ for i in ${MY_EMACS}/**/*; do
        ln -sf ${MY_EMACS}${targ} ${EMACS_HOME}${targ}
     fi
 done
+
+ln -sf $(pwd)/.ghci $HOME/.ghci
