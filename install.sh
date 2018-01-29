@@ -1,23 +1,26 @@
 #!/usr/bin/env bash
-ln -sf $(pwd)/.zshrc                  $HOME/.zshrc  
-ln -sf $(pwd)/.zshrc.d                $HOME/.zshrc.d
 
-mkdir -p $HOME/.cabal
-ln -sf $(pwd)/.cabal/config           $HOME/.cabal
-ln -sf $(pwd)/.cabal/config.platform  $HOME/.cabal
-
-EMACS_HOME=$HOME/.emacs.d
-MY_EMACS=$(pwd)/.emacs.d
-mkdir -p ${EMACS_HOME}
-for i in ${MY_EMACS}/**/*; do
-    targ=$(echo "${i}" | awk -F"${MY_EMACS}" '{print $NF}')
-    if [ -f "${i}" ] ; then
-       mkdir -p "${EMACS_HOME}$(dirname ${targ})"
-       ln -sf ${MY_EMACS}${targ} ${EMACS_HOME}${targ}
-    fi
+# Overlaying existing conf directories
+overlays=(.emacs.d .stack .cabal .zshrc.d)
+for dir_name in ${overlays}; do
+  TARGET=$HOME/${dir_name}
+  MINE=$(pwd)/${dir_name}
+  mkdir -p ${TARGET}
+  for i in ${MINE}/**/*; do
+      targ=$(echo "${i}" | awk -F"${MINE}" '{print $NF}')
+      if [ -f "${i}" ] ; then
+         mkdir -p "${TARGET}$(dirname ${targ})"
+         ln -sf ${MINE}${targ} ${TARGET}${targ}
+      fi
+  done
 done
 
-dots=(.gitattributes_global .gitconfig .gitignore_global .latexmkrc .ghci)
+# Single dot files
+dots=(.gitattributes_global .gitconfig .gitignore_global)
+dots=($dots .latexmkrc .ghci .inputrc)
+dots=($dots .irbrc .languagetool.cfg .nethackrc .profile)
+dots=($dots .stylish-haskell.yaml)
+dots=($dots .zshrc)
 for dot in ${dots}; do
   ln -sf "$(pwd)/${dot}" "${HOME}/${dot}"
 done

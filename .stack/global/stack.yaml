@@ -1,0 +1,8 @@
+flags: {}
+packages: []
+extra-deps: []
+resolver: lts-10.0
+build:
+  haddock: true
+  haddock-deps: false
+pvp-bounds: both

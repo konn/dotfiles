@@ -1,0 +1,8 @@
+OPTIONS=name:konn-V
+OPTIONS=align:neutral
+OPTIONS=fruit:ゆいしちゃん
+OPTIONS=color,pettype:cat
+OPTIONS=catname:トメ
+OPTIONS=autopickup,pickup_types:$!?/="+
+OPTIONS=disclose:yi +a yv +c
+OPTIONS=gender:female
