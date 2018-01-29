@@ -1,0 +1,14 @@
+# -*- mode: shell-script; coding: utf-8 -*-
+
+check_dotfiles () {
+    s=$(git --git-dir="${HOME}/.dotfiles/.git" status -s)
+    if [ -n "${s}" ]; then
+        terminal-notifier \
+            -group "check_dotfiles" -remove "check_dotfiles" \
+            -title "Dotfiles" -subtitle "Updated" \
+            -sound default \
+            -message "Dotfiles updated. Please sync with git." \
+            -execute "open -aSourceTree ${HOME}/.dotfiles" \
+            2>&1 1> /dev/null
+    fi
+}
