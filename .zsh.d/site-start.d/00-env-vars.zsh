@@ -10,6 +10,7 @@ export LANG=ja_JP.UTF-8
 export PATH=/Applications/Isabelle2013-2.app/Isabelle/bin:$PATH
 export PATH=~/sevpn:$PATH
 export PATH=/usr/bin:$PATH
+export PATH=$HOME/usr/bin:$PATH
 export PATH=~/.rbenv/bin:$PATH
 export PATH=~/.rbenv/shims:$PATH
 export PATH=/usr/local/bin:$PATH
