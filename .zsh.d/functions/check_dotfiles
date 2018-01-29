@@ -1,8 +1,8 @@
 # -*- mode: shell-script; coding: utf-8 -*-
 
 check_dotfiles () {
-    s=$(git --git-dir="${HOME}/.dotfiles/.git" status -s)
-    if [ -n "${s}" ]; then
+    s=$(cd $HOME/.dotfiles; git --git-dir="${HOME}/.dotfiles/.git" status -s)
+    if [ "${s}" = "\n" ]; then
         terminal-notifier \
             -group "check_dotfiles" -remove "check_dotfiles" \
             -title "Dotfiles" -subtitle "Updated" \
