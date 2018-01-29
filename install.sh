@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Overlaying existing conf directories
-overlays=(.emacs.d .stack .cabal .zshrc.d)
+overlays=(.emacs.d .stack .cabal .zsh.d)
 for dir_name in ${overlays}; do
   TARGET=$HOME/${dir_name}
   MINE=$(pwd)/${dir_name}
