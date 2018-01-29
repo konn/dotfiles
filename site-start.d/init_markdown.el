@@ -2,7 +2,7 @@
 ; (require 'yatex)
 (setq auto-mode-alist
    (append '(("\\.md" . markdown-mode) ("\\.markdown" . markdown-mode)) auto-mode-alist))
-(setq markdown-command (expand-file-name "~/usr/bin/markdown"))
+(setq markdown-command "pandoc -s -t html5 -V css:file:///Users/hiromi/usr/share/github-markdown.css -f markdown")
 (require 'mmm-mode)
 ; (setq mmm-global-mode 'maybe)
 ;(mmm-add-mode-ext-class nil "\\.md?\\'" 'markdown-yatex)

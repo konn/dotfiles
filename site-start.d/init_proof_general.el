@@ -5,5 +5,7 @@
 		("\\.thy$" . isar-mode)) auto-mode-alist))
 (add-hook 'proof-ready-for-assistant-hook (lambda () (show-paren-mode 0)))
 
+(setq coq-project-filename "_CoqProject")
+(setq coq-prog-args '("-I" "."))
 
 (provide 'init_proof_general)

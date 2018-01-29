@@ -2,21 +2,21 @@
 (autoload 'hare-init "hare" nil t)
 
 (load "haskell-mode-autoloads")
-(autoload 'ghc-init "ghc" nil t)
-(autoload 'ghc-debug "ghc" nil t)
+;; (autoload 'ghc-init "ghc" nil t)
+;; (autoload 'ghc-debug "ghc" nil t)
 (setq auto-mode-alist
       (append '(("\\.cabal$" . haskell-cabal-mode)) auto-mode-alist))
 ;; Indentation
 (autoload 'hi2 "hi2" nil t)
 ;(setq ghc-debug 't)
 
-;(require 'company)
-;(add-to-list 'company-backends 'company-ghc)
+(require 'company)
+(add-to-list 'company-backends 'company-ghc)
 (add-hook 'haskell-mode-hook 'my-haskell-hook)
 
 (custom-set-variables
  '(haskell-process-type 'stack-ghci)
- '(company-ghc-show-info t)
+ ;; '(company-ghc-show-info t)
  '(haskell-interactive-prompt  "λ> " t)
  '(haskell-literate-default 'latex)
  '(haskell-notify-p t)
@@ -24,12 +24,12 @@
  '(haskell-tags-on-save t)
  '(haskell-process-suggest-remove-import-lines t)
  '(haskell-process-suggest-hoogle-imports t)
- ;'(haskell-process-path-ghci "~/.local/bin/stack")
- ;'(haskell-process-args-ghci '("ghci"))
- ;'(haskell-process-args-cabal-repl '("ghci"))
- ;'(ghc-interactive-command "~/.local/bin/ghc-modi")
- ;'(ghc-module-command "~/.local/bin/ghc-modi")
- ;'(ghc-command "~/.local/bin/ghc-modi")
+ ;; '(haskell-process-path-ghci "~/.local/bin/stack")
+ ;; '(haskell-process-args-ghci '("ghci"))
+ ;; '(haskell-process-args-cabal-repl '("ghci"))
+ ;; '(ghc-interactive-command "~/.local/bin/ghc-modi")
+ ;; '(ghc-module-command "~/.local/bin/ghc-modi")
+ ;; '(ghc-command "~/.local/bin/ghc-modi")
 )
 
 (add-hook 'haskell-cabal-mode-hook 'haskell-cabal-hook)
@@ -51,7 +51,12 @@
      (define-key haskell-mode-map (kbd "C-c v c") 'haskell-cabal-visit-file)
      (define-key haskell-mode-map (kbd "C-:") 'company-complete-common)
      ; Overwrite ghc-mod's document browsing by helm
-     (define-key haskell-mode-map (kbd "C-M-d") 'ghc-browse-document)
+     ; (define-key haskell-mode-map (kbd "C-M-d") 'ghc-browse-document)
+     ; Flycheck key map
+     (define-key haskell-mode-map (kbd "M-n") 'flycheck-next-error)
+     (define-key haskell-mode-map (kbd "M-p") 'flycheck-previous-error)
+     (define-key haskell-mode-map (kbd "M-t") 'intero-apply-suggestions)
+     (define-key haskell-mode-map (kbd "C-c C-f") 'intero-restart)
   ))
 
 ;resolve symlinks
@@ -59,10 +64,11 @@
 
 ; Other initialization tasks
 (defun my-haskell-hook ()
-  (ghc-init)
+  ;; (ghc-init)
   (hare-init)
   (turn-on-hi2)
   (company-mode)
+  (intero-mode)
   (define-key haskell-mode-map (kbd "C-,") 'haskell-move-nested-left)
   (define-key haskell-mode-map (kbd "C-.") 'haskell-move-nested-right)
   (setq tab-width 2

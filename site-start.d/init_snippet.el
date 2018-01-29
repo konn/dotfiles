@@ -5,7 +5,8 @@
 
 (setq yas-snippet-dirs
       (list "~/.emacs.d/share/snippets" ;; 作成するスニペットはここに入る
-        (car (eshell-extended-glob "~/.emacs.d/elpa/yasnippet-*/snippets/"))))
+        ;(car (eshell-extended-glob "~/.emacs.d/elpa/yasnippet-*/snippets/"))
+        ))
 
 (yas-global-mode nil)
 

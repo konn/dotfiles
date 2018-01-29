@@ -22,24 +22,6 @@
   ;; forward-search for Skim
   (define-key YaTeX-mode-map [?\s-R] 'skim-forward-search)
   (define-key YaTeX-mode-map (kbd "C-c C-j") 'skim-forward-search)
-
-  ;; Spelling
-  (add-to-list 'ispell-dictionary-alist
-              '("math-latex-hunspell"
-                "[[:alpha:]]"
-                "[^[:alpha:]]"
-                "[']"
-                t
-                ("-d" "en_US,en_Math" "-p" "/Users/hiromi/Library/Spelling" "-t")
-                nil
-                UTF-8))
-  (setq ispell-extra-args '("-t"))
-  (eval-after-load 'ispell
-    (ispell-change-dictionary "math-latex-hunspell"))
-  (define-key YaTeX-mode-map (kbd "C-c C-s") 'flyspell-prog-mode)
-  (define-key YaTeX-mode-map (kbd "C-c C-k") 'flyspell-mode)
-  (define-key YaTeX-mode-map (kbd "C-c C-c") 'ispell-buffer)
-  (define-key YaTeX-mode-map (kbd "M-n") 'flyspell-goto-next-error)
   )
 
 (add-hook 'reftex-mode-hook
@@ -67,6 +49,9 @@
 		 "appendi\\(x\\|ces\\)" "App\\."  "Anh\"?ange?" "Anh\\."))
 
 	("enumerate" ?i "item:" "~\\ref{%s}" item
+	 (regexp "items?" "Punkte?" "条件"))
+
+	("enumerate*" ?i "item:" "~\\ref{%s}" item
 	 (regexp "items?" "Punkte?" "条件"))
 	
 	("equation"  ?e "eq:" "\\eqref{%s}" t
@@ -116,8 +101,8 @@
 (setq YaTeX-use-AMS-LaTeX t)
 
 (setq YaTeX-template-file "~/.emacs.d/share/yatextemplate.tex")
-(setq tex-command "latexmk"
-     makeindex-command "mendex -U")
+(setq tex-command "latexmk -pvc"
+      makeindex-command "mendex -U")
 
 (setq
  YaTeX-math-sign-alist-private
@@ -142,6 +127,7 @@
    ("@" "bigcup" "∩")
    ("|>" "rhd" "▷")
    ("/>" "nearrow" "↗︎")
+   ("\>" "searrow" "↘︎")
    ("<(-" "preccurlyeq" "≼")
    ("<(" "prec" "≺")
    (")>-" "succcurlyeq" "≽")
@@ -151,6 +137,7 @@
    ("||v" "Downarrow" "⇓")
    ("||^" "Uparrow" "⇑")
    ("||-" "\Vdash" "⊩")
+   ("||-/" "\nVdash" "⊮")
    ("||-*" "mathrel{\\Vdash^*}" "⊩*")
    ("~~-" "approxeq" "≊")
    ("[[" "llbracket" "〚")
@@ -187,6 +174,7 @@
         ("D~" "boldface{\\Delta}" "𝚫")
         ("ph"  "varphi" "φ-")
         ("ph-" "phi"    "φ")
+        ("]"  "gimel"  "ℷ")
         ))
 
 (setq
@@ -214,7 +202,7 @@
                                              buffer-file-name)))
              ".pdf"))
     buffer-file-name)))
- 
+ (fset 'YaTeX::Cref 'YaTeX::ref)
 
 ;; synctex forward search for Skim
 ;(setq YaTeX-inhibit-prefix-letter t)
@@ -222,5 +210,6 @@
       '(("TeXworks\\|texworks\\|texstudio\\|mupdf\\|SumatraPDF\\|Preview\\|Skim\\|TeXShop\\|evince\\|okular\\|zathura\\|qpdfview\\|Firefox\\|firefox\\|chrome\\|chromium\\|Adobe\\|Acrobat\\|AcroRd32\\|acroread\\|pdfopen\\|xdg-open\\|open\\|start" . ".pdf")))
 (setq dvi2-command "/usr/bin/open -a Skim")
 (setq tex-pdfview-command "/usr/bin/open -a Skim")
+(add-to-list 'helm-completing-read-handlers-alist '(YaTeX-make-begin-end . nil))
 
 (provide 'init_yatex)

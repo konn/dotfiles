@@ -1,3 +1,3 @@
-(require 'sml-mode)
+;; (require 'sml-mode)
 
 (provide 'init_sml)
