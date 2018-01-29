@@ -1,0 +1,47 @@
+[color]
+	status = auto
+	diff = auto
+	grep = auto
+	ui = auto
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes_global
+	pager = less -R
+        editor = emacsclient
+[alias]
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+
+[diff "haskell"]
+        xfuncname = "^\\s*((data|newtype|type)?[^\\s]+)(\\s*[^\\s]*)*(::|=)$"
+
+[diff "MSWord"]
+        textconv = textutil -convert txt -stdout
+
+
+[diff "pdf"]
+        textconv = pdf2text_stdout
+
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[rebase]
+	autosquash = true
+
+[commit]
+	template = ~/.stCommitMsg
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+# Intendedly excluded the following private settings
+[include]
+       path = .gitconfig.private

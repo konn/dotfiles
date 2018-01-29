@@ -1,0 +1,6 @@
+*.rb  diff=ruby
+*.tex diff=tex
+*.hs diff=haskell
+*.doc diff=MSWord
+*.docx diff=MSWord
+*.pdf diff=pdf

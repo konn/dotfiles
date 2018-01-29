@@ -17,7 +17,7 @@ for i in ${MY_EMACS}/**/*; do
     fi
 done
 
-dots=(.latexmkrc .ghci)
+dots=(.gitattributes_global .gitconfig .gitignore_global .latexmkrc .ghci)
 for dot in ${dots}; do
   ln -sf "$(pwd)/${dot}" "${HOME}/${dot}"
 done
