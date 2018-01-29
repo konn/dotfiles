@@ -1,0 +1,80 @@
+#compdef cabal-dev
+ 
+_cabal-dev() {
+  local curcontext="$curcontext" state
+  _arguments -C \
+    {-h,-?,--help}'[Show help text]' \
+    {-s,--sandbox}'[The location of the development cabal sandbox (default: ./cabal-dev)]:directory:_directories' \
+    {-c,--config}'[The location of the cabal-install config file (default: use included)]:file:_files' \
+    {-v,--verbose}'[Verbosity level]:verbosity:_cabal-dev_verbosity' \
+    --version'[Show the version of this program]' \
+    --numeric-version'[Show a machine-readable version number]' \
+    --cabal-install-arg'[Pass this argument through to cabal-install untouched]' \
+    --with-cabal-install'[The location of the specific cabal-install to invoke]:file:_files' \
+    --extra-config-file'[Additional cabal-install configuration files]:file:_files' \
+    --no-user-config'[Do not use any settings from the default cabal-install config file]' \
+    '(-):command:->command' \
+    '(-)*::arguments:->arguments'
+ 
+  local ret
+  case $state in
+    (command)
+      _cabal-dev_commands
+ 
+      local -a cabal_commands
+      cabal_commands=($(cabal --list-options | grep -v '^-'))
+      local expl
+      _wanted commands expl command compadd -- "${cabal_commands[@]}"
+      ;;
+    (arguments)
+      if ! _call_function ret _cabal-dev-${words[1]}; then
+        # delegating to cabal's completion
+        words=(cabal "${words[@]}") CURRENT=$[CURRENT + 1] _normal
+      fi
+      ;;
+  esac
+}
+ 
+_cabal-dev_commands() {
+  local -a cmds
+  cmds=(
+  'add-source:Make a package available for cabal-install to install'
+  'install-deps:Install the packages that depend on the specified packages, but not the packages themselves'
+  "ghci:Start ghci with the sandbox's GHC package repository available"
+  'buildopts:Extract the options that would be passed to the compiler when building'
+  'ghc-pkg:Invoke ghc-pkg including the appropriate --package-conf'
+  )
+  _describe -t commands command cmds
+}
+ 
+_cabal-dev_verbosity() {
+  local -a levels
+  levels=(
+    '0:silent'
+    '1:normal'
+    '2:verbose'
+    '3:deafening'
+    )
+  _describe -t verbosity verbosity levels
+}
+ 
+_cabal-dev-add-source() {
+  _directories
+}
+ 
+_cabal-dev-install-deps() {
+  :
+}
+ 
+_cabal-dev-ghci() {
+  :
+}
+ 
+_cabal-dev-buildopts() {
+  :
+}
+ 
+_cabal-dev-ghc-pkg() {
+  # delegating to ghc-pkg's completion
+  _normal
+}

@@ -1,0 +1,5 @@
+# -*- mode: shell-script -*-
+
+teyjus () {
+    tjmake -j3 $1.lp && tjsim $1;
+}

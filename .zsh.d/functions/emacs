@@ -1,0 +1,13 @@
+# -*- mode: shell-script -*-
+emacs () {
+  HOGE=`pgrep Emacs`
+  if [ ! $HOGE ] ; then
+    open -a Emacs && sleep 3;
+  fi
+  case $1 in
+    "" )
+      open -a Emacs;;
+    *)
+      emacsclient $@;;
+  esac
+}

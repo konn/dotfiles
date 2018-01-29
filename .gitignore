@@ -1,0 +1,10 @@
+/etc/
+/fonts/
+/games/
+/info/
+/lisp/
+/ProofGeneral-4.0pre100817/
+/elpa
+*~
+.DS_Store
+#*#
