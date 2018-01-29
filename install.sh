@@ -10,6 +10,11 @@ for dir_name in ${overlays}; do
       targ=$(echo "${i}" | awk -F"${MINE}" '{print $NF}')
       if [ -f "${i}" ] ; then
          mkdir -p "${TARGET}$(dirname ${targ})"
+         if [ -f "${TARGET}${targ}" ]; then
+             echo "The file ${TARGET}${targ} already exists."
+             echo "Saved as: ${TARGET}${targ}.orig"
+             mv ${TARGET}${targ} ${TARGET}${targ}.orig
+         fi
          ln -sf ${MINE}${targ} ${TARGET}${targ}
       fi
   done
