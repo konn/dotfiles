@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: deriving instance
+# key: dvi
+# --
+deriving instance ${1:Class} ${2:Data}

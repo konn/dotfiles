@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: let definition
+# key: l=
+# --
+${1:a} = ${2:undefined}

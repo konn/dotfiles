@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: coinductive
+# key: coind
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+CoInductive ${1:type}${2: ${3:A}}${4: : ${5:Set}} :=
+| ${6:Constr} : ${7:${8:A} ->} $1${5:$(mapconcat (lambda (cons) (concat " a")) (cdr (split-string yas-text "->")) "")}.
+$0

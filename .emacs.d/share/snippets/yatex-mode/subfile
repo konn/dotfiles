@@ -1,0 +1,16 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: subfile
+# key: subf
+# --
+%#!${1:luajitlatex} -src-specials ${2:file}
+
+\documentclass[${3:$2}]{subfiles}
+
+\begin{document}
+$0
+\end{document}
+
+% Local Variables:
+% mode: yatex
+% TeX-master: "${4:$2}"
+% End:

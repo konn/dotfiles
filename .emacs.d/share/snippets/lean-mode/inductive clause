@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: inductive clause
+# key: |:
+# --
+| ${1:cons} : ${2:type}

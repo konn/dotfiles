@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: header
+# key: header
+# --
+---
+title: ${1:title}
+date: ${2:`(format-time-string "%Y/%m/%d %T %Z" (current-time))`}
+author: ${3:石井大海}
+description: ${4:description}
+tag: ${5:tags}
+---
+$0

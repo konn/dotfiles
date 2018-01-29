@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: library
+# key: lib
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+library
+  exposed-modules:     ${1:Module}
+  other-modules:       ${2:Other}
+  -- other-extensions:    
+  build-depends:       base${3:
+                     , ${4:package}}
+  hs-source-dirs:      ${5:src}
+  default-language:    ${6:Haskell2010}
+$0

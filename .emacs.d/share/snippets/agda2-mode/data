@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: data
+# key: dat
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+data ${1:Data} : ${2:Set} where
+  ${3:Cons} : ${4:Args} → $1
+  $0

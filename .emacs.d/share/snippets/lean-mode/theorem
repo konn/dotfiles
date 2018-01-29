@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: theorem
+# key: thm
+# --
+theorem ${1:thm}${2: ${3:A}} : ${4:p} := ${5:sorry}
+$0

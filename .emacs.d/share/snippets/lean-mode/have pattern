@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: have pattern
+# key: havep
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+have ${1:name} : ${2:typ}
+| ${3:case1} := ${4:sorry}${5:
+$6},

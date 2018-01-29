@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*
+# name: have by
+# key: haby
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+have ${1:Hq} : ${2:q}, by ${3:assumption}, $0

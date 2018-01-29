@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: closed_typefamily
+# key: typw
+# --
+type family ${1:Name} ${2:a} where
+$1 ${3:t} = ${4:Type}

@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: class_standalone
+# key: clsd
+# --
+class ${1:Class} ${2:a}

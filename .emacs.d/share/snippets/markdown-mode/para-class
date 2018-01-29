@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: para-class
+# key: pcls
+# --
+<p class="$1"$2>$3</p>$0

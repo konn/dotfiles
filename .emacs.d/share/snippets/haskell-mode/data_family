@@ -1,0 +1,4 @@
+# contributor: https://github.com/polypus74
+# key: datf
+# --
+data family ${1:Name} ${2:a}

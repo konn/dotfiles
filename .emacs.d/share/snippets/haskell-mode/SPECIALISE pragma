@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: SPECIALISE pragma
+# key: special
+# --
+{-# SPECIALISE ${1:fun} :: ${2:a} #-}$0

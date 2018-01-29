@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: metaclass
+# key: [
+# --
+[${1:$$(yas-choose-value '("declarations" "notations" "coercions" "classes"
+                           "abbreviations" "tactic-hints" "reduce-hints"
+                           "aliases" "c-unfold" "calc" "begin-end-hints"))}]

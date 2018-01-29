@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: context
+# key: =>
+# --
+(${1:Pred} ${2:a}) => $0

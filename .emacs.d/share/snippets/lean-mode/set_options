@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: set_option
+# key: set
+# --
+set_option ${1:pp.implicit} ${2:true}

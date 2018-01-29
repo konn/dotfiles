@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: authors
+# key: auth
+# --
+<p class="authors">$1</p>$0

@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: conjecture
+# key: conj
+# --
+conjecture ${1:H} : ${2:p}
+$0

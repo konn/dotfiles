@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: deprecated
+# key: depr
+# --
+{-# DEPRECATED $1 #-}$0

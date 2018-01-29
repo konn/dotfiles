@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: variable implicit
+# key: vari
+# --
+variable {${1:A} : ${2:Type}}
+$0

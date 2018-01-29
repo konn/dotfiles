@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: instance-default
+# key: instd
+# --
+instance ${1:Name} ${2:a}

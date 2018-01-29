@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: otherwise->
+# key: otr>
+# --
+| otherwise -> $0

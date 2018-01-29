@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: defineSelector
+# key: defs
+# --
+defineSelector newSelector { selector = "${1:selector}"
+, reciever = (''${2:NSObject}, "${3:recv}")
+${4:, arguments = ["${5:arg}" :>>: ''${6:Type}]
+}${7:, returnType = Just [t| ${8:NSTextStorage} |]
+}, definition = [cexp| ${9:[$3 $1${10::}]} |]
+}
+$0

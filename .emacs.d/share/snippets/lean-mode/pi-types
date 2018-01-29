@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pi-types
+# key: pi
+# --
+Π (${1:A} : ${2:Type})${3: }, ${4:sorry}

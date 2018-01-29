@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: -@=
+# key: -@=
+# expand-env: ((yas/indent-line 'fixed))
+# --
+{-@ ${1:fun} :: ${2:Type} @-}
+$1$3 = ${5:undefined}$0

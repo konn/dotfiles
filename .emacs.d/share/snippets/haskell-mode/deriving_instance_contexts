@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: deriving instance contexts
+# key: dvc
+# --
+deriving instance ${1:Ctx} => ${2:Class} ${3:Name}

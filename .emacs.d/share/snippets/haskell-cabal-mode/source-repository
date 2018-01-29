@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: source-repository
+# key: repo
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+source-repository ${1:head}
+  Type: ${2:git}
+  Location: ${3:git://github.com/${4:konn}/${5:type-natural.git}}
+$0

@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: definition pattern
+# key: defp
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+definition ${1:fun}${2: ${3:A}} : ${4:ret}
+| $1 ${5:pat} := ${6:sorry}
+$0

@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: bib
+# key: bib
+# --
+\addbibresource[]{${1:biblio.bib}}
+$0

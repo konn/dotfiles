@@ -1,0 +1,4 @@
+# contributor: https://github.com/polypus74
+# --
+case ${1:x} of
+${2:_} -> ${3:undefined}

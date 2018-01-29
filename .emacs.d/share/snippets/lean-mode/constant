@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: constant
+# key: const
+# --
+constant ${1:a} : ${3:Type}
+$0

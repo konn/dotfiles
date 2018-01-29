@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: MINIMAL pramga
+# key: mini
+# --
+{-# MINIMAL $1 #-}

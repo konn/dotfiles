@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: import open
+# key: impo
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+import ${1:data.nat}
+open ${2:${1:$(mapconcat (lambda (comp) (car (last (split-string comp "\\\\.")))) (split-string yas-text "\\s+") " ")}}
+$0

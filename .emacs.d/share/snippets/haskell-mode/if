@@ -1,0 +1,6 @@
+# contributor: https://github.com/polypus74
+# key: ifte
+# --
+if ${1:p}
+then ${2:undefined}
+else ${3:undefined}

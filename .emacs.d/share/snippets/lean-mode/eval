@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: eval
+# key: eval
+# --
+$0eval ${1:x}

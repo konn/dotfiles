@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: have begin
+# key: habe
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+have ${1:Hp} : ${2:p},
+  begin
+    $0
+  end,

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: theorem
+# key: thm
+# --
+<div class="theorem"${1: id="${2}"}>
+$0
+</div>

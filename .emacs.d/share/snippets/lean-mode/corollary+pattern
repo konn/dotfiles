@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: corollary+pattern
+# key: corp
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+corollary ${1:thm} : ∀ (${2:a} : ${3:A}), ${4:p}
+| $1 ${5:pat} := ${6:sorry}
+$0

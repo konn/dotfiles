@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: RULES pragma
+# key: rules
+# --
+{-# RULES
+"${1:name}" forall ${2:xs}.
+  ${3:f xs} = ${4:after}
+  #-}$0

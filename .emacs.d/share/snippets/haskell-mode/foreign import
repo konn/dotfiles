@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: foreign import
+# key: ffi
+# --
+foreign import ${1:ccall} ${2:safe} "${3:${4:wrapper.h} ${5:makeNSString}}" ${6:$5} :: ${7:Type}
+$0

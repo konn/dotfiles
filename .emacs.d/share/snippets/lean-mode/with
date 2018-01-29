@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: with
+# key: with
+# --
+with ${1:name} : ${2:Type} :=
+| ${3:name} : ${4:$1}
+$0

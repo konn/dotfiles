@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: hypothesis
+# key: hypo
+# --
+hypothesis ${1:H} : ${2:p}
+$0

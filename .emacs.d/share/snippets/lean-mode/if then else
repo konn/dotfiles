@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: if then else
+# key: ifte
+# --
+if ${1:p} then ${2:sorry} else ${3:sorry}

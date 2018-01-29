@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: class
+# key: cla
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+structure ${1:name} [class]${2: (${3:A} : ${4:Type})${5: P}}${6: extends ${7:has_foo A}} ${8::=
+  ${9:(${10:pfoo} : ${11:p})}}

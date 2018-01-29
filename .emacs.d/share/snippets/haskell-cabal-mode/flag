@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: flag
+# key: flag
+# --
+flag ${1:Flag}
+  description:  ${2:awesome flag}
+  default:      ${3:True}
+$0

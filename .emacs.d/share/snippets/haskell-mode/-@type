@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: -@type
+# key: -@t
+# --
+{-@ type ${1:TRUE} = {${2:v}:${3:Type} | ${4:Prop v}} @-}
+$0

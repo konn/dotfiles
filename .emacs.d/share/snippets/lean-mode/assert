@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: assert
+# key: asrt
+# --
+assert ${1:Hp} : ${2:p}, ${3:using ${4:H}, }from ${5:sorry}, 

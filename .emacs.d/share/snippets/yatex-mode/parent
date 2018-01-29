@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: parent
+# key: parent
+# --
+%#!${1:luajitlatex} -src-specials ${2:file}
+
+$0
+
+% Local Variables:
+% mode: yatex
+% TeX-master: "${3:$2}"
+% End:
