@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: macro
+# key: mac
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+macro
+  ${1:myMacro} : ${2:${3:args} → }Term → TC ⊤
+  $1 ${4:hole} = ${5:_}

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: pattern where
+# key: patw
+# expand-env: ((yas/indent-line 'fixed))
+# --
+pattern ${1:Pat}${2: ${3:args}} <- ${4:$3} where
+$1 ${5:$3} = ${6:$3}$0

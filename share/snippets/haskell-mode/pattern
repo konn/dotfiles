@@ -1,0 +1,5 @@
+# key: pat
+# name: pattern
+# expand-env: ((yas/indent-line 'fixed))
+# --
+pattern ${1:Pat}${2: ${3:args}} = ${4:$3}$0

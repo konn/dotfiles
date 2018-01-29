@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: private
+# key: priv
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+private
+  $0

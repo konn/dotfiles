@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: WARNING
+# key: warn
+# --
+{-# WARNING${1: ${2:fun}} "$3" #-}$0

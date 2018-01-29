@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: record
+# key: rec
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+record ${1:Rec} : ${2:Set} where
+  field
+    ${3:fieldName} : ${4:Type}
+  $0

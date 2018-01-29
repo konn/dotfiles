@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: open import
+# key: oimp
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+open import ${1:Module}${2:
+     using (${3:ident})${4:
+     renaming (${5:old} to ${6:new})
+}}$0

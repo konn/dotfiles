@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: open
+# key: op
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+open ${1:expr}${2:
+     using (${3:ident})${4:
+     renaming (${5:old} to ${6:new})
+}}$0

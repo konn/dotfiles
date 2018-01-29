@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: Require Import
+# key: req
+# --
+Require Import ${1:module}.
+$0

@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: CPP if
+# key: #if
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+#if ${1:defined(__GLASGOW_HASKELL__) && __GLASGOW_HASKELL__ >= ${2:800}}
+$3${4:
+#else
+$5}
+#endif
+$0
