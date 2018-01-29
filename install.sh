@@ -17,4 +17,7 @@ for i in ${MY_EMACS}/**/*; do
     fi
 done
 
-ln -sf $(pwd)/.ghci $HOME/.ghci
+dots=(.latexmkrc .ghci)
+for dot in ${dots}; do
+  ln -sf "$(pwd)/${dot}" "${HOME}/${dot}"
+done
