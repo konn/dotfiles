@@ -1,0 +1,33 @@
+exclude: ["*~", ".DS_Store", "#*#", "*.elc"]
+
+dotfiles:
+- group: zsh
+  from: .
+  dest: {{HOME}}
+  exclude: 
+  symlinks:
+    - .zsh.d
+    - .zshrc
+
+- group: emacs
+  from:  .emacs.d
+  dest:  {{HOME}}/.emacs.d
+  symlinks:
+    - "abbrev_defs"
+    - "ac-comphist.dat"
+    - init.el
+    - local-lisp
+    - share
+    - site-start.d
+    
+- group: cabal
+  from: .cabal
+  dest: {{HOME}}/.cabal
+  symlinks:
+    - "*"
+
+- group: misc
+  from: "dots"
+  dest: {{HOME}}
+  symlinks: "*"
+    -
