@@ -7,6 +7,8 @@ export LC_MESSAGES=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
 
 # Binary Paths
+typeset -U path PATH # Uniquify the PATH list
+
 export PATH=/Applications/Isabelle2013-2.app/Isabelle/bin:$PATH
 export PATH=~/sevpn:$PATH
 export PATH=/usr/bin:$PATH
