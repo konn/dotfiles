@@ -1,8 +1,11 @@
 ### -*- mode: shell-script -*- ###
 ### Misc hook functions
 
-# Check if any dotfile is updated
+# Check if any dotfile is updated (On local only)
 autoload -Uz add-zsh-hook
-autoload -Uz check_dotfiles && check_dotfiles
 
-add-zsh-hook zshexit check_dotfiles
+if [ $(hostname) = "Jazz.local" ]; then
+    autoload -Uz check_dotfiles && check_dotfiles
+
+    add-zsh-hook zshexit check_dotfiles
+fi
