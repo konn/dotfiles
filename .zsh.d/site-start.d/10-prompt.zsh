@@ -8,9 +8,14 @@ if [[ $TERM != "dumb" ]]; then
   export ZLS_COLORS='di=01;34'
 
   setopt prompt_subst
-  PROMPT=$'%{\e[34m%}%D{%a %m %d} %{\e[33m%}%n@%m%{\e[32m%} %~\
-%{\e[0m%}$ '
-
+  case "$(hostname)" in
+      "sakura-vps")
+          PROMPT=$'%{\e[38;5;100m%}%D{%a %m %d} %{\e[38;5;159m%}%n@sakura%{\e[38;5;015m%} %~\n%{\e[0m%}$ ' ;;
+      "Ubuntu-VM")
+          PROMPT=$'%{\e[38;5;100m%}%D{%a %m %d} %{\e[38;5;159m%}%n@ubuntu-vm %{\e[38;5;015m%} %~\n%{\e[0m%}$ ';;
+      "Jazz.local")
+          PROMPT=$'%{\e[34m%}%D{%a %m %d} %{\e[33m%}%n@%m%{\e[32m%} %~\n%{\e[0m%}$ ';;
+  esac
   # Setting up right-hand side prompt for Git repos
   run_script git-prompt
   setopt TRANSIENT_RPROMPT
@@ -26,6 +31,12 @@ if [[ $TERM != "dumb" ]]; then
 
   # Change background image for remote shell
   run_script remote-shell-change-bg
+else
+    unsetopt zle
+    unsetopt prompt_cr
+    unsetopt prompt_subst
+    unfunction precmd
+    unfunction preexec
 fi
 
 ## Navigation Settings
