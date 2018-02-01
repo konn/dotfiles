@@ -31,6 +31,7 @@ alias tjsim='rlwrap tjsim'
 alias tmux-new='env tmux'
 alias tmux='tmux attach'
 alias vi=vim
+alias git=hub
 
 # Extension aliases
 alias -s rb=ruby
