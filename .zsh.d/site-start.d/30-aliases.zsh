@@ -20,11 +20,9 @@ alias jnethack='cocot -p EUC-JP jnethack'
 alias ls='ls -vapa'
 alias luajitlatex='luajittex --fmt=luajitlatex.fmt'
 alias ocaml='rlwrap ocaml'
-alias ocaml='rlwrap ocaml'
 alias pip=pip3
 alias python=python3
 alias qemu='sudo /usr/local/bin/qemu'
-alias sl='sl -Fval'
 alias sl='sl -Fval'
 alias sruby="/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby"
 alias tjsim='rlwrap tjsim'
