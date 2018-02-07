@@ -1,7 +1,7 @@
 ### -*- mode: shell-script; coding: utf-8 -*- ###
 ### Fundamental Environmental Variables
 
-export SHELL=/usr/local/bin/zsh
+export SHELL=/bin/zsh
 export LANGUAGE=ja_JP.UTF-8
 export LC_MESSAGES=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
