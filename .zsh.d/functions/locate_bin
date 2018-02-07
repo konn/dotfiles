@@ -6,7 +6,7 @@ locate_bin()  {
     if [ -n "$1" ]; then
         list=$(type -ap "${1}")
         if [ $? -eq 0 ]; then
-            echo "${list}" | head -n1 | awk -F"${1} is " '{ print $NF }'
+            echo "${list}" | head -n1 | awk -F"^${1} is " '{ print $NF }'
         else
             echo "No binary found: ${1}" 1>&2; return 1;
         fi
