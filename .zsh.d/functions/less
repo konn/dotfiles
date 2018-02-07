@@ -2,7 +2,7 @@
 
 # Renders Markdown with `less`.
 less () {
-    orig_less=/usr/bin/less
+    orig_less=$(locate_bin less)
     ext=`echo "${1}" | awk -F. '{print $NF}'`
     if [ "${ext}" = "md" -o "${ext}" = "markdown" ]; then
         cat $1 | nkf -w8 | pandoc -s -f markdown -t man 2> /dev/null | groff -mja -D utf8 -T utf8 -man 2> /dev/null | env less

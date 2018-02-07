@@ -34,5 +34,8 @@ export BIBINPUTS=~/Library/texmf/bibtex/bib:${BIBUNPUTS}
 # zed
 autoload -U zed
 
+# misc
+autoload -Uz locate_bin
+
 # SATySFi
 export SATYSFI_LIB_ROOT=$HOME/usr/lib-satysfi

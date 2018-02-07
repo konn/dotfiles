@@ -1,0 +1,16 @@
+# -*- mode: shell-script; coding: utf-8 -*-
+
+# Locate a binary, in OS-independent manner.
+
+locate_bin()  {
+    if [ -n "$1" ]; then
+        list=$(type -ap "${1}")
+        if [ $? -eq 0 ]; then
+            echo "${list}" | head -n1 | awk -F"${1} is " '{ print $NF }'
+        else
+            echo "No binary found: ${1}" 1>&2; return 1;
+        fi
+    else
+        echo "Please specify binary name" 1>&2; return 1;
+    fi
+}
