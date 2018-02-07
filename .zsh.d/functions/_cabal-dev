@@ -1,3 +1,4 @@
+### -*- mode: shell-script; coding: utf-8 -*-
 #compdef cabal-dev
  
 _cabal-dev() {
