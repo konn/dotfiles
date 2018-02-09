@@ -38,4 +38,4 @@ autoload -U zed
 autoload -Uz locate_bin
 
 # SATySFi
-export SATYSFI_LIB_ROOT=$HOME/usr/lib-satysfi
+export SATYSFI_LIB_ROOT=/usr/local/lib-satysfi
