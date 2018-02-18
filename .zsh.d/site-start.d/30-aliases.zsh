@@ -13,9 +13,11 @@ alias diff='colordiff'
 alias egison='rlwrap egison'
 alias favs='open -aSafari http://favstar.fm/users/mr_konn/recent'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
+
 if [ -f "$(which hub)" ]; then
   alias git=hub
 fi
+
 alias gosh='rlwrap gosh'
 alias io="rlwrap io"
 alias irb="irb --simple-prompt"
