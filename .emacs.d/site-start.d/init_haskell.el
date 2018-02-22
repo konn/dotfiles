@@ -1,6 +1,7 @@
 (require 'hare)
 (require 'flycheck)
 (require 'intero)
+(require 'hlint-refactor)
 (autoload 'hare-init "hare" nil t)
 
 (load "haskell-mode-autoloads")
@@ -41,6 +42,8 @@
   '(progn
      (define-key haskell-mode-map (kbd "M-.") 'haskell-mode-tag-find)
      
+     (define-key haskell-mode-map (kbd "C-c , b") 'hlint-refactor-refactor-buffer)
+     (define-key haskell-mode-map (kbd "C-c , r") 'hlint-refactor-refactor-at-point)
      (define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-file)
      (define-key haskell-mode-map [f5] 'haskell-process-load-file)
      

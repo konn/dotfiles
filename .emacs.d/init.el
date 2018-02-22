@@ -183,7 +183,8 @@
  '(coffee-tab-width 4)
  '(company-ghc-show-info t)
  '(coq-compile-before-require t)
- '(haskell-interactive-prompt "λ> " t)
+ '(desktop-save-mode t)
+ '(haskell-interactive-prompt "λ> ")
  '(haskell-literate-default (quote latex))
  '(haskell-notify-p t)
  '(haskell-process-suggest-hoogle-imports t)
@@ -203,7 +204,7 @@
  '(helm-truncate-lines t t)
  '(package-selected-packages
    (quote
-    (systemd desktop desktop+ flymake-less less flymake-coffee sass-mode company-flow flycheck-flow rust-mode cubicaltt redpen-paragraph magit magit-filenotify magit-find-file wolfram-mode intero dashboard flycheck-liquidhs liquid-types yasnippet yaml-mode visual-regexp-steroids tuareg swift-mode shm rw-language-and-country-codes rw-ispell rw-hunspell prolog pos-tip point-undo pcre2el mmm-mode mc-extras math-symbol-lists lua-mode langtool hi2 helm-idris helm-ghc foreign-regexp flycheck-color-mode-line fill-column-indicator f e2wm dash-functional company-ghc company-cabal color-theme coffee-mode button-lock bm auto-complete)))
+    (hlint-refactor systemd desktop desktop+ flymake-less less flymake-coffee sass-mode company-flow flycheck-flow rust-mode cubicaltt redpen-paragraph magit magit-filenotify magit-find-file wolfram-mode intero dashboard flycheck-liquidhs liquid-types yasnippet yaml-mode visual-regexp-steroids tuareg swift-mode shm rw-language-and-country-codes rw-ispell rw-hunspell prolog pos-tip point-undo pcre2el mmm-mode mc-extras math-symbol-lists lua-mode langtool hi2 helm-idris helm-ghc foreign-regexp flycheck-color-mode-line fill-column-indicator f e2wm dash-functional company-ghc company-cabal color-theme coffee-mode button-lock bm auto-complete)))
  '(rw-hunspell-default-dictionary "en_GB-ise")
  '(rw-hunspell-dicpath-list (quote ("/Users/hiromi/Library/Spelling")))
  '(rw-hunspell-make-dictionary-menu t)
