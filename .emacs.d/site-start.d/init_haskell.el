@@ -1,4 +1,6 @@
 (require 'hare)
+(require 'flycheck)
+(require 'intero)
 (autoload 'hare-init "hare" nil t)
 
 (load "haskell-mode-autoloads")
@@ -58,6 +60,9 @@
      (define-key haskell-mode-map (kbd "M-t") 'intero-apply-suggestions)
      (define-key haskell-mode-map (kbd "C-c C-f") 'intero-restart)
   ))
+
+; Enabling HLint
+(flycheck-add-next-checker 'intero '(warning . haskell-hlint))
 
 ;resolve symlinks
 (setq-default find-file-visit-truename t)
