@@ -1,11 +1,12 @@
 ### -*- mode: shell-script; coding: utf-8 -*- ###
 
-# Aliases defined by functions
-autoload -Uz emacs
-autoload -Uz teyjus
-autoload -Uz less
-
 # Simple command aliases
+list=$(type -ap gsed)
+if [ "$?" -eq 0 ]; then
+    alias sed=gsed
+else
+    alias gsed=sed
+fi
 alias cabal-install='cabal install'
 alias cabal-reinstall='cabal install --reinstall'
 alias caddy='ruby ~/prog/caddy/caddy.rb'
@@ -40,3 +41,10 @@ alias vi=vim
 alias -s rb=ruby
 alias -s hs=runhaskell
 alias -s lhs=runhaskell
+
+
+# Aliases defined by functions
+autoload -Uz emacs
+autoload -Uz teyjus
+autoload -Uz less
+autoload -Uz hoogle

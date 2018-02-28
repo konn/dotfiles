@@ -1,0 +1,5 @@
+# -*- mode: shell-script; coding: utf-8 -*-
+make_relative() {
+    pat=$(echo "$1" | gsed 's!/!\\/!g')
+    echo "$2" | gsed "s/^${pat}//i"
+}

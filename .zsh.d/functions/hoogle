@@ -1,0 +1,22 @@
+# -*- mode: shell-script -*-
+
+hoogle () {
+    autoload -Uz make_relative
+    autoload -Uz locate_bin
+    orig_hoogle=$(locate_bin hoogle)
+    locate_bin stack 2>&1 >/dev/null
+    if [ "$?" -eq 0 ]; then
+      stack_root=$(realpath $(stack path --project-root));
+      cwd=$(realpath $(pwd))
+      rel=$(make_relative "${stack_root}" "${cwd}")
+      echo "Cwd: ${cwd}, Root: ${stack_root}, result: ${rel}"
+      if [ "${rel}" != "${cwd}"  ]; then
+          stack hoogle -- "$@"
+      else
+          echo "Using original hoogle..."
+          $orig_hoogle "$@"
+      fi
+    else
+      $orig_hoogle "$@"
+    fi
+}
