@@ -14,7 +14,7 @@
 ;;; Return 押すと勝手に Tab も押される（24.4〜）クソ機能をオフに
 (setq electric-indent-mode nil)
 (setq use-default-font-for-symbols nil)
-
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 2) ((control))))
 ;;; ほげふが威風堂々ほげピンチョンfoobar𝔹ℕℤ⟶→∫∈
 ;;; 123456789012345678901234567890123456ℤ
 ;;;          , <- 本当は0に合っているべき
