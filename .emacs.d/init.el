@@ -115,7 +115,7 @@
 (setq my-paths 
       (mapcar 'expand-file-name
 	      '("~/.emacs.d/bin" "~/.local/bin" "~/.rbenv/shims" "/Library/TeX/texbin"  "/usr/local/bin" "~/usr/bin" "~/Library/Haskell/bin"
-		"~/prog/idris/.cabal-sandbox/bin"
+		"~/prog/idris/.cabal-sandbox/bin" "~/.opam/4.06.0/bin/satysfi"
 		;"/usr/local/ghc-7.8/bin"
 		)))
 
