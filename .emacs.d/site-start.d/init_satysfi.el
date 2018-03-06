@@ -16,4 +16,5 @@
      bol "![" (message) "] at line" (zero-or-more space) line ", characters" (zero-or-more space) column "-" (zero-or-more anything) eol))
   :modes satysfi-mode
   )
+(add-to-list 'flycheck-checkers 'satysfi)
 (provide 'init_satysfi)
