@@ -5,6 +5,8 @@
 (eval-after-load "satysfi"
   '(progn
      (define-key satysfi-mode-map (kbd "C-z") nil)
+     (define-key satysfi-mode-map (kbd "M-n") 'flycheck-next-error)
+     (define-key satysfi-mode-map (kbd "M-p") 'flycheck-previous-error)
      )
   )
 (flycheck-define-checker satysfi
