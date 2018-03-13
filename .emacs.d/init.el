@@ -211,7 +211,8 @@
  '(rw-hunspell-use-rw-ispell t)
  '(safe-local-variable-values
    (quote
-    ((intero-targets "halg-algorithms:lib")
+    ((intero-targets "halg-polyn-parser:lib")
+     (intero-targets "halg-algorithms:lib")
      (intero-targets "halg-polynomials:lib")
      (TeX-master . "saturated-filters.tex")
      (intero-targets "ghc-typelits-presburger:exe:simple-arith")
