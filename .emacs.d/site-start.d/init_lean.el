@@ -11,7 +11,7 @@
       (package-install p))))
 
 ;; Set up lean-root path
-(setq lean-rootdir "/usr/local")
+(setq lean-rootdir "/usr/local/opt/lean@0.2/")
 (setq-local lean-emacs-path "/usr/local/share/emacs/site-lisp/lean")
 (add-to-list 'load-path (expand-file-name lean-emacs-path))
 (require 'lean-mode)
