@@ -31,6 +31,7 @@ export PATH=~/node_modules/MathJax-node/bin/:$PATH
 export PATH=/usr/local/mercury-14.01.1/bin:$PATH
 export PATH=~/.local/bin:$PATH
 export PATH="$CUDA_HOME/bin:$PATH"
+export PATH="/usr/local/opt/lean@0.2/bin:$PATH"
 
 export EDITOR=emacsclient
 
