@@ -4,4 +4,3 @@
 # expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
 # --
 | ${1:pat} := ${2:body}
-$0

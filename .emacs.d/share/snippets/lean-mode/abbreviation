@@ -3,4 +3,3 @@
 # key: abbr
 # --
 abbreviation ${1:abbr} := ${2:body}
-$0

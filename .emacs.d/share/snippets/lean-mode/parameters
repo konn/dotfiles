@@ -2,4 +2,4 @@
 # name: parameters
 # key: params
 # --
-parameters ${1:A : Type} $0
+parameters ${1:A : Type}${2: $3}

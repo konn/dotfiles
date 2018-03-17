@@ -2,4 +2,4 @@
 # name: let
 # key: let
 # --
-let ${1:x} := ${2:sorry} in ${3:sorry}$0
+let ${1:x} := ${2:sorry} in ${3:sorry}

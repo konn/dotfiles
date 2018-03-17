@@ -3,4 +3,3 @@
 # key: vari
 # --
 variable {${1:A} : ${2:Type}}
-$0

@@ -6,4 +6,3 @@
 match ${1:a} with
 | ${2:pat} := ${3:sorry}
 $4end
-$0

@@ -2,5 +2,4 @@
 # name: check
 # key: chk
 # --
-check ${1:x}
-$0
+check ${1:x}$0

@@ -2,5 +2,4 @@
 # name: constant
 # key: const
 # --
-constant ${1:a} : ${3:Type}
-$0
+constant ${1:a} : ${3:Type}$0

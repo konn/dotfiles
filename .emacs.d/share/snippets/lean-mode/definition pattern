@@ -5,4 +5,3 @@
 # --
 definition ${1:fun}${2: ${3:A}} : ${4:ret}
 | $1 ${5:pat} := ${6:sorry}
-$0

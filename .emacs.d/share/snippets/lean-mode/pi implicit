@@ -1,5 +1,5 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: pi inplicit
+# name: pi implicit
 # key: pii
 # --
 Π {${1:a}${2: : ${3:A}}} $4, ${5:typ}

@@ -2,5 +2,4 @@
 # name: constants
 # key: consts
 # --
-constants ${1:(${2:A B C} : ${3:Type})}${4: }
-$0
+constants ${1:(${2:A B C} : ${3:Type})}${4: } $0

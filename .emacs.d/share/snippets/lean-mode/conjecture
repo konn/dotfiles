@@ -2,5 +2,4 @@
 # name: conjecture
 # key: conj
 # --
-conjecture ${1:H} : ${2:p}
-$0
+conjecture ${1:H} : ${2:p} $0

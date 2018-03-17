@@ -9,4 +9,3 @@ record ${1:name}${2: (${3:A B C}: ${4:Type})} :=
                               (loop for elm in (split-string yas-text " ")
                                 when (not (string= elm "") )
                                 collect elm) " "))}}
-$0

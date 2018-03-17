@@ -3,4 +3,3 @@
 # key: prems
 # --
 premises ${1:(${2:A} : ${3:Type})}${4: }
-$0

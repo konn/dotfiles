@@ -3,4 +3,3 @@
 # key: defn
 # --
 definition ${1:fun}${2: ${3:a}} ${4:: ${5:Type} }:= ${6:sorry}
-$0

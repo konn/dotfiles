@@ -4,4 +4,3 @@
 # binding: direct-keybinding
 # --
 import ${1:standard}
-$0

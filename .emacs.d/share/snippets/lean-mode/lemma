@@ -3,4 +3,3 @@
 # key: lem
 # --
 lemma ${1:thm} : ${2:p} := ${3:sorry}
-$0

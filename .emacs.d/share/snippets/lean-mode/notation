@@ -3,4 +3,3 @@
 # key: nota
 # --
 notation ${1:defn} := ${2:body}
-$0

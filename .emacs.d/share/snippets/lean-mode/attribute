@@ -3,4 +3,3 @@
 # key: attr
 # --
 attribute ${1:name} [${2:coercion}]
-$0

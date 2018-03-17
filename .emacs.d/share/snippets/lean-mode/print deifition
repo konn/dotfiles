@@ -2,4 +2,4 @@
 # name: print deifition
 # key: pdef
 # --
-$0print definition ${1:x}
+print definition ${1:x}

@@ -2,5 +2,4 @@
 # name: axioms
 # key: axs
 # --
-axioms ${1:(${2:Hp} : ${3:p})}${4: }
-$0
+axioms ${1:(${2:Hp} : ${3:p})}${4: }$0
