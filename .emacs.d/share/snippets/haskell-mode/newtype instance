@@ -1,0 +1,4 @@
+# contributor: https://github.com/konn
+# key: newi
+# --
+newtype instance ${1:Name} ${2:T} = ${3:Ctor}
