@@ -1,4 +1,4 @@
 # contributor: https://github.com/polypus74
 # key: opts
 # --
-{-# OPTIONS_GHC ${1:-fno-warn-type-defaults}$0 #-}
+{-# OPTIONS_GHC ${1:-Wno-type-defaults}$0 #-}
