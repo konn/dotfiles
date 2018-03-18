@@ -10,7 +10,7 @@
 (setq auto-mode-alist
       (append '(("\\.cabal$" . haskell-cabal-mode)) auto-mode-alist))
 ;; Indentation
-(autoload 'hi2 "hi2" nil t)
+;; (autoload 'hi2 "hi2" nil t)
 ;(setq ghc-debug 't)
 
 (require 'company)
@@ -74,7 +74,7 @@
 (defun my-haskell-hook ()
   ;; (ghc-init)
   (hare-init)
-  (turn-on-hi2)
+  (turn-on-haskell-indentation)
   (company-mode)
   (intero-mode)
   (define-key haskell-mode-map (kbd "C-,") 'haskell-move-nested-left)
