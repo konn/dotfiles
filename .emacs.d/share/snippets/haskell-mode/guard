@@ -1,5 +1,5 @@
 # -*- mode: snippet; require-final-newline: nil -*-
 # name: guard
-# key: gd
+# key: |->
 # --
 | ${1:p} -> ${2:undefined}
