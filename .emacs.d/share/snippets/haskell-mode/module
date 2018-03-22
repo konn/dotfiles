@@ -14,8 +14,13 @@ module ${1:`(if (not buffer-file-name) "Module"
                            (t nil)
                          )))
                      (if prefix
-                         (replace-regexp-in-string "/" "."
-                           (replace-regexp-in-string "^\/[^A-Z]*" ""
-                             (car (last (split-string name prefix)))))
+                         (let ((new
+                                (replace-regexp-in-string "/" "."
+                                (replace-regexp-in-string "^\/[^A-Z]*" ""
+                                (car (last (split-string name prefix)))))))
+                           (if (> (length new) 0)
+                               new
+                               "Main")
+                         )
                          (File-Name-nondirectory name))))`} where
 $0
