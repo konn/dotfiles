@@ -40,7 +40,7 @@ alias vi=vim
 # Jupyter alias for macOS
 if [ "$(hostname)" = "Jazz.local" ]; then
     alias jupyter='stack exec jupyter --'
-    alias jup='stack exec jupyter -- notebook'
+    alias jp='stack exec jupyter -- notebook'
 fi
 
 
