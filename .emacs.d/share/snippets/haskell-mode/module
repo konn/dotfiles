@@ -1,5 +1,21 @@
 # contributor: https://github.com/polypus74
 # key: mod
 # --
-module ${Main} where
+module ${1:`(if (not buffer-file-name) "Module"
+                (let* ((name (file-name-sans-extension (buffer-file-name)))
+                       (case-fold-search nil)
+                       (prefix
+                         (cond
+                           ((cl-search "src/" name) "src")
+                           ((cl-search "app/" name) "app")
+                           ((cl-search "tests/" name) "tests")
+                           ((cl-search "test/" name) "test")
+                           ((cl-search "bench/" name) "bench")
+                           (t nil)
+                         )))
+                     (if prefix
+                         (replace-regexp-in-string "/" "."
+                           (replace-regexp-in-string "^\/[^A-Z]*" ""
+                             (car (last (split-string name prefix)))))
+                         (File-Name-nondirectory name))))`} where
 $0
