@@ -37,6 +37,13 @@ alias tmux-new='env tmux'
 alias tmux='tmux attach'
 alias vi=vim
 
+# Jupyter alias for macOS
+if [ "$(hostname)" = "Jazz.local" ]; then
+    alias jupyter='stack exec jupyter --'
+    alias jupyn='stack exec jupyter -- notebook'
+fi
+
+
 # Extension aliases
 alias -s rb=ruby
 alias -s hs=runhaskell
