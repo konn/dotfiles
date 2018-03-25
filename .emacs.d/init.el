@@ -211,7 +211,8 @@
  '(rw-hunspell-use-rw-ispell t)
  '(safe-local-variable-values
    (quote
-    ((intero-targets "halg-algorithms:bench:homog-bench")
+    ((intero-targets "halg-algorithms:test:spec")
+     (intero-targets "halg-algorithms:bench:homog-bench")
      (intero-targets "halg-core:lib")
      (intero-targets "halg-bridge-singular:lib")
      (intero-targets "halg-polyn-parser:lib")
