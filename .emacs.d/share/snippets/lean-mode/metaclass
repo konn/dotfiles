@@ -2,6 +2,6 @@
 # name: metaclass
 # key: [
 # --
-[${1:$$(yas-choose-value '("declarations" "notations" "coercions" "classes"
+[${1:$$(yas-choose-value '("declarations" "notations" "constructor" "coercions" "classes"
                            "abbreviations" "tactic-hints" "reduce-hints"
                            "aliases" "c-unfold" "calc" "begin-end-hints"))}]
