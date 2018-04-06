@@ -211,7 +211,9 @@
  '(rw-hunspell-use-rw-ispell t)
  '(safe-local-variable-values
    (quote
-    ((intero-targets "halg-algorithms:test:spec")
+    ((TeX-master . "../haskell-groebner.tex")
+     (TeX-master . "haskell-groebner.tex")
+     (intero-targets "halg-algorithms:test:spec")
      (intero-targets "halg-algorithms:bench:homog-bench")
      (intero-targets "halg-core:lib")
      (intero-targets "halg-bridge-singular:lib")
