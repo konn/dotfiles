@@ -45,3 +45,5 @@
 # Intendedly excluded the following private settings
 [include]
        path = .gitconfig.private
+[init]
+       templatedir = ~/.git_template

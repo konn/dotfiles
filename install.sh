@@ -17,7 +17,7 @@ done
 
 # Single dot files
 dots=(.ghci .gitattributes_global .gitconfig .gitignore_global)
-dots=($dots .inputrc .irbrc .languagetool.cfg .latexmkrc)
+dots=($dots .git_template .inputrc .irbrc .languagetool.cfg .latexmkrc)
 dots=($dots .nethackrc .profile .stylish-haskell.yaml)
 dots=($dots .zsh.d .zshrc)
 for dot in ${dots}; do
