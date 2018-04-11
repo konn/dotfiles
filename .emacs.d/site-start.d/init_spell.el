@@ -32,7 +32,6 @@
                 ("-d" "en_GB-ise" "-p" "/Users/hiromi/Library/Spelling")
                 nil
                 UTF-8))
-
 (require 'langtool)
 (setq langtool-language-tool-jar "/usr/local/Cellar/languagetool/3.0/libexec/languagetool-commandline.jar"
       langtool-mother-tongue "ja"
@@ -42,4 +41,6 @@
                                 "EN_QUOTES"
                                 "CURRENCY"))
  
+(global-set-key (kbd "C-c C-c") 'flyspell-correct-word-before-point)
+(global-unset-key (kbd "C-c $"))
 (provide 'init_spell)
