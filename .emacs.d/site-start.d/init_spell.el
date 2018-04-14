@@ -41,6 +41,6 @@
                                 "EN_QUOTES"
                                 "CURRENCY"))
  
-(global-set-key (kbd "C-c C-c") 'flyspell-correct-word-before-point)
-(global-unset-key (kbd "C-c $"))
+;; (global-set-key (kbd "C-c C-c") 'flyspell-correct-word-before-point)
+;; (global-unset-key (kbd "C-c $"))
 (provide 'init_spell)

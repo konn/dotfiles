@@ -19,12 +19,6 @@
   (YaTeX-define-begend-key "bg" "gather*")
   (YaTeX-define-begend-key "bG" "gather")
   (YaTeX-define-begend-key "bC" "corollary")
-  (global-set-key (kbd "C-c C-c") 'flyspell-correct-word-before-point)
-  (global-unset-key (kbd "C-c $"))
-  (local-unset-key (kbd "C-c $"))
-  (global-set-key (kbd "C-c $") 'YaTeX-insert-dollars-region)
-  (local-set-key (kbd "C-c $") 'YaTeX-insert-dollars-region)
-  (define-key YaTeX-mode-map (kbd "C-c $") 'YaTeX-insert-dollars-region)
 
   ;; forward-search for Skim
   (define-key YaTeX-mode-map [?\s-R] 'skim-forward-search)
