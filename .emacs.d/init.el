@@ -184,6 +184,7 @@
  '(company-ghc-show-info t)
  '(coq-compile-before-require t)
  '(desktop-save-mode t)
+ '(flycheck-vale-modes (quote (text-mode markdown-mode rst-mode yatex-mode)))
  '(haskell-interactive-prompt "λ> " t)
  '(haskell-literate-default (quote latex))
  '(haskell-notify-p t)
