@@ -185,7 +185,7 @@
  '(coq-compile-before-require t)
  '(desktop-save-mode t)
  '(flycheck-vale-modes (quote (text-mode markdown-mode rst-mode yatex-mode)))
- '(haskell-interactive-prompt "λ> " t)
+ '(haskell-interactive-prompt "λ> ")
  '(haskell-literate-default (quote latex))
  '(haskell-notify-p t)
  '(haskell-process-suggest-hoogle-imports t)
@@ -212,7 +212,8 @@
  '(rw-hunspell-use-rw-ispell t)
  '(safe-local-variable-values
    (quote
-    ((TeX-master . "../haskell-groebner.tex")
+    ((intero-targets "halg-algorithms:bench:ordering-bench")
+     (TeX-master . "../haskell-groebner.tex")
      (TeX-master . "haskell-groebner.tex")
      (intero-targets "halg-algorithms:test:spec")
      (intero-targets "halg-algorithms:bench:homog-bench")
