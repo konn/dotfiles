@@ -8,7 +8,7 @@
 ;; (autoload 'ghc-init "ghc" nil t)
 ;; (autoload 'ghc-debug "ghc" nil t)
 (setq auto-mode-alist
-      (append '(("\\.cabal$" . haskell-cabal-mode)) auto-mode-alist))
+      (append '(("\\.cabal$" . haskell-cabal-mode) ("\\.hsig" . haskell-mode)) auto-mode-alist))
 ;; Indentation
 ;; (autoload 'hi2 "hi2" nil t)
 ;(setq ghc-debug 't)
