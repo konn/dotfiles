@@ -32,9 +32,10 @@
                 "[^[:alpha:]]"
                 "[']"
                 t
-                ("-d" "en_GB-ise" "-p" "/Users/hiromi/Library/Spelling")
+                ("-d" "en_GB-ise" "-p" "/Library/Application Support/cocoAspell/aspell6-en-6.0-0")
                 nil
                 UTF-8))
+
 (require 'langtool)
 (setq langtool-language-tool-jar "/usr/local/Cellar/languagetool/3.0/libexec/languagetool-commandline.jar"
       langtool-mother-tongue "ja"
