@@ -8,8 +8,8 @@
 
 (setenv "LANG" "ja_JP")
 (setenv "DICTIONARY" "en_GB-ise")
-(setq ispell-program-name "/usr/local/bin/hunspell")
-(setq ispell-really-hunspell t)                            ;hunspellの拡張を使う
+(setq ispell-program-name "aspell")
+;; (setq ispell-really-hunspell t)                            ;hunspellの拡張を使う
 (setq ispell-dictionary "en_GB-ise")
 (setq ispell-hunspell-dict-paths-alist
       '((nil       "/Users/hiromi/Library/Spelling/en_GB-ise.aff")
