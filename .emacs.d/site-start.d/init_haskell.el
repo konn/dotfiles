@@ -12,6 +12,13 @@
 ;; Indentation
 ;; (autoload 'hi2 "hi2" nil t)
 ;(setq ghc-debug 't)
+(require 'liquid-types)
+
+;; Toggle minor mode on entering Haskell mode.
+(add-hook 'haskell-mode-hook
+          '(lambda () (liquid-types-mode)))
+(add-hook 'literate-haskell-mode-hook
+	  '(lambda () (liquid-types-mode)))
 
 (require 'company)
 (add-to-list 'company-backends 'company-ghc)
