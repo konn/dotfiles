@@ -15,7 +15,7 @@ export EDITOR_KICKER="emacsclient -n +%s '%s'"
 export LESSCHARSET=utf-8
 export LESS='-R'
 export LESSOPEN='| src-hilite-lesspipe.sh %s' # syntax highlight 
-
+export HOMEBREW_NO_AUTO_UPDATE=1 
 # OPAM
 . /Users/hiromi/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
