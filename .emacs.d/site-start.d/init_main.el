@@ -25,7 +25,7 @@
 (require 'init_sml)
 ;(require 'init_powerline)
 ;(require 'init_egison)
-(require 'init_e2wm)
+;; (require 'init_e2wm)
 (require 'init_singular)
 (require 'init_CoCoA)
 (require 'init_markdown)
