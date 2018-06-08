@@ -1,3 +1,4 @@
+CUR_DIR=$(pwd)
 ZSH_HOME=$HOME/.zsh.d
 ZSH_SHARE=${ZSH_HOME}/share
 
@@ -27,5 +28,4 @@ if [ ~/.zshrc -nt ~/.zshrc.zwc ]; then
   zcompile ~/.zshrc
 fi
 
-cd
-
+cd "${CUR_DIR}"
