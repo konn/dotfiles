@@ -34,9 +34,13 @@ export PATH="$CUDA_HOME/bin:$PATH"
 export PATH="/usr/local/opt/lean@0.2/bin:$PATH"
 export PATH="/snap/bin:$PATH"
 
-export EDITOR=emacsclient
-
 # Library Paths
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDA_HOME/lib"
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+
+if [ "$(hostname)" = "Jazz.local" ]; then
+  export EDITOR=emacsclient    
+else
+  export EDITOR=emacs
+fi
