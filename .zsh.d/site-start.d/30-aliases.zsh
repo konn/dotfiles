@@ -15,7 +15,7 @@ alias egison='rlwrap egison'
 alias favs='open -aSafari http://favstar.fm/users/mr_konn/recent'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
 
-[ -f "$(locate_bin hub)" ] && alias git=hub
+locate_bin "hub" > /dev/null 2>&1 && alias git=hub
 
 alias gosh='rlwrap gosh'
 alias io="rlwrap io"
