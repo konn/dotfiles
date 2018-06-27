@@ -17,13 +17,13 @@ export LESS='-R'
 export LESSOPEN='| src-hilite-lesspipe.sh %s' # syntax highlight 
 export HOMEBREW_NO_AUTO_UPDATE=1 
 # OPAM
-. /Users/hiromi/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+locate_bin "opam" > /dev/null 2>&1 && (. /Users/hiromi/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true)
 
 # Ruby
-eval "$(rbenv init -)"
+locate_bin "rbenv" > /dev/null 2>&1 && eval "$(rbenv init -)"
 
 # Rust
-source $HOME/.cargo/env
+[ -d $HOME/.cargo/env ] && source $HOME/.cargo/env
 
 # TeX, LaTeX and BibTeX
 export BIBINPUTS=~/Library/texmf/bibtex/bib:${BIBUNPUTS}
