@@ -31,8 +31,16 @@ alias saty='satysfi --bytecomp'
 alias sl='sl -Fval'
 alias sruby="/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby"
 alias tjsim='rlwrap tjsim'
-alias tmux-new='env tmux'
-alias tmux='tmux attach'
+
+tmux () {
+    bin="$(locate_bin tmux)"
+    if [ -n "$1" ]; then
+        ${bin} "$@"
+    else
+        ${bin} attach || ${bin};
+    fi
+
+}
 alias vi=vim
 
 # Jupyter alias for macOS
