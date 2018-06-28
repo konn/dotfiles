@@ -19,7 +19,7 @@ done
 dots=(.ghci .gitattributes_global .gitconfig .gitignore_global)
 dots=($dots .git_template .inputrc .irbrc .languagetool.cfg .latexmkrc)
 dots=($dots .nethackrc .profile .stylish-haskell.yaml)
-dots=($dots .zsh.d .zshrc)
+dots=($dots .zsh.d .zshrc .tmux.conf)
 for dot in ${dots}; do
   ln -sf "$(pwd)/${dot}" "${HOME}/${dot}"
 done
