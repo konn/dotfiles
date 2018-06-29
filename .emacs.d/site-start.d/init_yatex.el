@@ -40,7 +40,7 @@
 
 ))
 
-(setq TeX-active-styles "biblatex")
+(setq reftex-using-biblatex-p 't)
 (setq reftex-label-alist 
       '((nil ?e nil "\\eqref{%s}" nil nil)
 	("section"   ?s "%S" "~\\ref{%s}" (nil . t)
