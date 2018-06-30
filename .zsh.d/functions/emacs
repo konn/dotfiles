@@ -1,13 +1,17 @@
 # -*- mode: shell-script -*-
 emacs () {
-  HOGE=`pgrep Emacs`
-  if [ ! $HOGE ] ; then
-    open -a Emacs && sleep 3;
+  if [ $(hostname) = "Jazz.local" ]; then
+    HOGE=`pgrep Emacs`
+    if [ ! $HOGE ] ; then
+      open -a Emacs && sleep 3;
+    fi
+    case $1 in
+      "" )
+        open -a Emacs;;
+      *)
+        emacsclient $@;;
+    esac
+  else
+    ${locate_bin emacs} "$@";
   fi
-  case $1 in
-    "" )
-      open -a Emacs;;
-    *)
-      emacsclient $@;;
-  esac
 }
