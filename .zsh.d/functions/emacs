@@ -12,6 +12,6 @@ emacs () {
         emacsclient $@;;
     esac
   else
-    ${locate_bin emacs} "$@";
+    $(locate_bin emacs) "$@";
   fi
 }
