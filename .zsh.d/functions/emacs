@@ -1,7 +1,7 @@
 # -*- mode: shell-script -*-
 emacs () {
   if [ "$(hostname)" = "Jazz.local" ]; then
-    if [ -n "$(pgrep Emacs)" ] ; then
+    if [ -z "$(pgrep Emacs)" ] ; then
       open -a/Applications/Emacs.app && sleep 3;
     fi
     case $1 in
