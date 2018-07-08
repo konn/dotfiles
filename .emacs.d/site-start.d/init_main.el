@@ -35,4 +35,5 @@
 (require 'init_point)
 (require 'init_math)
 (require 'init_cubical)
+(require 'init_redprl)
 (provide 'init_main)
