@@ -18,7 +18,7 @@ window:
   # (changes require restart)
   dimensions:
     columns: 140
-    lines: 40
+    lines: 50
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
@@ -58,7 +58,7 @@ font:
     # style: Italic
 
   # Point size of the font
-  size: 19.0
+  size: 18.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
