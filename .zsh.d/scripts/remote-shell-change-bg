@@ -6,7 +6,11 @@ unset __WINDOWLOC;
 unset __PREVSETID;
 
 function set_bg () {
-  osascript -e "tell app \"Terminal\" to set the current settings of the tab ${__WINDOWLOC[1]} of window id ${__WINDOWLOC[2]} to settings set \"$1\""
+  if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+      osascript -e "tell app \"Terminal\" to set the current settings of the tab ${__WINDOWLOC[1]} of window id ${__WINDOWLOC[2]} to settings set \"$1\""
+  elif [[ "$TERM" == "xterm-kitty" ]]; then
+      kitty @ set-colors background=black foreground=white cursor=gray
+  fi
 }
 
 function ssh-mosh-observe() {
@@ -28,9 +32,13 @@ add-zsh-hook preexec ssh-mosh-observe
 
 function ssh-mosh-post() {
     if [ -n "${__WINDOWLOC-}" ]; then
-        set_bg ${__PREVSETID};
-        unset __WINDOWLOC;
-        unset __PREVSETID;
+        if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+            set_bg ${__PREVSETID};
+            unset __WINDOWLOC;
+            unset __PREVSETID;
+        elif [[ "$TERM" == "xterm-kitty" ]]; then
+            kitty @ set-colors --reset
+        fi
     fi
 }
 
