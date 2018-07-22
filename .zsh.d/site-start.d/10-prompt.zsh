@@ -32,7 +32,9 @@ if [[ $TERM != "dumb" ]]; then
   GIT_PS1_SHOWCOLORHINTS=1
 
   # Change background image for remote shell
-  run_script remote-shell-change-bg
+  if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
+      run_script remote-shell-change-bg
+  fi
 else
     unsetopt zle
     unsetopt prompt_cr
