@@ -18,8 +18,10 @@ function ssh-mosh-observe() {
     case ${mycmd[1]} in
         ssh|mosh)
             HOSTNAME=${mycmd[-1]};
+            if [[ "$TERM_PROGRAM" == "Apple_Terminal" ]]; then
             __WINDOWLOC=(`osascript -e "tell app \"Terminal\" to selected tab of the window 1" | cut -d' ' -f 2,6`);
             __PREVSETID=`osascript -e "tell app \"Terminal\" to name of current settings of tab ${__WINDOWLOC[1]} of the window id ${__WINDOWLOC[2]}"`;
+            fi
             case $HOSTNAME in
                 sakura-vps) set_bg "Sakura";;
                 ubuntu-vm)  set_bg "VM";;
