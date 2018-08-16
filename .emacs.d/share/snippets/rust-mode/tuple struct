@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: tuple struct
+# key: tstr
+# --
+struct ${1:Type}(${2:typ});
