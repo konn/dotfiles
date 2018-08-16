@@ -1,0 +1,4 @@
+# key: der
+# name: derive
+# --
+#[derive(${1:Debug})]
