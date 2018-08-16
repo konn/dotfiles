@@ -1,0 +1,6 @@
+# key: enum
+# name: enum
+# --
+enum ${1:Enum} {
+  ${2:Variant}${3:(${4:Type})},$0
+}

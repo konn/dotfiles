@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: constructor
+# key: {:
+# --
+${1:Cons} { ${2:field}: ${3:typ}, $0 }
