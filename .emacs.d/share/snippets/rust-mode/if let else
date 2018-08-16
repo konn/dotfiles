@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: if let else
+# key: ifle
+# --
+if let ${1:Pat} = ${2:exp} {
+    ${1:do something}
+} else {
+    $0
+} 

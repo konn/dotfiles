@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: if let
+# key: ifl
+# --
+if let ${1:Pat} = ${2:exp} {
+    $0
+}
