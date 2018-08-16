@@ -1,5 +1,4 @@
-# -*- mode: snippet -*-
-# name: struct field
 # key: :
+# name: struct field
 # --
-${1:field}: ${2:typ},$0
+${1:field}: ${2:typ}, $0
