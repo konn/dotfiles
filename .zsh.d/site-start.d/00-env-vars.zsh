@@ -42,5 +42,5 @@ export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 if [ "$(hostname)" = "Jazz.local" ]; then
   export EDITOR=emacsclient    
 else
-  export EDITOR=$(locate_bin emacs)
+  export EDITOR=/usr/bin/emacs
 fi
