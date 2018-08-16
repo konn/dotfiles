@@ -36,4 +36,5 @@
 (require 'init_math)
 (require 'init_cubical)
 (require 'init_redprl)
+(require 'init_rust)
 (provide 'init_main)
