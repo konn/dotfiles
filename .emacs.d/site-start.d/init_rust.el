@@ -8,13 +8,17 @@
 (add-hook 'rust-mode-hook (lambda ()
                             (racer-mode)
                             (flycheck-rust-setup)))
+
+(custom-set-variables
+ '(racer-rust-src-path "~/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src")
+)
+
 ;;; racerのeldocサポートを使う
 (add-hook 'racer-mode-hook #'eldoc-mode)
 ;;; racerの補完サポートを使う
-(add-hook 'racer-mode-hook (lambda ()
-                             (company-mode)
-                             ;;; この辺の設定はお好みで
-                             (set (make-variable-buffer-local 'company-idle-delay) 0.1)
-                             (set (make-variable-buffer-local 'company-minimum-prefix-length) 0)))
+(add-hook 'racer-mode-hook
+          (lambda ()
+            (company-mode)
+            ))
 (provide 'init_rust)
 
