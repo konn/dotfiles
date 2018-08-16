@@ -5,11 +5,15 @@
 
 ;;; rust-modeでrust-format-on-saveをtにすると自動でrustfmtが走る
 (eval-after-load "rust-mode"
-  '(setq-default rust-format-on-save t))
+  '(progn
+     (define-key rust-mode-map (kbd "C-:") 'company-complete-common)
+     (setq-default rust-format-on-save t))
+  )
 ;;; rustのファイルを編集するときにracerとflycheckを起動する
-(add-hook 'rust-mode-hook (lambda ()
-                            (racer-mode)
-                            (flycheck-rust-setup)))
+(add-hook 'rust-mode-hook
+          (lambda ()
+            (racer-mode)
+            (flycheck-rust-setup)))
 
 (custom-set-variables
  '(racer-rust-src-path "~/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src")
