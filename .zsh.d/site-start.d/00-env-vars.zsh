@@ -43,4 +43,5 @@ if [ "$(hostname)" = "Jazz.local" ]; then
   export EDITOR=emacsclient    
 else
   export EDITOR=/usr/bin/emacs
+  export ALTERNATE_EDITOR=/usr/bin/emacs
 fi
