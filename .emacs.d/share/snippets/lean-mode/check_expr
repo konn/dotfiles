@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: check_expr
+# key: chx
+# --
+check_expr ${1:expr},

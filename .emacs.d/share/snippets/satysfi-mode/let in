@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: let in
+# key: leti
+# mode: satysfi
+# --
+let ${1:func}${2: ${3:arg}} = ${4:body} in $0

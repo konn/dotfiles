@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: use as
+# key: usea
+# --
+use ${1:std::io} as ${2:io};

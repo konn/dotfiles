@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: if then else
+# key: ifte
+# mode: satysfi
+# --
+if ${1:p}
+then ${2:something}
+else ${3:fallback}

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: deriving with strategy
+# key: dvs
+# --
+deriving ${1:$$(yas-choose-value '("newtype" "stock" "anyclass"))} (${2:Show})

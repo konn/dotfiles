@@ -1,0 +1,4 @@
+# key: annm
+# name: ANN pragma for module
+# --
+{-# ANN ${1:module} ${2:(${3:ann})} #-}

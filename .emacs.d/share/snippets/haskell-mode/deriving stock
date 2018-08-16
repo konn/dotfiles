@@ -1,0 +1,4 @@
+# key: dvst
+# name: deriving stock
+# --
+deriving stock (${Num})

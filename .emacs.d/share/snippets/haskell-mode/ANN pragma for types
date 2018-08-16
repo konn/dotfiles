@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: ANN pragma for types
+# key: annt
+# --
+{-# ANN type ${1:Type} ${2:(${3:expr})} #-}

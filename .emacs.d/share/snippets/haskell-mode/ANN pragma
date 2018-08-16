@@ -1,0 +1,4 @@
+# key: ann
+# name: ANN pragma
+# --
+{-# ANN ${1:value} ${2:(${3:ann})} #-}

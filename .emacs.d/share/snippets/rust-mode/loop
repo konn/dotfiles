@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: loop
+# key: lp
+# --
+loop {
+    $0
+}

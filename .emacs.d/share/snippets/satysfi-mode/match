@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: match
+# key: mat
+# mode: satysfi
+# --
+match ${1:exp} with
+| ${2:pat} -> $0

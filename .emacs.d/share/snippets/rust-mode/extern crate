@@ -1,0 +1,4 @@
+# key: ext
+# name: extern crate
+# --
+extern crate ${1:crat};

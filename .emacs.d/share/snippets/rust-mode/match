@@ -1,0 +1,6 @@
+# key: mat
+# name: match
+# --
+match ${1:expr} {
+    ${2:case} => ${3:alt},$0
+}

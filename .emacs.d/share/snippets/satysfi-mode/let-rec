@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: let-rec
+# key: letr
+# mode: satysfi
+# --
+let-rec ${1:func}${2: ${3:arg}} = ${4:body} ${5: in
+${6:rest}}

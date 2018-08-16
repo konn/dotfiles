@@ -1,0 +1,4 @@
+# key: exta
+# name: extern crate as
+# --
+extern crate ${1:crat} as ${2:cr};

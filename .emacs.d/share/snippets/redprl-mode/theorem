@@ -1,0 +1,9 @@
+# key: thm
+# name: theorem
+# expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+theorem ${1:Theorem} :
+  (${2:type})
+by {
+  $0
+}.
