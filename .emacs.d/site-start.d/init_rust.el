@@ -1,6 +1,8 @@
 (require 'rust-mode)
 (require 'racer)
 (add-to-list 'exec-path (expand-file-name "~/.cargo/bin/"))
+(add-to-list 'exec-path (expand-file-name "~/.rustup/toolchains/stable-x86_64-apple-darwin/bin/"))
+
 ;;; rust-modeでrust-format-on-saveをtにすると自動でrustfmtが走る
 (eval-after-load "rust-mode"
   '(setq-default rust-format-on-save t))
