@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: let mut with type sig
+# key: letm:
+# --
+let mut ${1:var} : ${2:typ} = ${3:exp};

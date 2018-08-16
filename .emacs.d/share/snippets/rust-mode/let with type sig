@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: let with type sig
+# key: let:
+# --
+let ${1:var} : ${3:typ} = ${4:expr};
