@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: generic impl
+# key: gimpl
+# --
+impl<${1:T}> ${2:Type} {
+    $0
+}

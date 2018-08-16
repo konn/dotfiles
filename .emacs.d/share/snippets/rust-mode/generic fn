@@ -1,0 +1,6 @@
+# key: gfn
+# name: generic fn
+# --
+fn ${1:fun}<${2:T}>(${3:${4:arg}: ${5:type}})${6: -> ${7:resl}} {
+    $0
+}
