@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: fn in trait
+# key: fn;
+# --
+fn ${1:fun}(${2:${3:arg}: ${4:type}})${6: -> ${7:resl}};
