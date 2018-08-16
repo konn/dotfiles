@@ -14,6 +14,7 @@ export PATH=~/sevpn:$PATH
 export PATH=/usr/bin:$PATH
 export PATH=$HOME/usr/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/bin:$PATH
 export PATH=/usr/local/go/bin:$PATH
 export PATH=~/.rbenv/bin:$PATH
 export PATH=~/.rbenv/shims:$PATH
