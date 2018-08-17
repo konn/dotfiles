@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: generics
+# key: <
+# --
+${1:Cons}<${2:T}>$0

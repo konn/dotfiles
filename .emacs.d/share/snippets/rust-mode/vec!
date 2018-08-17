@@ -1,0 +1,4 @@
+# key: vec
+# name: vec!
+# --
+vec![${1:a}]
