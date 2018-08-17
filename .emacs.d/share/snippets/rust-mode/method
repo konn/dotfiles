@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: method
+# key: mtd
+# --
+fn method(${1:&self}) {
+    $0
+}
