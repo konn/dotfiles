@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Option
+# key: Opt
+# --
+Option<${1:T}>
