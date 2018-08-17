@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: else if let
+# key: elifl
+# --
+else if let ${1:Pat} = ${2:expr} {
+    $0
+}
