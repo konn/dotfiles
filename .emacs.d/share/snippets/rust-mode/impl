@@ -2,6 +2,6 @@
 # name: impl
 # key: impl
 # --
-impl ${1:Type} {
+impl${1:<${2:T}>} ${3:Type$1} {
     $0
 }
