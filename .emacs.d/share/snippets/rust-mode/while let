@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: while let
+# key: whlet
+# --
+while let ${1:Pat} = ${2:expr} {
+    $0
+}
