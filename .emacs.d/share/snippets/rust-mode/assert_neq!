@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: assert_neq!
+# key: assn
+# --
+assert_neq!(${1:left}, ${2:right});
