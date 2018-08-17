@@ -1,4 +1,4 @@
-# key: stru
+# key: str
 # name: struct
 # --
 struct ${1:Struct}${2:<${3:T}>${4:
