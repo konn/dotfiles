@@ -1,6 +1,8 @@
 # key: stru
 # name: struct
 # --
-struct ${1:Struct} {
-    ${2:field}: ${3:typ},$0
+struct ${1:Struct}${2:<${3:T}>}${4:
+    where ${5:T}: ${6:Trait},
+} {
+    ${7:field}: ${8:typ},$0
 }
