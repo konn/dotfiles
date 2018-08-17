@@ -2,6 +2,6 @@
 # name: closure
 # key: cls
 # --
-|${1:arg}| {
+|${1:arg}|${2: -> ${3:typ}} {
     $0
 }
