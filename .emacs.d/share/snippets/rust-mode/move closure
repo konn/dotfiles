@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: move closure
+# key: mov
+# --
+move |${1:args}|${2: -> ${3:typ}} { 
+    $0
+}
