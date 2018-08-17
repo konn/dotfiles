@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: closure
+# key: cls
+# --
+|${1:arg}| {
+    $0
+}
