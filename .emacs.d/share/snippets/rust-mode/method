@@ -1,6 +1,6 @@
 # key: mtd
 # name: method
 # --
-fn ${1:method}(${2:&self})${3: -> ${4:typ}} {
+fn ${1:method}(${2:${3:&self}${4:,${5:}}})${6: -> ${7:typ}} {
     $0
 }

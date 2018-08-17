@@ -1,5 +1,4 @@
-# -*- mode: snippet -*-
-# name: method decl
 # key: mtd;
+# name: method decl
 # --
-fn ${1:method}(${2:&self})${3: -> ${4:typ}};
+fn ${1:method}(${2:&self}${3, ${4:}})${5: -> ${6:typ}};
