@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: closure
-# key: cls
+# key: |
 # --
 |${1:arg}|${2: -> ${3:typ}} {
     $0
