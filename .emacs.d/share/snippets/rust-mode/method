@@ -1,7 +1,6 @@
-# -*- mode: snippet -*-
-# name: method
 # key: mtd
+# name: method
 # --
-fn method(${1:&self}) {
+fn ${1:method}(${2:&self})${3: -> ${4:typ}} {
     $0
 }
