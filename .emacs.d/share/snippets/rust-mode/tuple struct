@@ -2,4 +2,4 @@
 # name: tuple struct
 # key: tstr
 # --
-struct ${1:Type}(${2:typ});
+struct ${1:Type}${2:<${3:T}>}(${4:typ});
