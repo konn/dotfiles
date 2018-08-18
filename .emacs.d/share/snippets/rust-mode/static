@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: static
+# key: stat
+# --
+static ${1:STATIC_VAR}: ${2:typ} = ${3:expr};
