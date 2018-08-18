@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Result
+# key: Res
+# --
+Result<${1:result}, ${2:&str}>
