@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: extern keyword
+# key: extd
+# --
+extern ${1:"${2:C}"} 
