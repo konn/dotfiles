@@ -1,0 +1,4 @@
+# name: assoc type
+# key: typ;
+# --
+type ${1:Type};
