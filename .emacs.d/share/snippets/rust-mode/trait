@@ -2,6 +2,6 @@
 # name: trait
 # key: tr
 # --
-trait ${1:Trait}${2:: ${3:super::trait}} {
+trait ${1:Trait}${2:: ${3:std::Trait}} {
     $0
 }
