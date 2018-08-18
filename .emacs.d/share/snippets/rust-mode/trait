@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
 # name: trait
-# key: tra
+# key: tr
 # --
 trait ${1:Trait} {
     $0

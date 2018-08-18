@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: static mut
+# key: stam
+# --
+static mut ${1:STATIC_VAR}: ${2:typ} = ${3:expr};
