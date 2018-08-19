@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: macro_rules
+# key: macr
+# --
+macro_rules! ${1:mac} {
+  ${2:($e:expr)} => {
+      $0
+  };
+}
