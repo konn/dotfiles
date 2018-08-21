@@ -19,7 +19,7 @@ setopt extendedglob
 
 ## Completion settings for specific commands
 # For Stack
-locate_bin "stack" > /dev/null 2>&1 && eval "$(stack --bash-completion-script stack)"
+which stack 1>/dev/null 2>/dev/null && eval "$(stack --bash-completion-script stack)"
 
 # Use ssh completion for mosh.
 compdef mosh=ssh
