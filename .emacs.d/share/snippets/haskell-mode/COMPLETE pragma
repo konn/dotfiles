@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: COMPLETE pragma
+# key: comp
+# --
+{-# COMPLETE ${1:Pat} #-}
