@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: roles
+# key: role
+# --
+${1:$$(yas-choose-value '("representational" "phantom" "nominal" "_"))}
