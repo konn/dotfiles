@@ -52,3 +52,11 @@ dotfiles:
   - .nethackrc
   - .profile
   - .stylish-haskell.yaml
+
+- group: .config
+  from:  ".config"
+  dest:  "~/.config"
+  symlinks:
+  - kitty
+  - karabiner
+  - alacritty
