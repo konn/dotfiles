@@ -24,7 +24,31 @@ dotfiles:
     - site-start.d
     
 - group: cabal
-  from: .cabal
+  from: .cabal/
   dest: ~/.cabal
   symlinks:
   - "."
+
+- group: stack
+  from:  ".stack"
+  dest:  "~/.stack"
+  symlinks:
+  - global/*.yaml
+  - templates
+
+- group: dots
+  from:  "."
+  dest:  ~/
+  symlinks:
+  - .ghci
+  - .gitattributes_global
+  - .gitconfig
+  - .gitignore_global
+  - .git_template
+  - .inputrc
+  - .irbrc
+  - .languagetool.cfg
+  - .latexmkrc
+  - .nethackrc
+  - .profile
+  - .stylish-haskell.yaml

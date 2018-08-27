@@ -107,11 +107,7 @@ impl Config {
             return Err(InvalidPath(invalid_path.to_path_buf()));
         };
         for pat in self.exclude.iter_mut() {
-            *pat = if pat.is_absolute() {
-                cwd.join(&pat.strip_prefix("/").unwrap())
-            } else {
-                cwd.join("**").join(&pat)
-            }
+            *pat = unfold_pattern(pat)
         }
         for Group {
             ref mut from,
@@ -137,7 +133,7 @@ impl Config {
             *dest = decode_path(dest);
 
             for exc_pat in exclude.iter_mut().flat_map(|a| a.iter_mut()) {
-                *exc_pat = from.to_path_buf().join(&exc_pat);
+                *exc_pat = unfold_pattern(&exc_pat);
             }
         }
         self.root = Some(cwd);
@@ -153,6 +149,7 @@ impl Config {
 
     pub fn run(&self) -> Result<()> {
         let ref global_excludes = self.exclude;
+        let cwd: &Path = (&self.root).as_ref().unwrap();
         for dot in &self.dotfiles {
             let excludes: Vec<_> = global_excludes
                 .iter()
@@ -172,22 +169,56 @@ impl Config {
                 .flat_map(|a| a.into_iter())
                 .collect();
             for sym in &dot.symlinks {
+                println!("Processing: {:?}", sym);
                 for fp in glob::glob(dot.from.join(&sym).to_str().unwrap())?
-                    .map(|a| a.unwrap())
-                    .filter(|a| !excludes.iter().any(|p| p.matches_path(a)))
-                {
+                    .map(|a| a.unwrap().canonicalize().unwrap())
+                    .filter(|a| {
+                        !excludes
+                            .iter()
+                            .map(|a| prepend_path(a, &cwd))
+                            .any(|p| p.matches_path(a))
+                    }) {
+                    println!("Processing: {:?}", fp);
                     let fp = fs::canonicalize(fp).unwrap();
                     let target = dot.dest.join(fp.strip_prefix(&dot.from).unwrap());
+                    let dest_excs: Vec<_> = excludes
+                        .iter()
+                        .map(|a| prepend_path(a, &dot.dest))
+                        .collect();
                     if target.exists() {
-                        resolve_conflict(true, &excludes, fp, target)?;
+                        resolve_conflict(true, &dest_excs, fp, target)?;
                     } else {
-                        unix::fs::symlink(fp, target)?;
+                        println!("Symlinking {:?} to {:?}...", target, fp);
+                        symlink(fp, target)?;
                     }
                 }
             }
         }
         Ok(())
     }
+}
+
+fn symlink<P, Q>(src: P, dest: Q) -> io::Result<()>
+where
+    P: AsRef<Path>,
+    Q: AsRef<Path>,
+{
+    let src = src.as_ref().to_path_buf();
+    let dest = dest.as_ref();
+    let dest = dest.parent().unwrap().join(dest.file_name().unwrap());
+    if dest.exists() {
+        println!("Removing: {:?}", dest);
+        if dest.is_dir() {
+            fs::remove_dir_all(&dest)?;
+        } else if dest.exists() {
+            fs::remove_file(&dest)?;
+        }
+    }
+    fs::create_dir_all(dest.parent().unwrap())?;
+    println!("Created: {:?}", dest.parent().unwrap());
+    println!("Symlinking {:?} to {:?}...", dest, src);
+    unix::fs::symlink(src, dest)?;
+    Ok(())
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -272,14 +303,16 @@ fn resolve_conflict(
                 println!("Skipping: {:?} ", target);
             } else {
                 if let Copy = answer {
-                    println!("Copying {:?} to {:?}", fp, target);
+                    println!("Copying {:?} to {:?}", target, fp);
                     fs::remove_file(&fp)?;
-                    fs::rename(&target, &fp)?;
+                    fs::copy(&target, &fp)?;
+                    println!("Copyied {:?}", target);
                 }
                 fs::remove_file(&target)?;
+                println!("Removed {:?}", target);
                 if do_symlink {
                     println!("Symlinking {:?} to {:?}", fp, target);
-                    unix::fs::symlink(fp, target)?;
+                    symlink(fp, target)?;
                 }
             }
         } else if target.is_dir() {
@@ -287,12 +320,14 @@ fn resolve_conflict(
                 let new_targs: Vec<PathBuf> = target
                     .read_dir()?
                     .map(|a| a.unwrap().path())
-                    .filter(|a| excludes.iter().any(|pat| pat.matches_path(a)))
+                    .filter(|a| !excludes.iter().any(|pat| pat.matches_path(a)))
                     .collect();
                 if new_targs.is_empty() {
                     if read_bool(format!("Directory {:?} is empty. Override?", target)) {
+                        println!("Removing: {:?}", target);
                         fs::remove_dir(&target)?;
-                        unix::fs::symlink(&fp, &target)?;
+                        println!("Removed: {:?}", target);
+                        symlink(&fp, &target)?;
                     }
                 } else {
                     println!("The directory is non-empty. Proceed to merging.");
@@ -310,13 +345,32 @@ fn resolve_conflict(
                     }
                 }
                 if do_symlink {
-                    fs::remove_dir_all(&target)?;
-                    unix::fs::symlink(&fp, &target)?;
+                    symlink(&fp, &target)?;
                 }
             } else {
                 println!("Skipping: {:?} ", target);
             }
         }
+    } else {
+        println!("Already installed: {:?}. Skipped.", target);
     }
     Ok(())
+}
+
+fn unfold_pattern(p: &Path) -> PathBuf {
+    if p.is_absolute() {
+        PathBuf::from(p.strip_prefix("/").unwrap())
+    } else {
+        PathBuf::from("**").join(&p)
+    }
+}
+
+fn prepend_path<P: AsRef<Path>>(pat: &glob::Pattern, p: P) -> glob::Pattern {
+    Pattern::new(
+        p.as_ref()
+            .to_path_buf()
+            .join(pat.as_str())
+            .to_str()
+            .unwrap(),
+    ).unwrap()
 }
