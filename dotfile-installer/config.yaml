@@ -1,4 +1,4 @@
-exclude: ["*~", ".DS_Store", "#*#", "*.elc", "/install-dotfiles"]
+exclude: ["*~", ".DS_Store", "#*#", "*.elc", "/dotfile-installer"]
 root: "~/.dotfiles"
 
 dotfiles:

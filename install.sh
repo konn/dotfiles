@@ -3,5 +3,5 @@
 which cargo || (curl https://sh.rustup.rs -sSf | sh)
 PATH=$HOME/.cargo/bin:$PATH
 
-pushd install-dotfiles
+pushd dotfile-installer
 cargo run --release
