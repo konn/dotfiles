@@ -1,0 +1,30 @@
+exclude: ["*~", ".DS_Store", "#*#", "*.elc", "/install-dotfiles"]
+root: "~/.dotfiles"
+
+dotfiles:
+- group: zsh
+  from: .
+  dest: ~/
+  exclude: []
+  symlinks:
+    - .zsh.d
+    - .zshrc
+
+- group: emacs
+  from:  .emacs.d
+  dest:  ~/.emacs.d
+  exclude:
+  - "lisp"
+  symlinks:
+    - "abbrev_defs"
+    - "ac-comphist.dat"
+    - init.el
+    - local-lisp
+    - share
+    - site-start.d
+    
+- group: cabal
+  from: .cabal
+  dest: ~/.cabal
+  symlinks:
+  - "."
