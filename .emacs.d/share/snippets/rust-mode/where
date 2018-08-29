@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: where
+# key: wh
+# --
+where
+  ${1:T}: ${2:Debug},
