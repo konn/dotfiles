@@ -1,0 +1,4 @@
+# key: `
+# name: inline code
+# --
+\`$0\`${1:{.${2:hs}}}
