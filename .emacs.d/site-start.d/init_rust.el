@@ -9,12 +9,10 @@
      (setq-default rust-format-on-save t))
   )
 ;;; rustのファイルを編集するときにracerとflycheckを起動する
-(add-hook 'rust-mode-hook
-          (lambda ()
-            (flycheck-rust-setup)))
-
 (add-hook 'rust-mode-hook #'racer-mode)
 (add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'racer-mode-hook #'flycheck-rust-setup)
+(add-hook 'racer-mode-hook #'flycheck-mode)
 
 (custom-set-variables
  '(racer-rust-src-path "~/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src")
