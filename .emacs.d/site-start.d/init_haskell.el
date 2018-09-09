@@ -1,6 +1,6 @@
 (require 'hare)
 (require 'flycheck)
-;; (require 'intero)
+(require 'intero)
 (require 'hlint-refactor)
 (autoload 'hare-init "hare" nil t)
 
@@ -67,12 +67,12 @@
      ; Flycheck key map
      (define-key haskell-mode-map (kbd "M-n") 'flycheck-next-error)
      (define-key haskell-mode-map (kbd "M-p") 'flycheck-previous-error)
-     ;; (define-key haskell-mode-map (kbd "M-t") 'intero-apply-suggestions)
-     ;; (define-key haskell-mode-map (kbd "C-c C-f") 'intero-restart)
+     (define-key haskell-mode-map (kbd "M-t") 'intero-apply-suggestions)
+     (define-key haskell-mode-map (kbd "C-c C-f") 'intero-restart)
   ))
 
 ; Enabling HLint
-;; (flycheck-add-next-checker 'intero '(warning . haskell-hlint))
+(flycheck-add-next-checker 'intero '(warning . haskell-hlint))
 
 ;resolve symlinks
 (setq-default find-file-visit-truename t)
@@ -83,7 +83,7 @@
   (hare-init)
   (turn-on-haskell-indentation)
   (company-mode)
-  ;; (intero-mode)
+  (intero-mode)
   (define-key haskell-mode-map (kbd "C-,") 'haskell-move-nested-left)
   (define-key haskell-mode-map (kbd "C-.") 'haskell-move-nested-right)
   (setq tab-width 2
@@ -126,12 +126,5 @@
   (setq mmm-global-mode 'true))
 
 (setq mmm-submode-decoration-level 0)
-
-(require 'lsp-ui)
-(require 'lsp-haskell)
-(add-hook 'lsp-mode-hook 'lsp-ui-mode)
-(add-hook 'haskell-mode-hook #'lsp-haskell-enable)
-(add-hook 'haskell-mode-hook 'flycheck-mode)
-(setq lsp-haskell-process-path-hie "hie-wrapper")
 
 (provide 'init_haskell)
