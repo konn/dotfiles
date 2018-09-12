@@ -151,9 +151,9 @@
 ;;
 ;; Upstream issue: https://github.com/commercialhaskell/intero/issues/569
 
-(advice-add 'intero-repl :before (lambda (&rest r) (intero-fix-ghci-panic))
+(advice-add 'intero-repl :after (lambda (&rest r) (intero-fix-ghci-panic))
             '((name . intero-panic-fix)))
-(advice-add 'intero-repl-load :before (lambda (&rest r) (intero-fix-ghci-panic))
+(advice-add 'intero-repl-load :after (lambda (&rest r) (intero-fix-ghci-panic))
             '((name . intero-panic-fix)))
 
 (provide 'init_haskell)
