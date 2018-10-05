@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: sealed abstract class
+# key: sea
+# --
+sealed abstract class ${1:Type}

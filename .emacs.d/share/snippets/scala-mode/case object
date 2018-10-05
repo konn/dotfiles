@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: case object
+# key: co
+# --
+case object ${1:Ctor} extends ${2:Type}
