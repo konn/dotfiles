@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: object
+# key: obj
+# --
+object ${1:Obj}${2: extends ${3:Cls}${4: with ${5:Trait}}} {
+  $0
+}
