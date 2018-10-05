@@ -1,0 +1,4 @@
+# key: case
+# name: case
+# --
+case ${1:Pat} => $0
