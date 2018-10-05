@@ -1,7 +1,6 @@
-# -*- mode: snippet -*-
-# name: def
 # key: def
+# name: def
 # --
-def ${1:main}${2:(${3:args}: ${4:Array[String]})}${5:: ${6:Unit}} = {
+def ${1:main}(${2:${3:args}: ${4:Array[String]}})${5:: ${6:Unit}} = {
   $0
 }
