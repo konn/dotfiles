@@ -1,0 +1,24 @@
+{
+    "window.zoomLevel": 0,
+    "editor.fontSize": 18,
+    "rust.formatOnSave": true,
+    "explorer.confirmDragAndDrop": false,
+    "haskell.hlint.logLevel": "info",
+    "editor.formatOnSave": true,
+    "languageServerHaskell.liquidOn": true,
+    "languageServerHaskell.useCustomHieWrapperPath": "~/.local/bin/hie-wrapper",
+    "haskell.hlint.executablePath": "/Users/hiromi/.local/bin/hlint",
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 18,
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        }
+    },
+    "[haskell]": {
+        "editor.fontFamily": "Hasklig,Menlo, Monaco, 'Courier New', monospace"
+    }
+}

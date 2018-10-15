@@ -2,6 +2,15 @@ exclude: ["*~", ".DS_Store", "#*#", "*.elc", "/dotfile-installer"]
 root: "~/.dotfiles"
 
 dotfiles:
+- group: VSCode User settings
+  from: vscode
+  dest: "~/Library/Application Support/Code/User"
+  exclude:
+  - workspaceStorage
+  symlinks:
+  - keybindings.json
+  - snippets
+  - settings.json
 - group: zsh
   from: .
   dest: ~/

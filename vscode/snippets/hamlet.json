@@ -1,0 +1,9 @@
+{
+  "tag": {
+    "description": "",
+    "prefix": "<",
+    "body": [
+      "<${1:span}$2>$0"
+    ]
+  }
+}

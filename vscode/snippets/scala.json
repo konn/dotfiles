@@ -1,0 +1,80 @@
+{
+  "main": {
+    "description": "",
+    "prefix": "main",
+    "body": [
+      "object Main extends App {",
+      "  $0",
+      "}"
+    ]
+  },
+  "object": {
+    "description": "",
+    "prefix": "obj",
+    "body": [
+      "object ${1:Obj}${2: extends ${3:Cls}${4: with ${5:Trait}}} {",
+      "  $0",
+      "}"
+    ]
+  },
+  "sealed abstract class": {
+    "description": "",
+    "prefix": "sea",
+    "body": [
+      "sealed abstract class ${1:Type}"
+    ]
+  },
+  "case object": {
+    "description": "",
+    "prefix": "co",
+    "body": [
+      "case object ${1:Ctor} extends ${2:Type}"
+    ]
+  },
+  "var": {
+    "description": "",
+    "prefix": "var",
+    "body": [
+      "var ${1:x}${2:: ${3:Int}} = ${4:expr}"
+    ]
+  },
+  "match": {
+    "description": "",
+    "prefix": "mat",
+    "body": [
+      "match {",
+      "  $0",
+      "}"
+    ]
+  },
+  "val": {
+    "description": "",
+    "prefix": "val",
+    "body": [
+      "val ${1:x}${2:: ${3:Int}} = ${4:expr}"
+    ]
+  },
+  "if": {
+    "description": "",
+    "prefix": "if",
+    "body": [
+      "if(${1:true}) ${2:thenE}${3: else ${4:elseE}}"
+    ]
+  },
+  "def": {
+    "description": "",
+    "prefix": "def",
+    "body": [
+      "def ${1:main}${2:[${3:A}]}(${4:${5:args}: ${6:Array[String]}})${7:: ${8:Unit}} = {",
+      "  $0",
+      "}"
+    ]
+  },
+  "case": {
+    "description": "",
+    "prefix": "case",
+    "body": [
+      "case ${1:Pat} => $0"
+    ]
+  }
+}

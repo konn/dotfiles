@@ -1,0 +1,11 @@
+{
+  "-epub": {
+    "description": "",
+    "prefix": "-e",
+    "body": [
+      "$1: $2;",
+      "-webkit-$1: $2;",
+      "-epub-$1: $2;"
+    ]
+  }
+}

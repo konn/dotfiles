@@ -1,0 +1,11 @@
+{
+  "fun": {
+    "description": "",
+    "prefix": "fun",
+    "body": [
+      "function ${1:name}(${2:arg})",
+      "    ${3:return something}$0",
+      "end"
+    ]
+  }
+}

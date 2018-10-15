@@ -1,0 +1,441 @@
+{
+	// Place your snippets for rust here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Case alternative": {
+		"prefix": "=>",
+		"body": "${1:case} => ${2:alt},$0"
+	},
+	"Case alternative with block": {
+		"prefix": "=>{",
+		"body": [
+			"${1:case} => {",
+			"    $0",
+			"}"
+		]
+	},
+	"Box": {
+		"prefix": "B",
+		"body": "Box<${1:T}>"
+	},
+	"Option": {
+		"prefix": "Opt",
+		"body": "Option<${1:T}>"
+	},
+	"Result": {
+		"prefix": "Res",
+		"body": "Result<${1:result}, ${2:&str}>"
+	},
+	"Vec": {
+		"prefix": "V",
+		"body": "Vec<${1:T}>"
+	},
+	"assert!": {
+		"prefix": "ass",
+		"body": "assert!(${true});"
+	},
+	"assert_eq!": {
+		"prefix": "asse",
+		"body": "assert_eq!(${1:left}, ${2:right});"
+	},
+	"assert_neq!": {
+		"prefix": "assn",
+		"body": "assert_neq!(${1:left}, ${2:right});"
+	},
+	"associated type": {
+		"prefix": "typ;",
+		"body": "type ${1:Type};"
+	},
+	"attribute": {
+		"prefix": "#",
+		"body": "#[${1:test}]"
+	},
+	"block": {
+		"prefix": "{",
+		"body": ["{", "    $0", "}"]
+	},
+	"break": {
+		"prefix": "br",
+		"body": "break"
+	},
+	"closure": {
+		"prefix": "|",
+		"body": [
+			"|${1:arg}|${2: -> ${3:typ}} {",
+			"    $0",
+			"}"
+		]
+	},
+	"constant": {
+		"prefix": "const",
+		"body": "const ${1:var} : ${2:typ} = ${3:expr};"
+	},
+	"constructor": {
+		"prefix": "cons",
+		"body": "${1:Cons} { ${2:field}: ${3:typ}, $0 }"
+	},
+	"continue": {
+		"prefix": "cont",
+		"body": "continue"
+	},
+	"derive": {
+		"prefix": "der",
+		"body": "#[derive(${1:Debug})]"
+	},
+	"else": {
+		"prefix": "els",
+		"body": [
+			"else {",
+			"    $0",
+			"}"
+		]
+	},
+	"else if": {
+		"prefix": "elif",
+		"body": [
+			"else if ${1:cond} {",
+			"    $0",
+			"}"
+		]
+	},
+	"else if let": {
+		"prefix": "elifl",
+		"body": [
+			"else if let ${1:Pat} = ${2:expr} {",
+			"    $0",
+			"}"
+		]
+	},
+	"enum": {
+		"prefix": "enum",
+		"body": [
+			"enum ${1:Enum} {",
+			"    ${2:Variant}${3:(${4:Type})},$0",
+			"}"
+		]
+	},
+	"extern block": {
+		"prefix": "extb",
+		"body": [
+			"extern ${1:\"${2:C}\"} {",
+			"    ${3:fn ${4:ffi_func}(${5:${6:arg}: ${7:type}})${8: -> ${9:result}};}$0",
+			""
+		]
+	},
+	"extern crate": {
+		"prefix": "ext",
+		"body": "extern crate ${1:crat};"
+	},
+	"extern crate as": {
+		"prefix": "exta",
+		"body": "extern crate ${1:crat} as ${2:cr};"
+	},
+	"extern keyword": {
+		"prefix": "extd",
+		"body": "extern ${1:\"${2:C}\"}"
+	},
+	"fn": {
+		"prefix": "fn",
+		"body": [
+			"fn ${1:fun}(${2:${3:arg}: ${4:type}})${6: -> ${7:resl}} {",
+			"    $0",
+			"}"
+		]
+	},
+	"trait function": {
+		"prefix": "fn;",
+		"body": "fn ${1:fun}(${2:${3:arg}: ${4:type}})${6: -> ${7:resl}};"
+	},
+	"for loop": {
+		"prefix": "for",
+		"body": [
+			"for ${1:element} in ${2:collection} {",
+			"    $0",
+			"}"
+		]
+	},
+	"format!": {
+		"prefix": "fmt",
+		"body": "format!(\"${1:{}}\"${2:, ${3:arg}})"
+	},
+	"generic function": {
+		"prefix": "gfn",
+		"body": [
+			"fn ${1:fun}<${2:T}>(${3:${4:arg}: ${5:typ}})${6: -> ${7:resl}}${8:\n  where ${9:T}: ${10:Trait},}",
+			"{",
+			"    $0",
+			"}"
+		]
+	},
+	"generic impl": {
+		"prefix": "gimpl",
+		"body": [
+			"impl<${1:T}> ${2:Type} {",
+			"    $0",
+			"}"
+		]
+	},
+	"generics": {
+		"prefix": "<",
+		"body": "${1:Cons}<${2:T}>"
+	},
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if ${1:cond} {",
+			"    $0",
+			"}"
+		]
+	},
+	"if else": {
+		"prefix": "ife",
+		"body": [
+			"if ${1:cond} {",
+			"    ${2:unimplemented!()}",
+			"} else {",
+			"    ${3:unimplemented!()}",
+			"}"
+		]
+
+	},
+	"if let": {
+		"prefix": "ifl",
+		"body": [
+			"if let ${1:Pat} = ${2:exp} {",
+			"    $0",
+			"}"
+		]
+	},
+	"if let else": {
+		"prefix": "ifle",
+		"body": [
+			"if let ${1:Pat} = ${2:exp} {",
+			"    ${3:do something}",
+			"} else {",
+			"    $0",
+			"}" 
+		]
+	},
+	"impl": {
+		"prefix": "impl",
+		"body": [
+			"impl${1:<${2:T}>} ${3:Type$1} {",
+			"    ${4:fn ${5:new}(${6:arg}) -> ${7:$3} {\n        ${8:$3 { ${9} } }\n    }\n    }$0",
+			"}"
+		]
+	},
+	"impl for": {
+		"prefix": "impf",
+		"body": [
+			"impl ${1:Trait} for ${2:Type} {",
+			"    $0",
+			"}"
+		]
+	},
+	"inline": {
+		"prefix": "inl",
+		"body": "#[inline]"
+	},
+	"let": {
+		"prefix": "let",
+		"body": "let ${1:var} = ${2:exp};"
+	},
+	"let mut": {
+		"prefix": "letm",
+		"body": "let mut ${1:var} = ${2:exp};"
+	},
+	"let mut with type signature": {
+		"prefix": "letm:",
+		"body": "let mut ${1:var} : ${2:typ} = ${3:exp};"
+	},
+	"let with type signature": {
+		"prefix": "let:",
+		"body": "let ${1:var} : ${3:typ} = ${4:expr};"
+	},
+	"loop": {
+		"prefix": "lp",
+		"body": ["loop {", "    $0", "}"]
+	},
+	"macro_rules": {
+		"prefix": "macr",
+		"body": [
+			"macro_rules! ${1:mac} {",
+			"  (${2:$e:expr}) => {",
+			"    $0",
+			"  };",
+			"}"
+		]
+	},
+	"main": {
+		"prefix": "main",
+		"body": [
+			"fn main() {",
+			"    ${1:println!(\"Hello, world!\");}$0",
+			"}"
+		]
+	},
+	"match": {
+		"prefix": "mat",
+		"body": [
+			"match ${1:expr} {",
+			"    ${2:case} => ${3:alt},$0",
+			"}"
+		]
+	},
+	"method (fn with self)": {
+		"prefix": "mtd",
+		"body": [
+			"fn ${1:method}(${2:${3:${4:&}self}${5:,${6:}}})${7: -> ${8:typ}} {",
+			"    $0",
+			"}"
+		]
+	},
+	"method decl": {
+		"prefix": "mtd;",
+		"body": "fn ${1:method}(${2:&self}${3, ${4:}})${5: -> ${6:typ}};"
+	},
+	"module": {
+		"prefix": "mod",
+		"body": [
+			"mod ${1:module_name} {",
+			"    $0",
+			"}"
+		]
+	},
+	"submodule": {
+		"prefix": "mod;",
+		"body": "mod ${1:module_name};"
+	},
+	"moving closure": {
+		"prefix": "mov",
+		"body": [
+			"move |${1:args}|${2: -> ${3:typ}} {",
+			"    $0",
+			"}"
+		]
+	},
+	"println!": {
+		"prefix": "pr",
+		"body": "println!(\"${1:{}}\"${2:, ${3:x}});"
+	},
+	"pub": {
+		"prefix": "pub",
+		"body": "pub $0"
+	},
+	"return": {
+		"prefix": "ret",
+		"body": "return ${resl};"
+	},
+	"static": {
+		"prefix": "stat",
+		"body": "static ${1:STATIC_VAR}: ${2:typ} = ${3:expr};"
+	},
+	"static mut": {
+		"prefix": "stam",
+		"body": "static mut ${1:STATIC_VAR}: ${2:typ} = ${3:expr};"
+	},
+	"struct": {
+		"prefix": "st",
+		"body": [
+			"struct ${1:Struct}${2:<${3:T}>${4:\n    where ${5:T}: ${6:Trait},\n}} {",
+			"    ${7:${8:field}: ${9:typ},}$0",
+			"}"
+		]
+	},
+	"field of structure": {
+		"prefix": ":",
+		"body": "${1:field}: ${2:typ}, $0"
+	},
+	"test fn": {
+		"prefix": "test",
+		"body": [
+			"#[test]",
+			"fn ${1:test}() {",
+			"    $0",
+			"}"
+		]
+	},
+	"test module": {
+		"prefix": "tests",
+		"body": [
+			"#[cfg(test)]",
+			"mod ${1:tests} {",
+			"  use super::*;",
+			"  $0",
+			"}"
+		]
+	},
+	"trait": {
+		"prefix": "tr",
+		"body": [
+			"trait ${1:Trait}${2:: ${3:std::Trait}} {",
+			"    $0",
+			"}"
+		]
+	},
+	"tuple structure": {
+		"prefix": "tstr",
+		"body": "struct ${1:Type}${2:<${3:T}>}(${4:typ});"
+	},
+	"type decl": {
+		"prefix": "type",
+		"body": "type ${Type} = ${typ};"
+	},
+	"unimplemented!()": {
+		"prefix": "unimp",
+		"body": "unimplemented!()"
+	},
+	"unsafe blcok": {
+		"prefix": "uns",
+		"body": [
+			"unsafe {",
+			"    $0",
+			"}"
+		]
+	},
+	"use": {
+		"prefix": "use",
+		"body": "use ${1:std::io};"
+	},
+	"use as": {
+		"prefix": "usa",
+		"body": "use ${1:std::io} as ${2:io};"
+	},
+	"vec!": {
+		"prefix": "vec",
+		"body": "vec![${1:el}]"
+	},
+	"where": {
+		"prefix": "wh",
+		"body": [
+			"where",
+			"  ${1:T}: ${2:Debug},"
+		]
+	},
+	"while": {
+		"prefix": "whl",
+		"body": [
+			"while ${1:cond} {",
+			"    $0",
+			"}"
+		]
+	},
+	"while let": {
+		"prefix": "whlet",
+		"body": [
+			"while let ${1:Pat} = ${2:expr} {",
+			"    $0",
+			"}"
+		]
+	}
+}

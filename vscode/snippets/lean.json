@@ -1,0 +1,510 @@
+{
+  "open": {
+    "description": "",
+    "prefix": "op",
+    "body": [
+      "open ${1:foo}"
+    ]
+  },
+  "obtain": {
+    "description": "",
+    "prefix": "obt",
+    "body": [
+      "obtain (${1:x}${2: : ${3:A}}) (${4:H$1}${5: : ${6:p}}), from ${7:H}, "
+    ]
+  },
+  "inductive clause": {
+    "description": "",
+    "prefix": "|:",
+    "body": [
+      "| ${1:cons} : ${2:type}"
+    ]
+  },
+  "set_options": {
+    "description": "",
+    "prefix": "set",
+    "body": [
+      "set_option ${1:pp.implicit} ${2:true}"
+    ]
+  },
+  "premise": {
+    "description": "",
+    "prefix": "prem",
+    "body": [
+      "premise ${1:x} : ${2:Type}"
+    ]
+  },
+  "notation parsing-only": {
+    "description": "",
+    "prefix": "notap",
+    "body": [
+      "notation [parsing-only] ${1:defn} := ${2:body}"
+    ]
+  },
+  "have begin": {
+    "description": "",
+    "prefix": "habe",
+    "body": [
+      "have ${1:Hp} : ${2:p},",
+      "  begin",
+      "    $0",
+      "  end,"
+    ]
+  },
+  "private": {
+    "description": "",
+    "prefix": "priv",
+    "body": [
+      "private $0"
+    ]
+  },
+  "context": {
+    "description": "",
+    "prefix": "cxt",
+    "body": [
+      "context${2: ${3:foo}}",
+      "  $0",
+      "end$2"
+    ]
+  },
+  "variable implicit": {
+    "description": "",
+    "prefix": "vari",
+    "body": [
+      "variable {${1:A} : ${2:Type}}"
+    ]
+  },
+  "parameters": {
+    "description": "",
+    "prefix": "params",
+    "body": [
+      "parameters ${1:A : Type}${2: $3}"
+    ]
+  },
+  "match": {
+    "description": "",
+    "prefix": "mat",
+    "body": [
+      "match ${1:a} with",
+      "| ${2:pat} := ${3:sorry}",
+      "$4end"
+    ]
+  },
+  "pi-types": {
+    "description": "",
+    "prefix": "pi",
+    "body": [
+      "Π (${1:A} : ${2:Type})${3: }, ${4:sorry}"
+    ]
+  },
+  "class": {
+    "description": "",
+    "prefix": "cla",
+    "body": [
+      "structure ${1:name} [class]${2: (${3:A} : ${4:Type})${5: P}}${6: extends ${7:has_foo A}} ${8::=\n  ${9:(${10:pfoo} : ${11:p})}}"
+    ]
+  },
+  "eval": {
+    "description": "",
+    "prefix": "eval",
+    "body": [
+      "eval ${1:x}"
+    ]
+  },
+  "attribute": {
+    "description": "",
+    "prefix": "attr",
+    "body": [
+      "attribute ${1:name} [${2:coercion}]"
+    ]
+  },
+  "check_expr": {
+    "description": "",
+    "prefix": "chx",
+    "body": [
+      "check_expr ${1:expr},"
+    ]
+  },
+  "match clause": {
+    "description": "",
+    "prefix": "|:=",
+    "body": [
+      "| ${1:pat} := ${2:body}"
+    ]
+  },
+  "import open": {
+    "description": "",
+    "prefix": "impo",
+    "body": [
+      "import ${1:data.nat}",
+      "open ${2:${1/([^\\s]+)/${1:/([^\\.]+\\.)*([^\\.]+)/$2/}/g}}"
+    ]
+  },
+  "constant": {
+    "description": "",
+    "prefix": "const",
+    "body": [
+      "constant ${1:a} : ${3:Type}$0"
+    ]
+  },
+  "local": {
+    "description": "",
+    "prefix": "loc",
+    "body": [
+      "local $0"
+    ]
+  },
+  "premises": {
+    "description": "",
+    "prefix": "prems",
+    "body": [
+      "premises ${1:(${2:A} : ${3:Type})}${4: }"
+    ]
+  },
+  "iffp": {
+    "description": "",
+    "prefix": "iffp",
+    "body": [
+      "have forward  : _, from sorry,",
+      "have converse : _, from sorry,",
+      "show _, from iff.intro forward converse"
+    ]
+  },
+  "record": {
+    "description": "",
+    "prefix": "rec",
+    "body": [
+      "record ${1:name}${2: (${3:A B C}: ${4:Type})} :=",
+      "  ${5:${6:mk} :: }${7:${3/([^\\s]+)/(pr$1: $1)/g}}"
+    ]
+  },
+  "corollary+pattern": {
+    "description": "",
+    "prefix": "corp",
+    "body": [
+      "corollary ${1:thm} : ∀ (${2:a} : ${3:A}), ${4:p}",
+      "| $1 ${5:pat} := ${6:sorry}"
+    ]
+  },
+  "hypothesis": {
+    "description": "",
+    "prefix": "hypo",
+    "body": [
+      "hypothesis ${1:H} : ${2:p}"
+    ]
+  },
+  "notation": {
+    "description": "",
+    "prefix": "nota",
+    "body": [
+      "notation ${1:defn} := ${2:body}"
+    ]
+  },
+  "print deifition": {
+    "description": "",
+    "prefix": "pdef",
+    "body": [
+      "print definition ${1:x}"
+    ]
+  },
+  "assert": {
+    "description": "",
+    "prefix": "asrt",
+    "body": [
+      "assert ${1:Hp} : ${2:p}, ${3:using ${4:H}, }from ${5:sorry}, "
+    ]
+  },
+  "infixr": {
+    "description": "",
+    "prefix": "infixr",
+    "body": [
+      "infixr \\`${1:<@>}\\`${2::${3:50}} := ${4:name}"
+    ]
+  },
+  "constants": {
+    "description": "",
+    "prefix": "consts",
+    "body": [
+      "constants ${1:(${2:A B C} : ${3:Type})}${4: } $0"
+    ]
+  },
+  "infix": {
+    "description": "",
+    "prefix": "infix",
+    "body": [
+      "infix \\`${1:<@>}\\`${2::${3:50}} := ${4:name}"
+    ]
+  },
+  "infixl": {
+    "description": "",
+    "prefix": "infixl",
+    "body": [
+      "infixl \\`${1:<@>}\\`${2::${3:50}} := ${4:name}"
+    ]
+  },
+  "with": {
+    "description": "",
+    "prefix": "with",
+    "body": [
+      "with ${1:name} : ${2:Type} :=",
+      "| ${3:name} : ${4:$1}"
+    ]
+  },
+  "variable": {
+    "description": "",
+    "prefix": "var",
+    "body": [
+      "variable ${1:x} : ${2:Type}"
+    ]
+  },
+  "definition": {
+    "description": "",
+    "prefix": "defn",
+    "body": [
+      "definition ${1:fun}${2: ${3:a}} ${4:: ${5:Type} }:= ${6:sorry}"
+    ]
+  },
+  "definition pattern": {
+    "description": "",
+    "prefix": "defp",
+    "body": [
+      "definition ${1:fun}${2: ${3:A}} : ${4:ret}",
+      "| $1 ${5:pat} := ${6:sorry}"
+    ]
+  },
+  "assume": {
+    "description": "",
+    "prefix": "ass",
+    "body": [
+      "assume ${1:H0} : ${2:p}, "
+    ]
+  },
+  "sorry": {
+    "description": "",
+    "prefix": "sor",
+    "body": [
+      "sorry"
+    ]
+  },
+  "axiom": {
+    "description": "",
+    "prefix": "ax",
+    "body": [
+      "axiom ${1:A1} : ${2:p}"
+    ]
+  },
+  "variables": {
+    "description": "",
+    "prefix": "vars",
+    "body": [
+      "variables ${1:(${2:A} : ${3:Type}) }$4"
+    ]
+  },
+  "instance": {
+    "description": "",
+    "prefix": "inst",
+    "body": [
+      "[instance]"
+    ]
+  },
+  "lemma+pattern": {
+    "description": "",
+    "prefix": "lemp",
+    "body": [
+      "lemma ${1:thm} : ∀ (${2:a} : ${3:A}), ${4:p}",
+      "| $1 ${5:pat} := ${6:sorry}"
+    ]
+  },
+  "example": {
+    "description": "",
+    "prefix": "ex",
+    "body": [
+      "example${1: ${2:(${3:Hp} : ${4:p})$5}} : ${6:p} := ${7:sorry}"
+    ]
+  },
+  "have by": {
+    "description": "",
+    "prefix": "haby",
+    "body": [
+      "have ${1:Hq} : ${2:q}, by ${3:assumption}, $0"
+    ]
+  },
+  "structure": {
+    "description": "",
+    "prefix": "str",
+    "body": [
+      "structure ${1:name}${2: (${3:A B C}: ${4:Type})$5}${6: : ${7:Type}} :=",
+      "  ${8:${9:mk} :: }${10:${3/([^\\s]+)/(pr$1: $1)/g}}"
+    ]
+  },
+  "abbreviation": {
+    "description": "",
+    "prefix": "abbr",
+    "body": [
+      "abbreviation ${1:abbr} := ${2:body}"
+    ]
+  },
+  "have pattern": {
+    "description": "",
+    "prefix": "havep",
+    "body": [
+      "have ${1:name} : ${2:typ}",
+      "| ${3:case1} := ${4:sorry}${5:\n$6},"
+    ]
+  },
+  "if then else": {
+    "description": "",
+    "prefix": "ifte",
+    "body": [
+      "if ${1:p} then ${2:sorry} else ${3:sorry}"
+    ]
+  },
+  "lemma": {
+    "description": "",
+    "prefix": "lem",
+    "body": [
+      "lemma ${1:thm} : ${2:p} := ${3:sorry}"
+    ]
+  },
+  "protected": {
+    "description": "",
+    "prefix": "prot",
+    "body": [
+      "protected $0"
+    ]
+  },
+  "corollary": {
+    "description": "",
+    "prefix": "cor",
+    "body": [
+      "corollary ${1:thm} : ${2:p} := ${3:sorry}"
+    ]
+  },
+  "namespaces": {
+    "description": "",
+    "prefix": "ns",
+    "body": [
+      "namespace ${1:name}",
+      "  $0",
+      "end $1"
+    ]
+  },
+  "take": {
+    "description": "",
+    "prefix": "take",
+    "body": [
+      "take ${1:x} : ${2:A}, "
+    ]
+  },
+  "metaclass": {
+    "description": "",
+    "prefix": "[",
+    "body": [
+      "[${1|declarations,notations,constructor,coercions,classes,abbreviations,tactic-hints,reduce-hints,aliases,c-unfold,calc,begin-end-hints|}]"
+    ]
+  },
+  "section": {
+    "description": "",
+    "prefix": "sect",
+    "body": [
+      "section${2: ${3:foo}}",
+      "  $0",
+      "end$2"
+    ]
+  },
+  "parameter": {
+    "description": "",
+    "prefix": "param",
+    "body": [
+      "parameter ${1:A} : ${2:Type}"
+    ]
+  },
+  "conjecture": {
+    "description": "",
+    "prefix": "conj",
+    "body": [
+      "conjecture ${1:H} : ${2:p} $0"
+    ]
+  },
+  "theorem": {
+    "description": "",
+    "prefix": "thm",
+    "body": [
+      "theorem ${1:thm}${2: ${3:A}} : ${4:p} := ${5:sorry}"
+    ]
+  },
+  "begin end": {
+    "description": "",
+    "prefix": "beg",
+    "body": [
+      "begin",
+      "  $0",
+      "end"
+    ]
+  },
+  "axioms": {
+    "description": "",
+    "prefix": "axs",
+    "body": [
+      "axioms ${1:(${2:Hp} : ${3:p})}${4: }$0"
+    ]
+  },
+  "show": {
+    "description": "",
+    "prefix": "show",
+    "body": [
+      "show ${1:p}, ${3:using ${4:H}, }from sorry"
+    ]
+  },
+  "inductive": {
+    "description": "",
+    "prefix": "ind",
+    "body": [
+      "inductive ${1:name}$2${3: : ${4:Type}} :=",
+      "| ${5:cons}${6: : ${7:arg -> }$1}"
+    ]
+  },
+  "import": {
+    "description": "",
+    "prefix": "imp",
+    "body": [
+      "import ${1:standard}"
+    ]
+  },
+  "check": {
+    "description": "",
+    "prefix": "chk",
+    "body": [
+      "check ${1:x}$0"
+    ]
+  },
+  "theorem+pattern": {
+    "description": "",
+    "prefix": "thmp",
+    "body": [
+      "theorem ${1:thm} : ∀ (${2:a} : ${3:A}), ${4:p}",
+      "| $1 ${5:pat} := ${6:sorry}"
+    ]
+  },
+  "pi implicit": {
+    "description": "",
+    "prefix": "pii",
+    "body": [
+      "Π {${1:a}${2: : ${3:A}}} $4, ${5:typ}"
+    ]
+  },
+  "let": {
+    "description": "",
+    "prefix": "let",
+    "body": [
+      "let ${1:x} := ${2:sorry} in ${3:sorry}"
+    ]
+  },
+  "have": {
+    "description": "",
+    "prefix": "have",
+    "body": [
+      "have ${1:Hp} : ${2:p}, ${3:using ${4:H}, }from ${5:sorry}, "
+    ]
+  }
+}

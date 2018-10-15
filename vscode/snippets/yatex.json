@@ -1,0 +1,70 @@
+{
+  "parent": {
+    "description": "",
+    "prefix": "parent",
+    "body": [
+      "%#!${1:luajitlatex} -src-specials ${2:file}",
+      "",
+      "$0",
+      "",
+      "% Local Variables:",
+      "% mode: yatex",
+      "% TeX-master: \"${3:$2}\"",
+      "% End:"
+    ]
+  },
+  "frame": {
+    "description": "",
+    "prefix": "frame",
+    "body": [
+      "\\begin{frame}${1:{$2}}",
+      "$0",
+      "\\end{frame}"
+    ]
+  },
+  "frame-allow-frame-breaks": {
+    "description": "",
+    "prefix": "framb",
+    "body": [
+      "\\begin{frame}[allowframebreaks]${1:{$2}}",
+      "$0",
+      "\\end{frame}"
+    ]
+  },
+  "makeat": {
+    "description": "",
+    "prefix": "makeat",
+    "body": [
+      "\\makeatletter",
+      "$1",
+      "\\makeatother",
+      "$0"
+    ]
+  },
+  "subfile": {
+    "description": "",
+    "prefix": "subf",
+    "body": [
+      "%#!${1:luajitlatex} -src-specials ${2:file}",
+      "",
+      "\\documentclass[${3:$2}]{subfiles}",
+      "",
+      "\\begin{document}",
+      "$0",
+      "\\end{document}",
+      "",
+      "% Local Variables:",
+      "% mode: yatex",
+      "% TeX-master: \"${4:$2}\"",
+      "% End:"
+    ]
+  },
+  "bib": {
+    "description": "",
+    "prefix": "bib",
+    "body": [
+      "\\addbibresource[]{${1:biblio.bib}}",
+      "$0"
+    ]
+  }
+}

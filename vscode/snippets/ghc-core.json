@@ -1,0 +1,10 @@
+{
+  "-@type": {
+    "description": "",
+    "prefix": "-@t",
+    "body": [
+      "{-@ type ${1:Synonym} = ${2:T} @-}",
+      "$0"
+    ]
+  }
+}

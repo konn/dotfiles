@@ -1,0 +1,94 @@
+{
+  "h1": {
+    "prefix": "h1",
+    "description": "Heading at level 1",
+    "body": [
+      "${1:Heading}",
+      "${1/./=/g}"
+    ]
+  },
+  "ruby": {
+    "description": "",
+    "prefix": "ruby",
+    "body": [
+      "<ruby><rb>${1:漢字}</rb><rp>（</rp><rt>${2:ルビ}</rt><rp>）</rp></ruby>$0"
+    ]
+  },
+  "inline code": {
+    "description": "",
+    "prefix": "inl",
+    "body": [
+      "`$0`${1:{.${2:hs}}}"
+    ]
+  },
+  "code block": {
+    "description": "",
+    "prefix": "code",
+    "body": [
+      "```${1:haskell}",
+      "$2",
+      "```",
+      "$3"
+    ]
+  },
+  "author": {
+    "description": "",
+    "prefix": "auth",
+    "body": [
+      "<p class=\"authors\">$1</p>$0"
+    ]
+  },
+  "section": {
+    "description": "",
+    "prefix": "sect",
+    "body": [
+      "<section${1: class=\"$2\"$3}>",
+      "$4",
+      "</section>$0"
+    ]
+  },
+  "haskell-code-block": {
+    "description": "",
+    "prefix": "haskc",
+    "body": [
+      "```haskell",
+      "$1",
+      "```"
+    ]
+  },
+  "theorem": {
+    "description": "",
+    "prefix": "thm",
+    "body": [
+      "<div class=\"theorem\"${1: id=\"${2}\"}>\n$0\n</div>"
+    ]
+  },
+  "para-class": {
+    "description": "",
+    "prefix": "pcls",
+    "body": [
+      "<p class=\"$1\"$2>$3</p>$0"
+    ]
+  },
+  "haskell-code": {
+    "description": "",
+    "prefix": "hask",
+    "body": [
+      "`$1`{.haskell} $0"
+    ]
+  },
+  "header": {
+    "description": "",
+    "prefix": "header",
+    "body": [
+      "---",
+      "title: ${1:title}",
+      "date: ${2:${CURRENT_YEAR}/${CURRENT_MONTH}/${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND} JST}",
+      "author: ${3:石井大海}",
+      "description: ${4:description}",
+      "tag: ${5:tags}",
+      "---",
+      "$0"
+    ]
+  }
+}

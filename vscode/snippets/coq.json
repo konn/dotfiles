@@ -1,0 +1,53 @@
+{
+  "Require Import": {
+    "description": "",
+    "prefix": "req",
+    "body": [
+      "Require Import ${1:module}.",
+      "$0"
+    ]
+  },
+  "coinductive": {
+    "description": "",
+    "prefix": "coind",
+    "body": [
+      "CoInductive ${1:type}${2: ${3:A}}${4: : ${5:Set}} :=",
+      "| ${6:Constr} : ${7:${8:A} ->} ${9:$1}.",
+      "$0"  
+    ]
+  },
+  "let": {
+    "description": "",
+    "prefix": "let",
+    "body": [
+      "let ${1:var} := ${2:body}",
+      "in $3"
+    ]
+  },
+  "match": {
+    "description": "",
+    "prefix": "mat",
+    "body": [
+      "match ${1:v} with",
+      "  | ${2:foo} => $3",
+      "end"
+    ]
+  },
+  "inductive": {
+    "description": "",
+    "prefix": "ind",
+    "body": [
+      "Inductive ${1:type}${2: ${3:A}}${4: : ${5:Set}} :=",
+      "| ${6:Constr} : ${7:${8:A} ->} $1.",
+      "$0"
+    ]
+  },
+  "Definition": {
+    "description": "",
+    "prefix": "defn",
+    "body": [
+      "Definition ${1:func}${2: ${3:A}}${4: : ${5:Type}} :=",
+      "  $0."
+    ]
+  }
+}

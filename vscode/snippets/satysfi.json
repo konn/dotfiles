@@ -1,0 +1,44 @@
+{
+  "let in": {
+    "description": "",
+    "prefix": "leti",
+    "body": [
+      "let ${1:func}${2: ${3:arg}} = ${4:body} in $0"
+    ]
+  },
+  "let-rec": {
+    "description": "",
+    "prefix": "letr",
+    "body": [
+      "let-rec ${1:func}${2: ${3:arg}} = ${4:body} ${5: in\n${6:rest}}"
+    ]
+  },
+  "match": {
+    "description": "",
+    "prefix": "mat",
+    "body": [
+      "match ${1:exp} with",
+      "| ${2:pat} -> $0"
+    ]
+  },
+  "module": {
+    "description": "",
+    "prefix": "mod",
+    "body": [
+      "module ${1:Module} : sig",
+      "  $0",
+      "end = struct",
+      "  ",
+      "end"
+    ]
+  },
+  "if then else": {
+    "description": "",
+    "prefix": "ifte",
+    "body": [
+      "if ${1:p}",
+      "then ${2:something}",
+      "else ${3:fallback}"
+    ]
+  }
+}

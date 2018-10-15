@@ -1,0 +1,9 @@
+{
+  "library": {
+    "description": "",
+    "prefix": "lib",
+    "body": [
+      "library(${1:lib})$0"
+    ]
+  }
+}

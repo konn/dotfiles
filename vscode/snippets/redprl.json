@@ -1,0 +1,13 @@
+{
+  "theorem": {
+    "description": "",
+    "prefix": "thm",
+    "body": [
+      "theorem ${1:Theorem} :",
+      "  (${2:type})",
+      "by {",
+      "  $0",
+      "}."
+    ]
+  }
+}

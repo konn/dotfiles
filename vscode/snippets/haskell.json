@@ -1,0 +1,617 @@
+{
+  "pragma_options": {
+    "description": "",
+    "prefix": "opts",
+    "body": [
+      "{-# OPTIONS_GHC ${1:-Wno-type-defaults}$0 #-}"
+    ]
+  },
+  "comprehension": {
+    "description": "",
+    "prefix": "|",
+    "body": [
+      "[${1:x} | ${2:x} <- ${3:undefined}]"
+    ]
+  },
+  "newtype instance": {
+    "description": "",
+    "prefix": "newi",
+    "body": [
+      "newtype instance ${1:Name} ${2:T} = ${3:Ctor}"
+    ]
+  },
+  "pragma": {
+    "description": "",
+    "prefix": "prag",
+    "body": [
+      "{-# $1 #-}"
+    ]
+  },
+  "data_braced": {
+    "description": "",
+    "prefix": "datb",
+    "body": [
+      "data ${1:Name} = ${2:Ctor} { ${3:x} :: ${4:T} }"
+    ]
+  },
+  "data": {
+    "description": "",
+    "prefix": "dat",
+    "body": [
+      "data ${1:Name} = ${2:Ctor}"
+    ]
+  },
+  "import_qualified": {
+    "description": "",
+    "prefix": "impq",
+    "body": [
+      "import qualified ${1:Name} as ${2:Alias}$0"
+    ]
+  },
+  "deprecated": {
+    "description": "",
+    "prefix": "depr",
+    "body": [
+      "{-# DEPRECATED $1 #-}$0"
+    ]
+  },
+  "default": {
+    "description": "",
+    "prefix": "def",
+    "body": [
+      "default (${1:LT.Text})",
+      "$0"
+    ]
+  },
+  "foreign import": {
+    "description": "",
+    "prefix": "ffi",
+    "body": [
+      "foreign import ${1:ccall} ${2:safe} \"${3:${4:wrapper.h} ${5:makeNSString}}\" ${6:$5} :: ${7:Type}",
+      "$0"
+    ]
+  },
+  "data_instance": {
+    "description": "",
+    "prefix": "dati",
+    "body": [
+      "data instance ${1:Name} ${2:T} = ${3:Ctor}"
+    ]
+  },
+  "CPP if": {
+    "description": "",
+    "prefix": "#if",
+    "body": [
+      "#if ${1:MIN_VERSION_ghc(${8,4,1})}\n$3${4:\n#else\n$5}\n#endif\n$0"
+    ]
+  },
+  "type": {
+    "description": "",
+    "prefix": "type",
+    "body": [
+      "type ${1:Synonym} = ${2:T}"
+    ]
+  },
+  "MINIMAL pramga": {
+    "description": "",
+    "prefix": "mini",
+    "body": [
+      "{-# MINIMAL $1 #-}"
+    ]
+  },
+  "definition_guarded": {
+    "description": "",
+    "prefix": "|=",
+    "body": [
+      "${1:f} :: ${2:T}",
+      "$1 ${3:x} | ${4:x} = ${5:undefined}",
+      "${1/./ /g} ${3/./ /g} | otherwise = ${6:undefined}"
+    ]
+  },
+  "NOINLINE": {
+    "description": "",
+    "prefix": "noinl",
+    "body": [
+      "{-# NOINLINE ${1:fun} #-}"
+    ]
+  },
+  "class_standalone": {
+    "description": "",
+    "prefix": "clsd",
+    "body": [
+      "class ${1:Class} ${2:a}"
+    ]
+  },
+  "definition": {
+    "description": "",
+    "prefix": "=",
+    "body": [
+      "${1:x} :: ${2:T}",
+      "$1$3 = ${4:undefined}"
+    ]
+  },
+  "deriving_instance": {
+    "description": "",
+    "prefix": "dvi",
+    "body": [
+      "deriving instance ${1:Class} ${2:Data}"
+    ]
+  },
+  "inline": {
+    "description": "",
+    "prefix": "inl",
+    "body": [
+      "{-# INLINE ${1:fun} #-}"
+    ]
+  },
+  "unpack-strict": {
+    "description": "",
+    "prefix": "unps",
+    "body": [
+      "{-# UNPACK #-} !${1:Type}"
+    ]
+  },
+  "otherwise->": {
+    "description": "",
+    "prefix": "otr>",
+    "body": [
+      "| otherwise -> $0"
+    ]
+  },
+  "SPECIALISE pragma": {
+    "description": "",
+    "prefix": "special",
+    "body": [
+      "{-# SPECIALISE ${1:fun} :: ${2:a} #-}$0"
+    ]
+  },
+  "deriving via": {
+    "description": "",
+    "prefix": "dvv",
+    "body": [
+      "deriving (${Show}) via ${T}"
+    ]
+  },
+  "deriving_all": {
+    "description": "",
+    "prefix": "dva",
+    "body": [
+      "deriving (Read, Show, Eq, Ord)"
+    ]
+  },
+  "scc": {
+    "description": "",
+    "prefix": "scc",
+    "body": [
+      "{-# SCC \"$1\" #-}$0"
+    ]
+  },
+  "instance-default": {
+    "description": "",
+    "prefix": "instd",
+    "body": [
+      "instance ${1:Name} ${2:a}"
+    ]
+  },
+  "let_in": {
+    "description": "",
+    "prefix": "leti",
+    "body": [
+      "let ${1:a} = ${2:undefined}",
+      "in ${3:undefined}"
+    ]
+  },
+  "OVERLAPPING": {
+    "description": "",
+    "prefix": "ovl",
+    "body": [
+      "{-# ${1|OVERLAPPING,OVERLAPPABLE,OVERLAPS,INCOHERENT|} #-} $0"
+    ]
+  },
+  "foreign function export": {
+    "description": "",
+    "prefix": "ffe",
+    "body": [
+      "foreign export ${1:ccall} ${2:ffifunc} :: ${3:Type}",
+      "$0"
+    ]
+  },
+  "data_family": {
+    "description": "",
+    "prefix": "datf",
+    "body": [
+      "data family ${1:Name} ${2:a}"
+    ]
+  },
+  "roles": {
+    "description": "",
+    "prefix": "role",
+    "body": [
+      "${1|representational,phantom,nominal,_|}"
+    ]
+  },
+  "newtype_braced": {
+    "description": "",
+    "prefix": "newb",
+    "body": [
+      "newtype ${1:Name} ${2:a} = $1 { ${3:run$1} :: ${4:T} }"
+    ]
+  },
+  "deriving stock": {
+    "description": "",
+    "prefix": "dvst",
+    "body": [
+      "deriving stock (${Num})"
+    ]
+  },
+  "ANN pragma for module": {
+    "description": "",
+    "prefix": "annm",
+    "body": [
+      "{-# ANN ${1:module} ${2:(${3:ann})} #-}"
+    ]
+  },
+  "deriving newtype": {
+    "description": "",
+    "prefix": "dvn",
+    "body": [
+      "deriving newtype (${IsString})"
+    ]
+  },
+  "multi-way-if": {
+    "description": "",
+    "prefix": "mif",
+    "body": [
+      "if | ${1:p} -> ${2:undefined}",
+      "   | ${3:q} -> ${4:undefined}",
+      "   | ${5:otherwise} -> ${6:undefined}"
+    ]
+  },
+  "unpack": {
+    "description": "",
+    "prefix": "unp",
+    "body": [
+      "{-# UNPACK #-} "
+    ]
+  },
+  "deriving_instance_contexts": {
+    "description": "",
+    "prefix": "dvc",
+    "body": [
+      "deriving instance ${1:Ctx} => ${2:Class} ${3:Name}"
+    ]
+  },
+  "gadt": {
+    "description": "",
+    "prefix": "gadt",
+    "body": [
+      "data ${1:Name}${2: ${3:a}} where",
+      "${4:Ctor} :: ${5:${6:T} -> }$1${7:$2}"
+    ]
+  },
+  "module": {
+    "description": "module declaration",
+    "prefix": "module",
+    "body": [
+      "module ${1:${TM_FILEPATH/^.*?\\/(([A-Z][a-z0-9_]+\\/)*)(([a-z][a-zA-Z0-9_]+)|([A-Z][a-zA-Z0-9_]+))\\.l?hs$/${4:?Main:$1$5}/}} where",
+    ]
+  },
+  "WARNING": {
+    "description": "",
+    "prefix": "warn",
+    "body": [
+      "{-# WARNING${1: ${2:fun}} \"$3\" #-}$0"
+    ]
+  },
+  "COMPLETE pragma": {
+    "description": "",
+    "prefix": "comp",
+    "body": [
+      "{-# COMPLETE ${1:Pat} #-}"
+    ]
+  },
+  "type_family": {
+    "description": "",
+    "prefix": "typf",
+    "body": [
+      "type family ${1:Name} ${2:a}"
+    ]
+  },
+  "type role": {
+    "description": "",
+    "prefix": "role",
+    "body": [
+      "type role ${1:T} ${2|representational,phantom,nominal,_|}"
+    ]
+  },
+  "tuple": {
+    "description": "",
+    "prefix": "tuple",
+    "body": [
+      "(${1:undefined},${2:undefined})"
+    ]
+  },
+  "describe": {
+    "description": "",
+    "prefix": "desc",
+    "body": [
+      "describe \"${1:some function}\" $ do",
+      "${2:some}"
+    ]
+  },
+  "deriving": {
+    "description": "",
+    "prefix": "dv",
+    "body": [
+      "deriving (${Show})"
+    ]
+  },
+  "lambda": {
+    "description": "",
+    "prefix": "\\",
+    "body": [
+      "\\\\${1:x} -> ${2:undefined}"
+    ]
+  },
+  "import": {
+    "description": "",
+    "prefix": "imp",
+    "body": [
+      "import ${Name}"
+    ]
+  },
+  "-@=": {
+    "description": "",
+    "prefix": "-@=",
+    "body": [
+      "{-@ ${1:fun} :: ${2:Type} @-}",
+      "$1$3 = ${5:undefined}$0"
+    ]
+  },
+  "spec": {
+    "description": "",
+    "prefix": "it",
+    "body": [
+      "it \"${1:satisfies bra bra}\" $ do",
+      "${2:pendingWith \"${3:need example}\"}"
+    ]
+  },
+  "type_instance": {
+    "description": "",
+    "prefix": "typi",
+    "body": [
+      "type instance ${1:Name} ${2:a} = ${3:Type}"
+    ]
+  },
+  "instance": {
+    "description": "",
+    "prefix": "inst",
+    "body": [
+      "instance ${1:Name} ${2:a} where",
+      "${3:x} = ${4:undefined}"
+    ]
+  },
+  "otherwise": {
+    "description": "",
+    "prefix": "otr",
+    "body": [
+      "| otherwise = $0"
+    ]
+  },
+  "if": {
+    "description": "",
+    "prefix": "ifte",
+    "body": [
+      "if ${1:p}",
+      "then ${2:undefined}",
+      "else ${3:undefined}"
+    ]
+  },
+  "hiding": {
+    "description": "",
+    "prefix": "hid",
+    "body": [
+      "hiding ($1)"
+    ]
+  },
+  "context": {
+    "description": "",
+    "prefix": "=>",
+    "body": [
+      "(${1:Pred} ${2:a}) => $0"
+    ]
+  },
+  "doc": {
+    "description": "",
+    "prefix": "{-",
+    "body": [
+      "{-",
+      "  $0",
+      "-}"
+    ]
+  },
+  "-@": {
+    "description": "",
+    "prefix": "-@",
+    "body": [
+      "{-@ $1 @-}$0"
+    ]
+  },
+  "let definition": {
+    "description": "",
+    "prefix": "l=",
+    "body": [
+      "${1:a} = ${2:undefined}"
+    ]
+  },
+  "pattern where": {
+    "description": "",
+    "prefix": "patw",
+    "body": [
+      "pattern ${1:Pat} :: ${2:Type}",
+      "pattern $1${3: ${4:args}} <- ${5:$4} where",
+      "  $1 ${6:$3} = ${7:$4}$0"
+    ]
+  },
+  "defineClass": {
+    "description": "",
+    "prefix": "defc",
+    "body": [
+      "defineClass \"${1:NSClass}\" (Just ''${2:NSObject})"
+    ]
+  },
+  "let": {
+    "description": "",
+    "prefix": "let",
+    "body": [
+      "let ${1:x} = ${2:undefined}"
+    ]
+  },
+  "SPECIALISE instance pragma": {
+    "description": "",
+    "prefix": "specializei",
+    "body": [
+      "{-# SPECIALISE instance ${1:C} ${2:a} #-}$0"
+    ]
+  },
+  "where": {
+    "description": "",
+    "prefix": "where",
+    "body": [
+      "where",
+      "${1:x} :: ${2:T}",
+      "$1$3 = ${4:undefined}"
+    ]
+  },
+  "xxs": {
+    "description": "",
+    "prefix": "xxs",
+    "body": [
+      "(${1:x}:$1s)"
+    ]
+  },
+  "ANN pragma for types": {
+    "description": "",
+    "prefix": "annt",
+    "body": [
+      "{-# ANN type ${1:Type} ${2:(${3:expr})} #-}"
+    ]
+  },
+  "defineSelector": {
+    "description": "",
+    "prefix": "defs",
+    "body": [
+      "defineSelector newSelector { selector = \"${1:selector}\"",
+      ", reciever = (''${2:NSObject}, \"${3:recv}\")",
+      "${4:, arguments = [\"${5:arg}\" :>>: ''${6:Type}]\n}${7:, returnType = Just [t| ${8:NSTextStorage} |]\n}, definition = [cexp| ${9:[$3 $1${10::}]} |]",
+      "}",
+      "$0"
+    ]
+  },
+  "undefined": {
+    "description": "",
+    "prefix": "un",
+    "body": [
+      "undefined"
+    ]
+  },
+  "case": {
+    "description": "",
+    "prefix": "case",
+    "body": [
+      "case ${1:x} of",
+      "${2:_} -> ${3:undefined}"
+    ]
+  },
+  "RULES pragma": {
+    "description": "",
+    "prefix": "rules",
+    "body": [
+      "{-# RULES",
+      "\"${1:name}\" forall ${2:xs}.",
+      "  ${3:f xs} = ${4:after}",
+      "  #-}$0"
+    ]
+  },
+  "pattern": {
+    "description": "",
+    "prefix": "pat",
+    "body": [
+      "pattern ${1:Pat} :: ${2:Type}",
+      "pattern $1${3: ${4:args}} ${5:=} ${6:$4}$0"
+    ]
+  },
+  "pragma_language": {
+    "description": "",
+    "prefix": "lang",
+    "body": [
+      "{-# LANGUAGE ${1:OverloadedStrings}$0 #-}"
+    ]
+  },
+  "triple": {
+    "description": "",
+    "prefix": ",,",
+    "body": [
+      "(${1:undefined},${2:undefined},${3:undefined})"
+    ]
+  },
+  "main": {
+    "description": "",
+    "prefix": "main",
+    "body": [
+      "main :: IO ()\nmain = ${undefined}"
+    ]
+  },
+  "closed_typefamily": {
+    "description": "",
+    "prefix": "typw",
+    "body": [
+      "type family ${1:Name} ${2:a} where",
+      "$1 ${3:t} = ${4:Type}"
+    ]
+  },
+  "class": {
+    "description": "",
+    "prefix": "cla",
+    "body": [
+      "class ${1:Name} ${2:a} where",
+      "${3:x} :: ${4:a}"
+    ]
+  },
+  "newtype": {
+    "description": "",
+    "prefix": "new",
+    "body": [
+      "newtype ${1:Name} = $1 ${2:T}"
+    ]
+  },
+  "ANN pragma": {
+    "description": "",
+    "prefix": "ann",
+    "body": [
+      "{-# ANN ${1:value} ${2:(${3:ann})} #-}"
+    ]
+  },
+  "guard": {
+    "description": "",
+    "prefix": "|->",
+    "body": [
+      "| ${1:p} -> ${2:undefined}"
+    ]
+  },
+  "-@type": {
+    "description": "",
+    "prefix": "-@t",
+    "body": [
+      "{-@ type ${1:TRUE} = {${2:v}:${3:Type} | ${4:Prop v}} @-}",
+      "$0"
+    ]
+  },
+  "deriving with strategy": {
+    "description": "",
+    "prefix": "dvs",
+    "body": [
+      "deriving ${1|newtype,stock,anyclass|} (${2:Show})"
+    ]
+  }
+}

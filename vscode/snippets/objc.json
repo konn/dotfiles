@@ -1,0 +1,10 @@
+{
+  "instance_method_impl": {
+    "description": "",
+    "prefix": "-",
+    "body": [
+      "-(${1:void}) ${2:selector}${3::(${4:id})${5:arg}}",
+      "${6:{\n$0\n}}"
+    ]
+  }
+}

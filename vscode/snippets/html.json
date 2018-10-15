@@ -1,0 +1,24 @@
+{
+  "div-class": {
+    "description": "",
+    "prefix": "d.",
+    "body": [
+      "<div class=\"$1\"$2>$3</div>",
+      "$0"
+    ]
+  },
+  "tcy": {
+    "description": "",
+    "prefix": "tcy",
+    "body": [
+      "<span class=\"tcy\">$1</span>$0"
+    ]
+  },
+  "span": {
+    "description": "",
+    "prefix": "span",
+    "body": [
+      "<span${1: class=\"$2\"}$3>$0</span>"
+    ]
+  }
+}

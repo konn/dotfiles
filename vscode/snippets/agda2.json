@@ -1,0 +1,67 @@
+{
+  "record": {
+    "description": "",
+    "prefix": "rec",
+    "body": [
+      "record ${1:Rec} : ${2:Set} where",
+      "  field",
+      "    ${3:fieldName} : ${4:Type}",
+      "  $0"
+    ]
+  },
+  "macro": {
+    "description": "",
+    "prefix": "mac",
+    "body": [
+      "macro",
+      "  ${1:myMacro} : ${2:${3:args} → }Term → TC ⊤",
+      "  $1 ${4:hole} = ${5:_}"
+    ]
+  },
+  "private": {
+    "description": "",
+    "prefix": "priv",
+    "body": [
+      "private",
+      "  $0"
+    ]
+  },
+  "import": {
+    "description": "",
+    "prefix": "imp",
+    "body": [
+      "import ${1:Name}"
+    ]
+  },
+  "data": {
+    "description": "",
+    "prefix": "dat",
+    "body": [
+      "data ${1:Data} : ${2:Set} where",
+      "  ${3:Cons} : ${4:Args} → $1",
+      "  $0"
+    ]
+  },
+  "open": {
+    "description": "",
+    "prefix": "op",
+    "body": [
+      "open ${1:expr}${2:\n     using (${3:ident})${4:\n     renaming (${5:old} to ${6:new})\n}}$0"
+    ]
+  },
+  "module": {
+    "description": "",
+    "prefix": "mod",
+    "body": [
+      "module ${1:Module.Name} where",
+      "$0"
+    ]
+  },
+  "open import": {
+    "description": "",
+    "prefix": "oimp",
+    "body": [
+      "open import ${1:Module}${2:\n     using (${3:ident})${4:\n     renaming (${5:old} to ${6:new})\n}}$0"
+    ]
+  }
+}

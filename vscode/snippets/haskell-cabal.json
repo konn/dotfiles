@@ -1,0 +1,48 @@
+{
+  "executable": {
+    "description": "",
+    "prefix": "exe",
+    "body": [
+      "executable ${1:name}",
+      "  Main-is:             $1.hs",
+      "  build-depends:       base${2:\n                     , ${3:package}}${4:\n  other-modules:       ${5:Utils.hs}}",
+      "  default-language:    ${6:Haskell2010}",
+      "  ghc-options:         -Wall",
+      "$0"
+    ]
+  },
+  "flag": {
+    "description": "",
+    "prefix": "flag",
+    "body": [
+      "flag ${1:Flag}",
+      "  description:  ${2:awesome flag}",
+      "  default:      ${3:True}",
+      "$0"
+    ]
+  },
+  "source-repository": {
+    "description": "",
+    "prefix": "repo",
+    "body": [
+      "source-repository ${1:head}",
+      "  Type: ${2:git}",
+      "  Location: ${3:git://github.com/${4:konn}/${5:type-natural.git}}",
+      "$0"
+    ]
+  },
+  "library": {
+    "description": "",
+    "prefix": "lib",
+    "body": [
+      "library",
+      "  exposed-modules:     ${1:Module}",
+      "  other-modules:       ${2:Other}",
+      "  -- other-extensions:    ",
+      "  build-depends:       base${3:\n                     , ${4:package}}",
+      "  hs-source-dirs:      ${5:src}",
+      "  default-language:    ${6:Haskell2010}",
+      "$0"
+    ]
+  }
+}

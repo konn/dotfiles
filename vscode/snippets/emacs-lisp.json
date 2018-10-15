@@ -1,0 +1,9 @@
+{
+  "require": {
+    "description": "",
+    "prefix": "req",
+    "body": [
+      "(require '${1:init_${2:foobar}})$0"
+    ]
+  }
+}

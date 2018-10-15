@@ -1,0 +1,9 @@
+{
+  "let-rec": {
+    "description": "",
+    "prefix": "letr",
+    "body": [
+      "let-rec ${1:func}${2: ${3:arg}} = ${4:body} ${5: in\n${6:rest}}"
+    ]
+  }
+}
