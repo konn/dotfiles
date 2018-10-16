@@ -32,5 +32,13 @@
             "passphrase": true,
             "name": "sakura-vps"
         }
-    ]
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.olean": true
+    }
 }
