@@ -1,4 +1,5 @@
 {
+    "redprl.path": "/Users/hiromi/usr/bin/redprl",
     "window.zoomLevel": 0,
     "editor.fontSize": 18,
     "rust.formatOnSave": true,
@@ -8,7 +9,6 @@
     "languageServerHaskell.liquidOn": true,
     "languageServerHaskell.useCustomHieWrapperPath": "~/.local/bin/hie-wrapper",
     "haskell.hlint.executablePath": "/Users/hiromi/.local/bin/hlint",
-    "editor.fontLigatures": true,
     "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
     "terminal.integrated.fontSize": 18,
     "[markdown]": {
@@ -19,7 +19,8 @@
         }
     },
     "[haskell]": {
-        "editor.fontFamily": "Hasklig,Menlo, Monaco, 'Courier New', monospace"
+        "editor.fontFamily": "Hasklig,Menlo, Monaco, 'Courier New', monospace",
+        "editor.fontLigatures": true
     },
     "sshfs.configs": [
         {
