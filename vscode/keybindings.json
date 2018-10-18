@@ -3,5 +3,45 @@
     {
         "key": "cmd+r",
         "command": "workbench.action.reloadWindow"
+    },
+    {
+        "key": "ctrl+c ctrl+l",
+        "command": "ghciHelper.reload"
+    },
+    {
+        "key": "alt+z 8",
+        "command": "-ghciHelper.reload"
+    },
+    {
+        "key": "ctrl+c ctrl+r",
+        "command": "ghciHelper.start"
+    },
+    {
+        "key": "alt+z 7",
+        "command": "-ghciHelper.start"
+    },
+    {
+        "key": "shift+alt+down",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "shift+alt+up",
+        "command": "workbench.action.navigateUp"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+c ctrl+t",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "cmd+a",
+        "command": "selectAll"
     }
 ]
