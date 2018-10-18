@@ -41,5 +41,6 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/*.olean": true
-    }
+    },
+    "rust.clippy_preference": "on"
 }
