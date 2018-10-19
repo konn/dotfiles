@@ -17,7 +17,7 @@ export LESS='-R'
 export LESSOPEN='| src-hilite-lesspipe.sh %s' # syntax highlight 
 export HOMEBREW_NO_AUTO_UPDATE=1 
 # OPAM
-locate_bin "opam" > /dev/null 2>&1 && (. /Users/hiromi/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true)
+test -r /Users/hiromi/.opam/opam-init/init.zsh && . /Users/hiromi/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 # Ruby
 locate_bin "rbenv" > /dev/null 2>&1 && eval "$(rbenv init -)"
