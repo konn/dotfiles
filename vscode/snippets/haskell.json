@@ -388,7 +388,7 @@
     "prefix": "inst",
     "body": [
       "instance ${1:Name} ${2:a} where",
-      "${3:x} = ${4:undefined}"
+      "  ${3:x} = ${4:undefined}"
     ]
   },
   "otherwise": {
