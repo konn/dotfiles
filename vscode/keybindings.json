@@ -43,5 +43,19 @@
     {
         "key": "cmd+a",
         "command": "selectAll"
+    },
+    {
+        "key": "shift+alt+n",
+        "command": "editor.action.selectToBracket"
+    },
+    {
+        "key": "ctrl+cmd+n",
+        "command": "editor.action.jumpToBracket",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+[IntlYen]",
+        "command": "-editor.action.jumpToBracket",
+        "when": "editorTextFocus"
     }
 ]
