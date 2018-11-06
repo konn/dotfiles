@@ -40,9 +40,14 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/*.olean": true
+        "**/*.olean": true,
+        "out": false
     },
     "rust.clippy_preference": "on",
     "latex-workshop.view.pdf.viewer": "tab",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "spellright.groupDictionaries": false,
+    "spellright.language": [
+        "en-GB"
+    ]
 }
