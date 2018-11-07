@@ -57,5 +57,15 @@
         "key": "shift+cmd+[IntlYen]",
         "command": "-editor.action.jumpToBracket",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+c [Quote]",
+        "command": "extension.greek-complete",
+        "when": "editorTextFocus && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+c [BracketLeft]",
+        "command": "extension.font-complete",
+        "when": "editorTextFocus && editorLangId == 'latex'"
     }
 ]
