@@ -49,5 +49,6 @@
     "spellright.groupDictionaries": false,
     "spellright.language": [
         "en-GB"
-    ]
+    ],
+    "telemetry.enableTelemetry": false
 }
