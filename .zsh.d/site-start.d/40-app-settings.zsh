@@ -22,6 +22,12 @@ test -r /Users/hiromi/.opam/opam-init/init.zsh && . /Users/hiromi/.opam/opam-ini
 # Ruby
 locate_bin "rbenv" > /dev/null 2>&1 && eval "$(rbenv init -)"
 
+# PyEnv and PipEnv
+export PYENV_ROOT="$HOME/.pyenv"
+export PIPENV_VENV_IN_PROJECT=true
+export PATH="$PYENV_ROOT/bin:$PATH"
+which  pyenv > /dev/null 2>&1  && eval "$(pyenv init -)"
+
 # Rust
 [ -d $HOME/.cargo/env ] && source $HOME/.cargo/env
 
