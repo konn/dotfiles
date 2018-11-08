@@ -1,13 +1,21 @@
 {
   "theorem": {
-    "description": "",
+    "description": "theorem decl",
     "prefix": "thm",
     "body": [
-      "theorem ${1:Theorem} :",
-      "  (${2:type})",
+      "theorem ${1:OpName}${2:(${3:#l: lvl})} :",
+      "  (${4:type})",
       "by {",
-      "  ${3:?goal}",
+      "  ${5:?goal}$0",
       "}."
+    ]
+  },
+  "define": {
+    "description": "define decl",
+    "prefix": "def",
+    "body": [
+      "define ${1:OpName}${2:(${3:#a})}${4::${5: #a}} =",
+      "  ${6:exp}$0."
     ]
   }
 }
