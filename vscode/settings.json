@@ -1,54 +1,56 @@
 {
-    "redprl.path": "/Users/hiromi/usr/bin/redprl",
-    "window.zoomLevel": 0,
-    "editor.fontSize": 18,
-    "rust.formatOnSave": true,
-    "explorer.confirmDragAndDrop": false,
-    "haskell.hlint.logLevel": "info",
-    "editor.formatOnSave": true,
-    "languageServerHaskell.liquidOn": true,
-    "languageServerHaskell.useCustomHieWrapperPath": "~/.local/bin/hie-wrapper",
-    "haskell.hlint.executablePath": "/Users/hiromi/.local/bin/hlint",
-    "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
-    "terminal.integrated.fontSize": 18,
-    "[markdown]": {
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": false
-        }
-    },
-    "[haskell]": {
-        "editor.fontFamily": "Hasklig,Menlo, Monaco, 'Courier New', monospace",
-        "editor.fontLigatures": true
-    },
-    "sshfs.configs": [
-        {
-            "label": "Sakura VPS",
-            "root": "~/",
-            "host": "219.94.254.227",
-            "port": 10022,
-            "username": "hiromi",
-            "privateKeyPath": "/Users/hiromi/.ssh/id_rsa",
-            "passphrase": true,
-            "name": "sakura-vps"
-        }
-    ],
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/*.olean": true,
-        "out": false
-    },
-    "rust.clippy_preference": "on",
-    "latex-workshop.view.pdf.viewer": "tab",
-    "editor.tabSize": 2,
-    "spellright.groupDictionaries": false,
-    "spellright.language": [
-        "en-GB"
-    ],
-    "telemetry.enableTelemetry": false
+  "redprl.path": "/Users/hiromi/usr/bin/redprl",
+  "window.zoomLevel": 0,
+  "editor.fontSize": 18,
+  "rust.formatOnSave": true,
+  "explorer.confirmDragAndDrop": false,
+  "haskell.hlint.logLevel": "info",
+  "editor.formatOnSave": true,
+  "languageServerHaskell.liquidOn": true,
+  "languageServerHaskell.useCustomHieWrapperPath": "~/.local/bin/hie-wrapper",
+  "haskell.hlint.executablePath": "/Users/hiromi/.local/bin/hlint",
+  "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 18,
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    }
+  },
+  "[haskell]": {
+    "editor.fontFamily": "Hasklig,Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true
+  },
+  "[redprl]": {
+    "editor.fontFamily": "Fira Code,Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true
+  },
+  "sshfs.configs": [
+    {
+      "label": "Sakura VPS",
+      "root": "~/",
+      "host": "219.94.254.227",
+      "port": 10022,
+      "username": "hiromi",
+      "privateKeyPath": "/Users/hiromi/.ssh/id_rsa",
+      "passphrase": true,
+      "name": "sakura-vps"
+    }
+  ],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/*.olean": true,
+    "out": false
+  },
+  "rust.clippy_preference": "on",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "editor.tabSize": 2,
+  "spellright.groupDictionaries": false,
+  "spellright.language": ["en-GB"],
+  "telemetry.enableTelemetry": false
 }
