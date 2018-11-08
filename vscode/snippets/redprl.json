@@ -2,6 +2,12 @@
   "theorem": {
     "description": "",
     "prefix": "thm",
-    "body": ["theorem ${1:Theorem} :", "  (${2:type})", "by {", "  ?goal", "}."]
+    "body": [
+      "theorem ${1:Theorem} :",
+      "  (${2:type})",
+      "by {",
+      "  ${3:?goal}",
+      "}."
+    ]
   }
 }
