@@ -8,7 +8,7 @@ check_dotfiles () {
             -title "Dotfiles" -subtitle "Updated" \
             -sound default \
             -message "Dotfiles updated. Please sync with git." \
-            -execute "code ${HOME}/.dotfiles" \
+            -execute "/usr/local/bin/code ${HOME}/.dotfiles" \
             2>&1 1> /dev/null
     fi
     popd 2>&1 1> /dev/null
