@@ -1,71 +1,75 @@
 // 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
-    {
-        "key": "cmd+r",
-        "command": "workbench.action.reloadWindow"
-    },
-    {
-        "key": "ctrl+c ctrl+l",
-        "command": "ghciHelper.reload"
-    },
-    {
-        "key": "alt+z 8",
-        "command": "-ghciHelper.reload"
-    },
-    {
-        "key": "ctrl+c ctrl+r",
-        "command": "ghciHelper.start"
-    },
-    {
-        "key": "alt+z 7",
-        "command": "-ghciHelper.start"
-    },
-    {
-        "key": "shift+alt+down",
-        "command": "workbench.action.navigateDown"
-    },
-    {
-        "key": "shift+alt+right",
-        "command": "workbench.action.navigateRight"
-    },
-    {
-        "key": "shift+alt+up",
-        "command": "workbench.action.navigateUp"
-    },
-    {
-        "key": "shift+alt+left",
-        "command": "workbench.action.navigateLeft"
-    },
-    {
-        "key": "ctrl+c ctrl+t",
-        "command": "workbench.action.terminal.focus"
-    },
-    {
-        "key": "cmd+a",
-        "command": "selectAll"
-    },
-    {
-        "key": "shift+alt+n",
-        "command": "editor.action.selectToBracket"
-    },
-    {
-        "key": "ctrl+cmd+n",
-        "command": "editor.action.jumpToBracket",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+cmd+[IntlYen]",
-        "command": "-editor.action.jumpToBracket",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+c [Quote]",
-        "command": "extension.greek-complete",
-        "when": "editorTextFocus && editorLangId == 'latex'"
-    },
-    {
-        "key": "ctrl+c [BracketLeft]",
-        "command": "extension.font-complete",
-        "when": "editorTextFocus && editorLangId == 'latex'"
-    }
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.reloadWindow"
+  },
+  {
+    "key": "ctrl+c ctrl+l",
+    "command": "ghciHelper.reload"
+  },
+  {
+    "key": "alt+z 8",
+    "command": "-ghciHelper.reload"
+  },
+  {
+    "key": "ctrl+c ctrl+r",
+    "command": "ghciHelper.start"
+  },
+  {
+    "key": "alt+z 7",
+    "command": "-ghciHelper.start"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "workbench.action.navigateDown"
+  },
+  {
+    "key": "shift+alt+right",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "workbench.action.navigateUp"
+  },
+  {
+    "key": "shift+alt+left",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "ctrl+c ctrl+t",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "cmd+a",
+    "command": "selectAll"
+  },
+  {
+    "key": "shift+alt+n",
+    "command": "editor.action.selectToBracket"
+  },
+  {
+    "key": "ctrl+cmd+n",
+    "command": "editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+[IntlYen]",
+    "command": "-editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+c [Quote]",
+    "command": "extension.greek-complete",
+    "when": "editorTextFocus && editorLangId == 'latex'"
+  },
+  {
+    "key": "ctrl+c [BracketLeft]",
+    "command": "extension.font-complete",
+    "when": "editorTextFocus && editorLangId == 'latex'"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.gotoLine"
+  }
 ]
