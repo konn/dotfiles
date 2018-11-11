@@ -34,7 +34,6 @@
     "editor.fontFamily": "Hasklig,Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true
   },
-  "lean.input.languages": ["lean", "redtt"],
   "[redprl]": {
     "editor.fontFamily": "Fira Code,Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true
