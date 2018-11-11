@@ -18,14 +18,7 @@
       "strings": false
     }
   },
-  "lean.input.customTranslations": {
-    "II": "𝕀",
-    "dim": "𝕀",
-    "<:": "⦉",
-    ":>": "⦊",
-    "<|": "⦉",
-    "|>": "⦊"
-  },
+
   "[redtt]": {
     "editor.fontFamily": "Fira Code,Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true
@@ -66,5 +59,45 @@
   "spellright.language": ["en-GB"],
   "telemetry.enableTelemetry": false,
   "redtt.diagnostics.onChange": true,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "generic-input-methods.input-methods": [
+    {
+      "name": "LaTeX Font Completion",
+      "commandName": "latex.font",
+      "languages": ["latex"],
+      "triggers": ["@"],
+      "dictionary": "defaults/fonts.json",
+      "renderMode": "latex"
+    },
+    {
+      "name": "LaTeX Image Completion",
+      "commandName": "latex.image",
+      "languages": ["latex"],
+      "triggers": [";"],
+      "dictionary": "defaults/images.json",
+      "renderMode": "latex"
+    },
+    {
+      "name": "LaTeX Image Completion",
+      "commandName": "latex.greek",
+      "languages": ["latex"],
+      "triggers": [":"],
+      "dictionary": "defaults/greek.json",
+      "renderMode": "latex"
+    },
+    {
+      "name": "Unicode Math",
+      "commandName": "text.math",
+      "languages": ["markdown", "redtt"],
+      "triggers": ["\\"],
+      "dictionary": [
+        "defaults/math.json",
+        { "label": "dim", "body": "dim" },
+        { "label": "<:", "body": "<:" },
+        { "label": ":>", "body": ":>" },
+        { "label": "<|", "body": "<|" },
+        { "label": "|>", "body": "|>" }
+      ]
+    }
+  ]
 }
