@@ -65,5 +65,6 @@
   "spellright.groupDictionaries": false,
   "spellright.language": ["en-GB"],
   "telemetry.enableTelemetry": false,
-  "redtt.diagnostics.onChange": true
+  "redtt.diagnostics.onChange": true,
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
