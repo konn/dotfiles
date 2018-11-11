@@ -71,5 +71,33 @@
   {
     "key": "cmd+l",
     "command": "workbench.action.gotoLine"
+  },
+  {
+    "key": "alt+cmd+c",
+    "command": "workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+c ctrl+v",
+    "command": "extension.coq.query.check",
+    "when": "editorTextFocus && editorLangId == 'coq'"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-extension.coq.query.check",
+    "when": "editorTextFocus && editorLangId == 'coq'"
+  },
+  {
+    "key": "ctrl+h ctrl+p",
+    "command": "git.push"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "git.commitStaged"
   }
 ]
