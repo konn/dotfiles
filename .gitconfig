@@ -7,7 +7,7 @@
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes_global
 	pager = less -R
-        editor = emacsclient
+        editor = code
 [alias]
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'

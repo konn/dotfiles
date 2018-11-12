@@ -6,10 +6,10 @@ export CUDA_HOME=/usr/local/cuda
 
 # darcs
 export DARCS_DONT_ESCAPE_ANYTHING=1
-export DARCS_EDITOR="${HOME}/usr/bin/emacsclient"
+export DARCS_EDITOR="code"
 
 # Editors
-export EDITOR_KICKER="emacsclient -n +%s '%s'"
+export EDITOR_KICKER="code -g %s:%s"
 
 # less
 export LESSCHARSET=utf-8
