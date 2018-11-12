@@ -6,7 +6,7 @@ export CUDA_HOME=/usr/local/cuda
 
 # darcs
 export DARCS_DONT_ESCAPE_ANYTHING=1
-export DARCS_EDITOR="code"
+export DARCS_EDITOR="code --wait"
 
 # Editors
 export EDITOR_KICKER="code -g %s:%s"
