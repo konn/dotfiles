@@ -99,5 +99,6 @@
         { "label": "|>", "body": "|>" }
       ]
     }
-  ]
+  ],
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
 }
