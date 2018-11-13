@@ -114,5 +114,6 @@
       "name": "pdflatex -> bibtex -> pdflatex*2",
       "tools": ["lualatex", "biber", "lualatex", "lualatex"]
     }
-  ]
+  ],
+  "workbench.editor.highlightModifiedTabs": true
 }
