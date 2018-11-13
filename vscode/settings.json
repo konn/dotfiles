@@ -103,5 +103,16 @@
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "markdown.extension.toc.unorderedList.marker": "*",
   "markdown.extension.toc.updateOnSave": false,
-  "prettier.disableLanguages": ["vue", "markdown"]
+  "prettier.disableLanguages": ["vue", "markdown"],
+  "latex-preview.command": "lualatex",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex*2",
+      "tools": ["lualatex", "biber", "lualatex", "lualatex"]
+    }
+  ]
 }
