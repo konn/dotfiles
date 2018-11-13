@@ -100,5 +100,8 @@
       ]
     }
   ],
-  "terminal.integrated.shell.osx": "/usr/local/bin/zsh"
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+  "markdown.extension.toc.unorderedList.marker": "*",
+  "markdown.extension.toc.updateOnSave": false,
+  "prettier.disableLanguages": ["vue", "markdown"]
 }
