@@ -115,5 +115,8 @@
       "tools": ["lualatex", "biber", "lualatex", "lualatex"]
     }
   ],
-  "workbench.editor.highlightModifiedTabs": true
+  "workbench.editor.highlightModifiedTabs": true,
+  "files.associations": {
+    "*.el": "lisp"
+  }
 }
