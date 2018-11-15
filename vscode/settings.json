@@ -62,30 +62,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "generic-input-methods.input-methods": [
     {
-      "name": "LaTeX Font Completion",
-      "commandName": "latex.font",
-      "languages": ["latex"],
-      "triggers": ["@"],
-      "dictionary": "defaults/fonts.json",
-      "renderMode": "latex"
-    },
-    {
-      "name": "LaTeX Image Completion",
-      "commandName": "latex.image",
-      "languages": ["latex"],
-      "triggers": [";"],
-      "dictionary": "defaults/images.json",
-      "renderMode": "latex"
-    },
-    {
-      "name": "LaTeX Image Completion",
-      "commandName": "latex.greek",
-      "languages": ["latex"],
-      "triggers": [":"],
-      "dictionary": "defaults/greek.json",
-      "renderMode": "latex"
-    },
-    {
       "name": "Unicode Math",
       "commandName": "text.math",
       "languages": ["markdown", "redtt"],
