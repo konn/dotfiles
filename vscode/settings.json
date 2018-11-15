@@ -94,5 +94,6 @@
   "workbench.editor.highlightModifiedTabs": true,
   "files.associations": {
     "*.el": "lisp"
-  }
+  },
+  "markdownlint.ignore": ["*MD033*"]
 }
