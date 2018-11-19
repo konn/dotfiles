@@ -149,6 +149,24 @@
     {
       "name": "tikzpicture",
       "args": ["options"]
+    },
+    {
+      "name": "scope",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "feat=val"
+        }
+      ]
+    },
+    {
+      "name": "remark",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "Title"
+        }
+      ]
     }
   ]
 }
