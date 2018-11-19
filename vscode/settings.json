@@ -212,7 +212,16 @@
       ]
     },
     {
-      "name": "definition",
+      "name": "fact",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "title"
+        }
+      ]
+    },
+    {
+      "name": "remark",
       "args": [
         {
           "kind": "optional",
