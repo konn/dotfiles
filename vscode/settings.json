@@ -237,6 +237,9 @@
           "placeholder": "title"
         }
       ]
+    },
+    {
+      "name": "proof"
     }
   ],
   "catex.image-completion": {
