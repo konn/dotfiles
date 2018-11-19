@@ -162,7 +162,7 @@
       ]
     },
     {
-      "name": "definition",
+      "name": "theorem",
       "args": [
         {
           "kind": "optional",
