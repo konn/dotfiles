@@ -95,9 +95,7 @@
   "files.associations": {
     "*.el": "lisp"
   },
-  "markdownlint.ignore": [
-    "*MD033*"
-  ],
+  "markdownlint.ignore": ["*MD033*"],
   "catex.maketitle.dictionary": [
     {
       "include": "defaults/maketitles.json"
@@ -143,5 +141,14 @@
       ]
     }
   ],
-  "editor.minimap.enabled": false
+  "editor.minimap.enabled": false,
+  "catex.environment.dictionary": [
+    {
+      "include": "defaults/environments.json"
+    },
+    {
+      "name": "tikzpicture",
+      "args": ["options"]
+    }
+  ]
 }
