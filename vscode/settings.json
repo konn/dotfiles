@@ -148,7 +148,9 @@
     },
     {
       "name": "tikzpicture",
-      "args": ["options"]
+      "args": [
+        "options"
+      ]
     },
     {
       "name": "scope",
@@ -164,7 +166,7 @@
       "args": [
         {
           "kind": "optional",
-          "placeholder": "Title"
+          "placeholder": "title"
         }
       ]
     }
