@@ -18,7 +18,6 @@
       "strings": false
     }
   },
-
   "[redtt]": {
     "editor.fontFamily": "Fira Code,Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true
@@ -56,7 +55,9 @@
   "latex-workshop.view.pdf.viewer": "tab",
   "editor.tabSize": 2,
   "spellright.groupDictionaries": false,
-  "spellright.language": ["en-GB"],
+  "spellright.language": [
+    "en-GB"
+  ],
   "telemetry.enableTelemetry": false,
   "redtt.diagnostics.onChange": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -64,38 +65,70 @@
     {
       "name": "Unicode Math",
       "commandName": "text.math",
-      "languages": ["markdown", "redtt"],
-      "triggers": ["\\"],
+      "languages": [
+        "markdown",
+        "redtt"
+      ],
+      "triggers": [
+        "\\"
+      ],
       "dictionary": [
         "defaults/math.json",
-        { "label": "dim", "body": "dim" },
-        { "label": "<:", "body": "<:" },
-        { "label": ":>", "body": ":>" },
-        { "label": "<|", "body": "<|" },
-        { "label": "|>", "body": "|>" }
+        {
+          "label": "dim",
+          "body": "dim"
+        },
+        {
+          "label": "<:",
+          "body": "<:"
+        },
+        {
+          "label": ":>",
+          "body": ":>"
+        },
+        {
+          "label": "<|",
+          "body": "<|"
+        },
+        {
+          "label": "|>",
+          "body": "|>"
+        }
       ]
     }
   ],
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "markdown.extension.toc.unorderedList.marker": "*",
   "markdown.extension.toc.updateOnSave": false,
-  "prettier.disableLanguages": ["vue", "markdown"],
+  "prettier.disableLanguages": [
+    "vue",
+    "markdown"
+  ],
   "latex-preview.command": "lualatex",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
-      "tools": ["latexmk"]
+      "tools": [
+        "latexmk"
+      ]
     },
     {
       "name": "pdflatex -> bibtex -> pdflatex*2",
-      "tools": ["lualatex", "biber", "lualatex", "lualatex"]
+      "tools": [
+        "lualatex",
+        "biber",
+        "lualatex",
+        "lualatex"
+      ]
     }
   ],
   "workbench.editor.highlightModifiedTabs": true,
   "files.associations": {
     "*.el": "lisp"
   },
-  "markdownlint.ignore": ["*MD033*"],
+  "markdownlint.ignore": [
+    "*MD033*"
+  ],
   "catex.maketitle.dictionary": [
     {
       "include": "defaults/maketitles.json"
@@ -165,7 +198,9 @@
     },
     {
       "name": "tikzpicture",
-      "args": ["options"]
+      "args": [
+        "options"
+      ]
     },
     {
       "name": "scope",
@@ -194,5 +229,43 @@
         }
       ]
     }
-  ]
+  ],
+  "catex.image-completion": {
+    "name": "CaTeX Image Completion",
+    "languages": [
+      "latex"
+    ],
+    "triggers": [
+      ";"
+    ],
+    "dictionary": [
+      "defaults/images.json",
+      {
+        "label": "/>",
+        "body": "nearrow",
+        "description": "↗"
+      },
+      {
+        "label": "\\>",
+        "body": "searrow",
+        "description": "↘"
+      },
+      {
+        "label": "/<",
+        "body": "swarrow",
+        "description": "↙"
+      },
+      {
+        "label": "\\<",
+        "body": "nwarrow",
+        "description": "↖"
+      },
+      {
+        "label": "{/",
+        "body": "\\notin",
+        "description": "∉"
+      }
+    ],
+    "renderMode": "latex"
+  }
 }
