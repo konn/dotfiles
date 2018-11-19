@@ -139,6 +139,23 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "circled",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
+    },
+    {
+      "name": "label",
+      "args": [
+        {
+          "kind": "fixed",
+          "placeholder": "item:foo"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
