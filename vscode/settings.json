@@ -162,7 +162,7 @@
       ]
     },
     {
-      "name": "remark",
+      "name": "definition",
       "args": [
         {
           "kind": "optional",
