@@ -105,5 +105,19 @@
     "mainmatter",
     "frontmatter",
     "backmatter"
-  ]
+  ],
+  "catex.section.dictionary": [
+    {
+      "include": "defaults/sections.json"
+    },
+    {
+      "name": "nocite",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
+    }
+  ],
+  "editor.minimap.enabled": false
 }
