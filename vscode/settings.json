@@ -117,6 +117,30 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "braket",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
+    },
+    {
+      "name": "finseq",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
+    },
+    {
+      "name": "Set",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false
