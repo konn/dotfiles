@@ -182,11 +182,34 @@
       ]
     },
     {
-      "name": "label",
+      "name": "mathreg",
       "args": [
         {
-          "kind": "fixed",
-          "placeholder": "item:foo"
+          "kind": "fixed"
+        }
+      ]
+    },
+    {
+      "name": "quoted",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
+    },
+    {
+      "name": "onslide",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
+    },
+    {
+      "name": "truth",
+      "args": [
+        {
+          "kind": "fixed"
         }
       ]
     }
