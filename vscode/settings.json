@@ -230,6 +230,15 @@
       ]
     },
     {
+      "name": "definition",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "title"
+        }
+      ]
+    },
+    {
       "name": "theorem",
       "args": [
         {
@@ -239,7 +248,13 @@
       ]
     },
     {
-      "name": "proof"
+      "name": "corollary",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "title"
+        }
+      ]
     }
   ],
   "catex.image-completion": {
