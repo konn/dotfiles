@@ -278,6 +278,24 @@
           "placeholder": "title"
         }
       ]
+    },
+    {
+      "name": "lemma",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "title"
+        }
+      ]
+    },
+    {
+      "name": "notation",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "title"
+        }
+      ]
     }
   ],
   "catex.image-completion": {
