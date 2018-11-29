@@ -220,6 +220,14 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "label",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
