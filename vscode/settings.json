@@ -55,9 +55,7 @@
   "latex-workshop.view.pdf.viewer": "tab",
   "editor.tabSize": 2,
   "spellright.groupDictionaries": false,
-  "spellright.language": [
-    "en-GB"
-  ],
+  "spellright.language": ["en-GB"],
   "telemetry.enableTelemetry": false,
   "redtt.diagnostics.onChange": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
@@ -65,13 +63,8 @@
     {
       "name": "Unicode Math",
       "commandName": "text.math",
-      "languages": [
-        "markdown",
-        "redtt"
-      ],
-      "triggers": [
-        "\\"
-      ],
+      "languages": ["markdown", "redtt"],
+      "triggers": ["\\"],
       "dictionary": [
         "defaults/math.json",
         {
@@ -100,35 +93,23 @@
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "markdown.extension.toc.unorderedList.marker": "*",
   "markdown.extension.toc.updateOnSave": false,
-  "prettier.disableLanguages": [
-    "vue",
-    "markdown"
-  ],
+  "prettier.disableLanguages": ["vue", "markdown"],
   "latex-preview.command": "lualatex",
   "latex-workshop.latex.recipes": [
     {
       "name": "latexmk",
-      "tools": [
-        "latexmk"
-      ]
+      "tools": ["latexmk"]
     },
     {
       "name": "pdflatex -> bibtex -> pdflatex*2",
-      "tools": [
-        "lualatex",
-        "biber",
-        "lualatex",
-        "lualatex"
-      ]
+      "tools": ["lualatex", "biber", "lualatex", "lualatex"]
     }
   ],
   "workbench.editor.highlightModifiedTabs": true,
   "files.associations": {
     "*.el": "lisp"
   },
-  "markdownlint.ignore": [
-    "*MD033*"
-  ],
+  "markdownlint.ignore": ["*MD033*"],
   "catex.maketitle.dictionary": [
     {
       "include": "defaults/maketitles.json"
@@ -228,6 +209,14 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "Cref",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
@@ -237,9 +226,7 @@
     },
     {
       "name": "tikzpicture",
-      "args": [
-        "options"
-      ]
+      "args": ["options"]
     },
     {
       "name": "scope",
@@ -316,12 +303,8 @@
   ],
   "catex.image-completion": {
     "name": "CaTeX Image Completion",
-    "languages": [
-      "latex"
-    ],
-    "triggers": [
-      ";"
-    ],
+    "languages": ["latex"],
+    "triggers": [";"],
     "dictionary": [
       "defaults/images.json",
       {
