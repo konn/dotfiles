@@ -271,6 +271,14 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "AtBeginDocument",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
