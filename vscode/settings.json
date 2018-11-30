@@ -235,6 +235,14 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "mathord",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
