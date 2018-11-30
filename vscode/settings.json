@@ -243,6 +243,26 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "lstnewenvironment",
+      "args": [
+        {
+          "kind": "fixed",
+          "placeholder": "env"
+        },
+        {
+          "kind": "optional"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "BEFORE"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "AFTER"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
