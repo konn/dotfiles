@@ -227,6 +227,14 @@
           "body": true
         }
       ]
+    },
+    {
+      "name": "\"",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
