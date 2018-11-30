@@ -236,7 +236,9 @@
     },
     {
       "name": "tikzpicture",
-      "args": ["options"]
+      "args": [
+        "options"
+      ]
     },
     {
       "name": "scope",
@@ -303,6 +305,15 @@
     },
     {
       "name": "notation",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "title"
+        }
+      ]
+    },
+    {
+      "name": "proof",
       "args": [
         {
           "kind": "optional",
