@@ -217,6 +217,16 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "theorembodyfont",
+      "args": [
+        {
+          "kind": "fixed",
+          "placeholder": "\\normalfont",
+          "body": true
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
