@@ -288,6 +288,14 @@
           "placeholder": "FIXME: "
         }
       ]
+    },
+    {
+      "name": "nth",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
