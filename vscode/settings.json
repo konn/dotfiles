@@ -279,6 +279,15 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "fxwarning",
+      "args": [
+        {
+          "kind": "fixed",
+          "placeholder": "FIXME: "
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
