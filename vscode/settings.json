@@ -309,6 +309,14 @@
           "placeholder": "key=val"
         }
       ]
+    },
+    {
+      "name": "mathop",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
