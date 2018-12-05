@@ -317,6 +317,31 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "newindex",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "thecounter"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "name"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "idx"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "ind"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "title"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
