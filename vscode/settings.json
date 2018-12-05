@@ -426,6 +426,6 @@
     "renderMode": "latex"
   },
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」【】『』（）！？",
-  "workbench.colorTheme": "Material Theme Darker High Contrast",
+  "workbench.colorTheme": "One Monokai",
   "workbench.iconTheme": "eq-material-theme-icons-darker"
 }
