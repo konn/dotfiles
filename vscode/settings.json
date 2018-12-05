@@ -296,6 +296,19 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "setlist",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "kind"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "key=val"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
