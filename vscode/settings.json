@@ -342,6 +342,15 @@
           "placeholder": "title"
         }
       ]
+    },
+    {
+      "name": "RequirePackage",
+      "args": [
+        {
+          "kind": "fixed",
+          "placeholder": "package"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
