@@ -351,6 +351,20 @@
           "placeholder": "package"
         }
       ]
+    },
+    {
+      "name": "fxwarning*",
+      "args": [
+        {
+          "kind": "fixed",
+          "placeholder": "note"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "body",
+          "body": true
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
@@ -360,9 +374,7 @@
     },
     {
       "name": "tikzpicture",
-      "args": [
-        "options"
-      ]
+      "args": ["options"]
     },
     {
       "name": "scope",
