@@ -365,6 +365,14 @@
           "body": true
         }
       ]
+    },
+    {
+      "name": "marginpar",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
