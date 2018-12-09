@@ -373,6 +373,19 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "setmonofont",
+      "args": [
+        {
+          "kind": "optional",
+          "placeholder": "feat=val"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "fontname"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
