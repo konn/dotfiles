@@ -515,5 +515,9 @@
   },
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」【】『』（）！？",
   "workbench.colorTheme": "One Monokai",
-  "workbench.iconTheme": "eq-material-theme-icons-darker"
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "latex-workshop.intellisense.citation.label": "title",
+  "latex-workshop.latex.additionalBib": [
+    "/Users/hiromi/Library/texmf/bibtex/bib/myreference.bib"
+  ]
 }
