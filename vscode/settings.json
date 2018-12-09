@@ -519,5 +519,7 @@
   "latex-workshop.intellisense.citation.label": "title",
   "latex-workshop.latex.additionalBib": [
     "/Users/hiromi/Library/texmf/bibtex/bib/myreference.bib"
-  ]
+  ],
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 85
 }
