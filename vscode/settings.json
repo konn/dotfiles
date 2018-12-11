@@ -509,6 +509,16 @@
         "label": "{/",
         "body": "\\notin",
         "description": "∉"
+      },
+      {
+        "label": "<.",
+        "body": "\\lessdot",
+        "description": "⋖"
+      },
+      {
+        "label": ">.",
+        "body": "\\gtrdot",
+        "description": "⋗"
       }
     ],
     "renderMode": "latex"
