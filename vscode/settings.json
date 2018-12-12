@@ -107,7 +107,8 @@
   ],
   "workbench.editor.highlightModifiedTabs": true,
   "files.associations": {
-    "*.el": "lisp"
+    "*.el": "lisp",
+    "*.satysfi-hash": "json"
   },
   "markdownlint.ignore": ["*MD033*"],
   "catex.maketitle.dictionary": [
@@ -531,5 +532,6 @@
     "/Users/hiromi/Library/texmf/bibtex/bib/myreference.bib"
   ],
   "editor.wordWrap": "bounded",
-  "editor.wordWrapColumn": 85
+  "editor.wordWrapColumn": 85,
+  "[json]": {}
 }
