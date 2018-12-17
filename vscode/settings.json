@@ -533,6 +533,5 @@
   ],
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 85,
-  "[json]": {},
-  "editor.autoIndent": false
+  "[json]": {}
 }
