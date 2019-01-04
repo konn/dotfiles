@@ -533,5 +533,6 @@
   ],
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 85,
-  "[json]": {}
+  "[json]": {},
+  "terminal.integrated.rendererType": "dom"
 }
