@@ -135,6 +135,7 @@
  '(agda2-highlight-datatype-face ((t (:foreground "cyan"))))
  '(agda2-highlight-function-face ((t (:foreground "deep sky blue"))))
  '(agda2-highlight-inductive-constructor-face ((t (:foreground "olive drab"))))
+ '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
  '(agda2-highlight-primitive-face ((t (:foreground "deep sky blue"))))
  '(agda2-highlight-primitive-type-face ((t (:foreground "cyan"))))
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
