@@ -132,6 +132,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(agda2-highlight-datatype-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-function-face ((t (:foreground "deep sky blue"))))
+ '(agda2-highlight-inductive-constructor-face ((t (:foreground "olive drab"))))
+ '(agda2-highlight-primitive-face ((t (:foreground "deep sky blue"))))
+ '(agda2-highlight-primitive-type-face ((t (:foreground "cyan"))))
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil))))
  '(satysfi-literal-area ((t (:background "dark" :foreground "orange"))))
@@ -179,12 +184,13 @@
  ;; If there is more than one, they won't work right.
  '(agda-input-user-translations (\` (("bb" "𝔹") (";_" "⍮"))))
  '(agda2-include-dirs (quote (".")))
- '(agda2-program-args (quote ("-l" "standard-library" "-i.")))
+ '(agda2-program-args (quote ("-l" "standard-library" "-l" "cubical" "-i.")))
  '(coffee-tab-width 4)
  '(company-ghc-show-info t)
  '(coq-compile-before-require t)
+ '(custom-enabled-themes (quote (tsdh-dark)))
  '(desktop-save-mode t)
- '(flycheck-vale-modes (quote (text-mode markdown-mode rst-mode yatex-mode)))
+ '(flycheck-vale-modes (quote (text-mode markdown-mode rst-mode yatex-mode)) t)
  '(haskell-interactive-prompt "λ> " t)
  '(haskell-literate-default (quote latex))
  '(haskell-notify-p t)
