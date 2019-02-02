@@ -138,6 +138,8 @@
  '(agda2-highlight-postulate-face ((t (:foreground "cyan"))))
  '(agda2-highlight-primitive-face ((t (:foreground "deep sky blue"))))
  '(agda2-highlight-primitive-type-face ((t (:foreground "cyan"))))
+ '(agda2-highlight-unsolved-constraint-face ((t (:background "gold4"))))
+ '(agda2-highlight-unsolved-meta-face ((t (:background "gold4"))))
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil))))
  '(satysfi-literal-area ((t (:background "dark" :foreground "orange"))))
