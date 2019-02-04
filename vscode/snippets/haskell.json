@@ -414,7 +414,7 @@
   "closed_typefamily": {
     "description": "",
     "prefix": "typw",
-    "body": ["type family ${1:Name} ${2:a} where", "$1 ${3:t} = ${4:Type}"]
+    "body": ["type family ${1:Name} ${2:a} where", "  $1 ${3:t} = ${4:Type}"]
   },
   "class": {
     "description": "",
