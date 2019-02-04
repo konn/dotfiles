@@ -419,7 +419,7 @@
   "class": {
     "description": "",
     "prefix": "cla",
-    "body": ["class ${1:Name} ${2:a} where", "${3:x} :: ${4:a}"]
+    "body": ["class ${1:Name} ${2:a} where", "  ${3:x} :: ${4:a}"]
   },
   "newtype": {
     "description": "",
