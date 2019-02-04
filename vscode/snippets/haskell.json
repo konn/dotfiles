@@ -212,7 +212,7 @@
     "prefix": "gadt",
     "body": [
       "data ${1:Name}${2: ${3:a}} where",
-      "${4:Ctor} :: ${5:${6:T} -> }$1${7:$2}"
+      "  ${4:Ctor} :: ${5:${6:T} -> }$1${7:$2}"
     ]
   },
   "WARNING": {
@@ -243,7 +243,7 @@
   "describe": {
     "description": "",
     "prefix": "desc",
-    "body": ["describe \"${1:some function}\" $ do", "${2:some}"]
+    "body": ["describe \"${1:some function}\" $ do", "  ${2:some}"]
   },
   "deriving": {
     "description": "",
@@ -270,7 +270,7 @@
     "prefix": "it",
     "body": [
       "it \"${1:satisfies bra bra}\" $ do",
-      "${2:pendingWith \"${3:need example}\"}"
+      "  ${2:pendingWith \"${3:need example}\"}"
     ]
   },
   "type_instance": {
@@ -345,7 +345,7 @@
   "where": {
     "description": "",
     "prefix": "where",
-    "body": ["where", "${1:x} :: ${2:T}", "$1$3 = ${4:undefined}"]
+    "body": ["where", "  ${1:x} :: ${2:T}", "  $1$3 = ${4:undefined}"]
   },
   "xxs": {
     "description": "",
@@ -376,7 +376,7 @@
   "case": {
     "description": "",
     "prefix": "case",
-    "body": ["case ${1:x} of", "${2:_} -> ${3:undefined}"]
+    "body": ["case ${1:x} of", "  ${2:_} -> ${3:undefined}"]
   },
   "RULES pragma": {
     "description": "",
