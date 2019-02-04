@@ -109,7 +109,8 @@
   "workbench.editor.highlightModifiedTabs": true,
   "files.associations": {
     "*.el": "lisp",
-    "*.satysfi-hash": "json"
+    "*.satysfi-hash": "json",
+    "*.hs": "haskell"
   },
   "markdownlint.ignore": ["*MD033*"],
   "catex.maketitle.dictionary": [
