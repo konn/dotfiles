@@ -536,5 +536,6 @@
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 85,
   "[json]": {},
-  "terminal.integrated.rendererType": "dom"
+  "terminal.integrated.rendererType": "dom",
+  "editor.tabCompletion": "onlySnippets"
 }
