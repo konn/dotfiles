@@ -537,5 +537,6 @@
   "editor.wordWrapColumn": 85,
   "[json]": {},
   "terminal.integrated.rendererType": "dom",
-  "editor.tabCompletion": "onlySnippets"
+  "editor.tabCompletion": "onlySnippets",
+  "git.autofetch": true
 }
