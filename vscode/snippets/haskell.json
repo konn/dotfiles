@@ -383,11 +383,19 @@
     "prefix": "rules",
     "body": [
       "{-# RULES",
-      "\"${1:name}\" forall ${2:xs}.",
-      "  ${3:f xs} = ${4:after}",
+      "\"${1:name}\"${2: forall ${3:xs}.}",
+      "  ${4:f xs} = ${5:after}",
       "  #-}$0"
     ]
   },
+  "single rule": {
+    "description": "A single rule inside RULES pragma",
+    "prefix": "rule",
+    "body": [
+      "\"${1:name}\"${2: forall ${3:xs}.}",
+      "  ${4:f xs} = ${5:after}"
+    ]
+  }
   "pattern": {
     "description": "",
     "prefix": "pat",
