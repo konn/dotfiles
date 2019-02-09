@@ -14,6 +14,6 @@
   // }
   "case-break": {
     "prefix": "case",
-    "body": ["case ${1:expr}:", "    break;"]
+    "body": ["case ${1:expr}:", "    $0", "    break;"]
   }
 }
