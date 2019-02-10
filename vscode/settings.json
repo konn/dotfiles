@@ -538,5 +538,8 @@
   "[json]": {},
   "terminal.integrated.rendererType": "dom",
   "editor.tabCompletion": "onlySnippets",
-  "git.autofetch": true
+  "git.autofetch": true,
+  "github.customPullRequestDescription": "gitEditor",
+  "github.customPullRequestTitle": true,
+  "github.preferedMergeMethod": "squash"
 }
