@@ -541,5 +541,6 @@
   "git.autofetch": true,
   "github.customPullRequestDescription": "gitEditor",
   "github.customPullRequestTitle": true,
-  "github.preferedMergeMethod": "squash"
+  "github.preferedMergeMethod": "squash",
+  "prolog.executablePath": "/usr/local/bin/swipl"
 }
