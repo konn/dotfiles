@@ -530,9 +530,7 @@
   "workbench.colorTheme": "One Monokai",
   "workbench.iconTheme": "material-icon-theme",
   "latex-workshop.intellisense.citation.label": "title",
-  "latex-workshop.latex.additionalBib": [
-    "/Users/hiromi/Library/texmf/bibtex/bib/myreference.bib"
-  ],
+  "latex-workshop.latex.bibDirs": ["/Users/hiromi/Library/texmf/bibtex/bib"],
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 85,
   "[json]": {},
