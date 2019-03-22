@@ -99,5 +99,13 @@
   {
     "key": "shift+cmd+c",
     "command": "git.commitStaged"
+  },
+  {
+    "key": "alt+g g",
+    "command": "-workbench.action.gotoLine"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "-workbench.action.gotoLine"
   }
 ]
