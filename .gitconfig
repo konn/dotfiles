@@ -11,6 +11,7 @@
 [alias]
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+	co    = checkout
 
 [diff "haskell"]
         xfuncname = "^\\s*((data|newtype|type)?[^\\s]+)(\\s*[^\\s]*)*(::|=)$"
