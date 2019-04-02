@@ -37,7 +37,7 @@
     "command": "workbench.action.navigateLeft"
   },
   {
-    "key": "ctrl+c ctrl+t",
+    "key": "shift+cmd+[BracketLeft]",
     "command": "workbench.action.terminal.focus"
   },
   {
@@ -107,5 +107,21 @@
   {
     "key": "ctrl+g",
     "command": "-workbench.action.gotoLine"
+  },
+  {
+    "key": "ctrl+c ctrl+t",
+    "command": "haskero.insertType"
+  },
+  {
+    "key": "ctrl+c ctrl+i",
+    "command": "haskell.addImport"
+  },
+  {
+    "key": "ctrl+c ctrl+e",
+    "command": "haskell.addExtension"
+  },
+  {
+    "key": "ctrl+c ctrl+q",
+    "command": "haskero.selectTarget"
   }
 ]
