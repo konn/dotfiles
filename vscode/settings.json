@@ -540,5 +540,6 @@
   "github.customPullRequestDescription": "gitEditor",
   "github.customPullRequestTitle": true,
   "github.preferedMergeMethod": "squash",
-  "prolog.executablePath": "/usr/local/bin/swipl"
+  "prolog.executablePath": "/usr/local/bin/swipl",
+  "workbench.editor.enablePreviewFromQuickOpen": false
 }
