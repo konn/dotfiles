@@ -43,13 +43,13 @@
     }
   ],
   "files.exclude": {
-    "**/.DS_Store": true,
     "**/.git": true,
-    "**/.hg": true,
     "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
     "**/*.agdai": true,
     "**/*.olean": true,
-    "**/CVS": true,
     "out": false
   },
   "rust.clippy_preference": "on",
