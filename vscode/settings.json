@@ -113,6 +113,11 @@
     "*.hs": "haskell"
   },
   "markdownlint.ignore": ["*MD033*"],
+  "markdownlint.config": {
+    "MD004": {
+      "style": "sublist"
+    }
+  },
   "catex.maketitle.dictionary": [
     {
       "include": "defaults/maketitles.json"
