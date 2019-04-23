@@ -50,7 +50,11 @@
     "**/.DS_Store": true,
     "**/*.agdai": true,
     "**/*.olean": true,
-    "out": false
+    "out": false,
+    "**/.stack-work": true,
+    "**/*.hi": true,
+    "**/*.o": true,
+    "abstract-solver/": true
   },
   "rust.clippy_preference": "on",
   "latex-workshop.view.pdf.viewer": "tab",
