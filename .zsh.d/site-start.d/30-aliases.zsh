@@ -14,7 +14,7 @@ alias diff='colordiff'
 alias egison='rlwrap egison'
 alias favs='open -aSafari http://favstar.fm/users/mr_konn/recent'
 alias gd='dirs -v; echo -n "select number: "; read newdir; cd +"$newdir"'
-
+alias cagda='agda --cubical +RTS -M1.5G -H1.5G -A128M -RTS'
 locate_bin "hub" > /dev/null 2>&1 && alias git=hub
 
 alias gosh='rlwrap gosh'
