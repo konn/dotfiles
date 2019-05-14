@@ -103,6 +103,11 @@
     "prefix": "dvi",
     "body": ["deriving instance ${1:Class} ${2:Data}"]
   },
+  "deriving_instance with strategy": {
+    "description": "deriving (via/newtype/stock...) instance ()",
+    "prefix": "dvis",
+    "body": ["deriving ${1|newtype,stock,anyclass,via|} instance (${2:Show})"]
+  },
   "inline": {
     "description": "",
     "prefix": "inl",
