@@ -5,6 +5,7 @@ export SHELL=/bin/zsh
 export LANGUAGE=ja_JP.UTF-8
 export LC_MESSAGES=ja_JP.UTF-8
 export LANG=ja_JP.UTF-8
+export LC_CTYPE=ja_JP.UTF-8
 
 # Binary Paths
 typeset -U path PATH # Uniquify the PATH list
