@@ -13,7 +13,7 @@ if [[ $TERM != "dumb" ]]; then
           PROMPT=$'%{\e[38;5;100m%}%D{%a %m %d} %{\e[38;5;159m%}%n@sakura%{\e[38;5;015m%} %~\n%{\e[0m%}$ ' ;;
       "Ubuntu-VM")
           PROMPT=$'%{\e[38;5;100m%}%D{%a %m %d} %{\e[38;5;159m%}%n@ubuntu-vm %{\e[38;5;015m%} %~\n%{\e[0m%}$ ';;
-      "Jazz.local")
+      "Jazz.local" | "Swing.local")
           PROMPT=$'%{\e[34m%}%D{%a %m %d} %{\e[33m%}%n@%m%{\e[32m%} %~\n%{\e[0m%}$ ';;
       *)
           PROMPT=$'%{\e[34m%}%D{%a %m %d} %{\e[32m%}%n@%m%{\e[33m%} %~\n%{\e[0m%}$ ';;
