@@ -71,7 +71,8 @@ tramp
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -110,5 +111,4 @@ cabal.sandbox.config
 *.aux
 *.hp
 .stack-work/
-
-
+.config/karabiner/automatic_backups
