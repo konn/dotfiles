@@ -24,7 +24,8 @@
   },
   "[haskell]": {
     "editor.fontFamily": "Hasklig,Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "editor.defaultFormatter": "MaxGabriel.brittany"
   },
   "[redprl]": {
     "editor.fontFamily": "Fira Code,Menlo, Monaco, 'Courier New', monospace",
@@ -550,5 +551,9 @@
   "github.customPullRequestTitle": true,
   "github.preferedMergeMethod": "squash",
   "prolog.executablePath": "/usr/local/bin/swipl",
-  "workbench.editor.enablePreviewFromQuickOpen": false
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.detectIndentation": false,
+  "brittany.stackEnable": true,
+  "brittany.path": "~/.local/bin/brittany",
+  "editor.defaultFormatter": "MaxGabriel.brittany"
 }
