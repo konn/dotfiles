@@ -4,8 +4,9 @@
 # Check if any dotfile is updated (On local only)
 autoload -Uz add-zsh-hook
 
-if [ $(hostname) = "Jazz.local" ]; then
+case "$(hostname)" in
+"Jazz.local" | "Swing.local")
     autoload -Uz check_dotfiles && check_dotfiles
 
     add-zsh-hook zshexit check_dotfiles
-fi
+esac
