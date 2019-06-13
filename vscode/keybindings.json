@@ -155,5 +155,10 @@
     "key": "ctrl+r",
     "command": "-actions.find",
     "when": "!findWidgetVisible"
+  },
+  {
+    "key": "ctrl+[IntlRo]",
+    "command": "-emacs.C-/",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
