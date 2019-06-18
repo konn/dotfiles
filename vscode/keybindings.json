@@ -160,5 +160,10 @@
     "key": "ctrl+[IntlRo]",
     "command": "-emacs.C-/",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
   }
 ]
