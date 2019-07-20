@@ -170,5 +170,10 @@
     "key": "up",
     "command": "-closeFindWidget",
     "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "down",
+    "command": "-closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
   }
 ]
