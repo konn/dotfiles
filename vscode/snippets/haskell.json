@@ -4,6 +4,11 @@
     "prefix": "opts",
     "body": ["{-# OPTIONS_GHC ${1:-Wno-type-defaults}$0 #-}"]
   },
+  "MPTC": {
+    "description": "{-# LANGUAGE MultiParamTypeClasses #-}",
+    "prefix": "mptc",
+    "body": "MultiParamTypeClasses"
+  },
   "comprehension": {
     "description": "",
     "prefix": "|",
