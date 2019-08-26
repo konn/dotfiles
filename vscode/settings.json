@@ -44,18 +44,17 @@
     }
   ],
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
     "**/.DS_Store": true,
-    "**/*.agdai": true,
-    "**/*.olean": true,
-    "out": false,
+    "**/.git": true,
+    "**/.hg": true,
     "**/.stack-work": true,
+    "**/.svn": true,
+    "**/*.agdai": true,
     "**/*.hi": true,
     "**/*.o": true,
-    "abstract-solver/": true
+    "**/*.olean": true,
+    "**/CVS": true,
+    "out": false
   },
   "rust.clippy_preference": "on",
   "latex-workshop.view.pdf.viewer": "tab",
