@@ -42,7 +42,7 @@ tmux () {
 
 }
 alias vi=vim
-
+alias ghci="stack ghci --"
 # Jupyter alias for macOS
 if [ "$(hostname)" = "Jazz.local" ]; then
     alias jupyter='stack exec jupyter --'
