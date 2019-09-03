@@ -47,6 +47,7 @@
     "**/.DS_Store": true,
     "**/.git": true,
     "**/.hg": true,
+    "**/.stack-prof": true,
     "**/.stack-work": true,
     "**/.svn": true,
     "**/*.agdai": true,
