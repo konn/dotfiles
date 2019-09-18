@@ -555,5 +555,6 @@
   "editor.detectIndentation": false,
   "brittany.stackEnable": true,
   "brittany.path": "~/.local/bin/brittany",
-  "editor.defaultFormatter": "MaxGabriel.brittany"
+  "editor.defaultFormatter": "MaxGabriel.brittany",
+  "prolog.format.tabSize": 2
 }
