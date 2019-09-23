@@ -37,6 +37,10 @@ export PATH="$CUDA_HOME/bin:$PATH"
 export PATH="/usr/local/opt/lean@0.2/bin:$PATH"
 export PATH="/snap/bin:$PATH"
 export PATH="$HOME/.local/elmer/bin:$PATH"
+if [ -d "/Applications/EasyWine64.app" ]; then
+  export PATH="/Applications/EasyWine64.app/Contents/Resources/wine/bin:$PATH"
+fi
+
 
 # Library Paths
 export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
