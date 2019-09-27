@@ -9,6 +9,11 @@
     "prefix": "mptc",
     "body": "MultiParamTypeClasses"
   },
+  "GND": {
+    "description": "{-# LANGUAGE GeneralizedNewtypeDeriving #-}",
+    "prefix": "gnd",
+    "body": "GeneralizedNewtypeDeriving"
+  },
   "comprehension": {
     "description": "",
     "prefix": "|",
