@@ -37,7 +37,7 @@ steps:
   - language_pragmas:
       style: compact_line
       align: true
-      remove_redundant: true
+      remove_redundant: false
 
   # Remove trailing whitespace
   - trailing_whitespace: {}
