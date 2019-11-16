@@ -1,7 +1,7 @@
 flags: {}
 packages: []
 extra-deps: []
-resolver: lts-13.9
+resolver: lts-14.14
 build:
   haddock: true
   haddock-deps: false
