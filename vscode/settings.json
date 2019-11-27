@@ -65,6 +65,31 @@
   "telemetry.enableTelemetry": false,
   "redtt.diagnostics.onChange": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "markdown-preview-enhanced.mathBlockDelimiters": [
+    [
+      "```math",
+      "```"
+    ],
+    [
+      "$$",
+      "$$"
+    ],
+    [
+      "\\[",
+      "\\]"
+    ],
+  ],
+  "markdown-preview-enhanced.mathInlineDelimiters": [
+    ["$`", "`$"],
+    [
+      "$",
+      "$"
+    ],
+    [
+      "\\(",
+      "\\)"
+    ]
+  ],
   "generic-input-methods.input-methods": [
     {
       "name": "Unicode Math",
@@ -556,5 +581,6 @@
   "brittany.stackEnable": true,
   "brittany.path": "~/.local/bin/brittany",
   "editor.defaultFormatter": "MaxGabriel.brittany",
-  "prolog.format.tabSize": 2
+  "prolog.format.tabSize": 2,
+  "markdown-preview-enhanced.liveUpdate": true
 }
