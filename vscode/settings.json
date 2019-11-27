@@ -585,5 +585,5 @@
   "markdown-preview-enhanced.liveUpdate": true,
   "markdown-preview-enhanced.latexEngine": "lualatex",
   "markdown-preview-enhanced.usePandocParser": true,
-  "markdown-preview-enhanced.pandocArguments": "--filter=gitlabmath,--katex,--standalone,--metadata=title=Perview"
+  "markdown-preview-enhanced.pandocArguments": "--filter=gitlabmath,--katex,--standalone,--highlight-style=kate"
 }
