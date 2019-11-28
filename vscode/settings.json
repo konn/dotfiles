@@ -583,7 +583,7 @@
   "editor.defaultFormatter": "MaxGabriel.brittany",
   "prolog.format.tabSize": 2,
   "markdown-preview-enhanced.liveUpdate": true,
-  "markdown-preview-enhanced.latexEngine": "lualatex",
+  "markdown-preview-enhanced.latexEngine": "katex",
   "markdown-preview-enhanced.usePandocParser": true,
   "markdown-preview-enhanced.pandocArguments": "--filter=gitlabmath,--katex,--standalone,--highlight-style=kate"
 }
