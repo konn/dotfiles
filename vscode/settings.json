@@ -569,7 +569,7 @@
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 85,
   "[json]": {},
-  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.rendererType": "experimentalWebgl",
   "editor.tabCompletion": "onlySnippets",
   "git.autofetch": true,
   "github.customPullRequestDescription": "gitEditor",
