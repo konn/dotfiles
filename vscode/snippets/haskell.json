@@ -116,7 +116,7 @@
   "deriving_instance with strategy": {
     "description": "deriving (via/newtype/stock...) instance ()",
     "prefix": "dvis",
-    "body": ["deriving ${1|newtype,stock,anyclass,via|} instance (${2:Show})"]
+    "body": ["deriving ${1|newtype,stock,anyclass,via|} instance ${2:(${3:Cxt}) => }${4:Class} ${5:a}"]
   },
   "inline": {
     "description": "",
