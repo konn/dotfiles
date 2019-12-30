@@ -1,4 +1,4 @@
-(require 'hare)
+;(require 'hare)
 (require 'flycheck)
 (require 'intero)
 (require 'hlint-refactor)
