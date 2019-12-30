@@ -2,7 +2,7 @@
 (require 'rw-language-and-country-codes)
 (require 'rw-ispell)
 (require 'rw-hunspell)
-(require 'emacs-grammarly)
+; (require 'emacs-grammarly)
 (require 'flycheck-vale)
 (flycheck-vale-setup)
 
