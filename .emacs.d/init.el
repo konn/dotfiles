@@ -22,43 +22,43 @@
 ;;;               123456789012
 ;;; ユニコード文字：Cambria Math……は何故か動かない……。
 
-;; (create-fontset-from-ascii-font
-;;  "Menlo-18:weight=normal:slant=normal:height=140"
-;;  nil "menlokakugo")
+ (create-fontset-from-ascii-font
+  "Menlo-18:weight=normal:slant=normal:height=140"
+  nil "menlokakugo")
 
-;; (set-face-attribute
-;;   'default nil
-;;   :family "Menlo"
-;;   :height 180
-;;  )
+ (set-face-attribute
+   'default nil
+   :family "Menlo"
+   :height 180
+  )
 
-;; (set-fontset-font
-;;  t 'unicode (font-spec :family "Cambria Math")
-;;  )
-;; (set-fontset-font 
-;;  t 'symbol (font-spec :family "Cambria Math")
-;;  )
+ (set-fontset-font
+  t 'unicode (font-spec :family "Cambria Math")
+  )
+ (set-fontset-font 
+  t 'symbol (font-spec :family "Cambria Math")
+  )
 
-;; (mapc
-;;  (lambda (cat)
-;;    (set-fontset-font
-;;     t cat
-;;     (font-spec :family "Hiragino Kaku Gothic ProN")))
-;;  (list
-;;   'katakana-jisx0201 'japanese-jisx0208 'japanese-jisx0212
-;;   'japanese-jisx0213-1 'japanese-jisx0213-2))
-;; (set-fontset-font t '(#x0080 . #x024F) "Menlo")
+ (mapc
+  (lambda (cat)
+    (set-fontset-font
+     t cat
+     (font-spec :family "Hiragino Kaku Gothic ProN")))
+  (list
+   'katakana-jisx0201 'japanese-jisx0208 'japanese-jisx0212
+   'japanese-jisx0213-1 'japanese-jisx0213-2))
+ (set-fontset-font t '(#x0080 . #x024F) "Menlo")
 
-;; (add-to-list 'face-font-rescale-alist
-;;              '(".*Hiragino Kaku Gothic ProN.*" . 1.275)
-;;              ;; '(".*Cambria Math.*" . 1.2)
-;;              )
+ (add-to-list 'face-font-rescale-alist
+	      '(".*Hiragino Kaku Gothic ProN.*" . 1.275)
+	      ;; '(".*Cambria Math.*" . 1.2)
+	      )
 
-;; (set-fontset-font t '(#x2115 . #x2115) "Cambria Math")
-;; (set-fontset-font t '(#x2192 . #x2192) "Cambria Math")
+(set-fontset-font t '(#x2115 . #x2115) "Cambria Math")
+(set-fontset-font t '(#x2192 . #x2192) "Cambria Math")
 
 ;; ;;; Menlo+角ゴ+その他を使う
-;; ;; (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
+(add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))
 
 
 (let* ((size 17) ; ASCIIフォントのサイズ [9/10/12/14/15/17/19/20/...]
@@ -211,7 +211,7 @@
  '(helm-exit-idle-delay 0)
  '(helm-ff-skip-boring-files t)
  '(helm-ls-git-show-abs-or-relative (quote relative))
- '(helm-truncate-lines t t)
+ '(helm-truncate-lines t)
  '(package-selected-packages
    (quote
     (ensime scala-mode use-package company-racer flycheck-rust racer dockerfile-mode flycheck-vale wgrep-ag wgrep ripgrep ess ess-R-data-view helm-R ag gitignore-mode hlint-refactor systemd desktop desktop+ flymake-less less flymake-coffee sass-mode company-flow flycheck-flow rust-mode cubicaltt redpen-paragraph magit magit-filenotify magit-find-file wolfram-mode intero dashboard flycheck-liquidhs liquid-types yasnippet yaml-mode visual-regexp-steroids tuareg swift-mode shm rw-language-and-country-codes rw-ispell rw-hunspell prolog pos-tip point-undo pcre2el mmm-mode mc-extras math-symbol-lists lua-mode langtool haskell-indentation helm-idris helm-ghc foreign-regexp flycheck-color-mode-line fill-column-indicator f e2wm dash-functional company-ghc company-cabal color-theme coffee-mode button-lock bm auto-complete)))
@@ -523,7 +523,7 @@
      ("\\`smb\\'" nil nil)
      ("\\`\\(?:fcp\\|krlogin\\|nc\\|r\\(?:cp\\|emcp\\|sh\\)\\|telnet\\)\\'" nil "hiromi")
      ("\\`\\(?:socks\\|tunnel\\)\\'" nil "hiromi")
-     ("\\`synce\\'" nil nil))) nil (tramp))
+     ("\\`synce\\'" nil nil))))
  '(yas-prompt-functions (quote (my-yas/prompt)))
  '(yas-triggers-in-field t))
 

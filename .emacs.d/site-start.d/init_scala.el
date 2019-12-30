@@ -1,4 +1,4 @@
-(require 'scala-mode-auto)
+(require 'scala-mode)
 (eval-after-load 'scala-mode
   '(progn
      (define-key scala-mode-map [tab] nil)
