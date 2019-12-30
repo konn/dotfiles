@@ -95,8 +95,8 @@
         (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
             (normal-top-level-add-subdirs-to-load-path))))))
 
-(add-to-load-path "lisp/stack-mode" "lisp/skk" "lisp" "local-lisp" "private" "site-start.d")
-(add-to-load-path "ProofGeneral" "lisp/liquid-types.el")
+(add-to-load-path "lisp" "local-lisp" "private" "site-start.d")
+(add-to-load-path "ProofGeneral")
 
 ;; 終了時バイトコンパイル
 (add-hook 'kill-emacs-query-functions

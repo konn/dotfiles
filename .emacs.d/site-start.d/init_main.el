@@ -1,7 +1,7 @@
 (require 'init_auto-complete)
 (require 'init_multiple-cursors)
 (require 'init_javascript)
-(require 'init_satysfi)
+;(require 'init_satysfi)
 (require 'init_helm)
 (require 'init_haskell)
 (require 'init_regex)
