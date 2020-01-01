@@ -45,3 +45,4 @@ autoload -Uz locate_bin
 
 # SATySFi
 export SATYSFI_LIB_ROOT=/usr/local/lib-satysfi
+eval "$(rbenv init -)"
