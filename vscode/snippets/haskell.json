@@ -145,7 +145,7 @@
   },
   "deriving_all": {
     "description": "",
-    "prefix": "dva",
+    "prefix": "dv",
     "body": ["deriving (Read, Show, Eq, Ord)"]
   },
   "scc": {
@@ -262,8 +262,8 @@
   },
   "deriving": {
     "description": "",
-    "prefix": "dv",
-    "body": ["deriving (${Show})"]
+    "prefix": "dva",
+    "body": ["deriving anyclass (${Class})"]
   },
   "lambda": {
     "description": "",
