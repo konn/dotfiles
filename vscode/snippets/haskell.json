@@ -146,7 +146,7 @@
   "deriving_all": {
     "description": "",
     "prefix": "dv",
-    "body": ["deriving (Read, Show, Eq, Ord)"]
+    "body": ["deriving (${1:Read, Show, Eq, Ord}${2})"]
   },
   "scc": {
     "description": "",
