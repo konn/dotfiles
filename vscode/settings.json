@@ -585,5 +585,6 @@
   "markdown-preview-enhanced.latexEngine": "katex",
   "markdown-preview-enhanced.usePandocParser": true,
   "markdown-preview-enhanced.pandocArguments": "--filter=gitlabmath,--katex,--standalone,--highlight-style=kate",
-  "markdown-preview-enhanced.breakOnSingleNewLine": false
+  "markdown-preview-enhanced.breakOnSingleNewLine": false,
+  "explorer.confirmDelete": false
 }
