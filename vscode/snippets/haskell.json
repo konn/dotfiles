@@ -71,7 +71,7 @@
     "description": "",
     "prefix": "#if",
     "body": [
-      "#if ${1:MIN_VERSION_ghc(${2:8,4,1})}\n$3${4:\n#else\n$5}\n#endif\n$0"
+      "#if ${1:MIN_VERSION_${2:ghc}(${3:8,4,1})}\n$4${5:\n#else\n$6}\n#endif\n$0"
     ]
   },
   "type": {
