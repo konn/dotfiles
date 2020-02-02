@@ -34,9 +34,6 @@
 [rebase]
 	autosquash = true
 
-[commit]
-	template = ~/.stCommitMsg
-
 [include]
        path = .gitconfig.private
 [init]
