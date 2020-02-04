@@ -586,5 +586,6 @@
   "markdown-preview-enhanced.usePandocParser": true,
   "markdown-preview-enhanced.pandocArguments": "--filter=gitlabmath,--katex,--standalone,--highlight-style=kate",
   "markdown-preview-enhanced.breakOnSingleNewLine": false,
-  "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  "gitlens.codeLens.recentChange.enabled": false
 }
