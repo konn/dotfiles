@@ -12,6 +12,20 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
 	co    = checkout
+  pull-o = "!f(){ \
+        local branch_name=${1};\
+        local current_branch=$(git symbolic-ref --short HEAD);\
+        local branch_remote=$(git config branch.${branch_name}.remote);\
+        local branch_path=$(git config branch.${branch_name}.merge);\
+        if [ ${branch_name} = ${current_branch} ];then \
+            git pull ${branch_remote} ${branch_name} --ff-only;\
+            return ${?};\
+        else \
+            git fetch ${branch_remote} && \
+            git fetch . refs/remotes/${branch_remote}/${branch_name}:${branch_path};\
+            return ${?};\
+        fi;\
+    };f"
 
 [diff "haskell"]
         xfuncname = "^\\s*((data|newtype|type)?[^\\s]+)(\\s*[^\\s]*)*(::|=)$"
