@@ -97,5 +97,14 @@
       "\\addbibresource[]{${1:biblio.bib}}",
       "$0"
     ]
+  },
+  "align*": {
+    "description": "\begin{align*}",
+    "prefix": "al*",
+    "body": [
+      "\\begin{align*}",
+      "$0",
+      "\\end{align*}"
+    ]
   }
 }
