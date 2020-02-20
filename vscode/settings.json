@@ -588,5 +588,6 @@
   "markdown-preview-enhanced.breakOnSingleNewLine": false,
   "explorer.confirmDelete": false,
   "gitlens.codeLens.recentChange.enabled": false,
-  "gitlens.codeLens.authors.enabled": false
+  "gitlens.codeLens.authors.enabled": false,
+  "languageServerHaskell.completionSnippetsOn": false
 }
