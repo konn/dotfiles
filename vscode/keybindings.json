@@ -6,7 +6,13 @@
   },
   {
     "key": "ctrl+c ctrl+l",
-    "command": "ghciHelper.reload"
+    "command": "ghciHelper.reload",
+    "when": "editorLangId == haskell"
+  },
+  {
+    "key": "ctrl+c ctrl+l",
+    "command": "agda-interactive.load-file",
+    "when": "editorLangId == agda"
   },
   {
     "key": "alt+z 8",
