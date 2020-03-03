@@ -45,5 +45,6 @@
 	required = true
 [user]
 	signingkey = 1115F8EA
+	email = konn.jinro@gmail.com
 [commit]
 	gpgsign = true
