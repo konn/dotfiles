@@ -43,3 +43,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[user]
+	signingkey = 1115F8EA
+[commit]
+	gpgsign = true
