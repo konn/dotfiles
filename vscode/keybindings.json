@@ -215,5 +215,24 @@
   {
     "key": "ctrl+c b",
     "command": "extension.complete.catex.environment"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-emacs.C-k"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "-deleteAllRight",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+k",
+    "command": "-editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
   }
 ]
