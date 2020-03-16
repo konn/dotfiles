@@ -26,6 +26,7 @@ alias luajitlatex='luajittex --fmt=luajitlatex.fmt'
 alias ocaml='rlwrap ocaml'
 alias pip=pip3
 alias maxima='rlwrap maxima'
+alias runhaskell='stack exec -- runhaskell'
 alias python=python3
 alias qemu='sudo /usr/local/bin/qemu'
 alias saty='satysfi --bytecomp'
