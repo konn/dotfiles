@@ -57,3 +57,9 @@ export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 export PKG_CONFIG_PATH="/usr/local/opt/openssl@1.1/lib/pkgconfig"
+if [ -d $HOME/.nix-profile ]; then
+  source $HOME/.nix-profile/etc/profile.d/nix.sh
+  export LD_LIBRARY_PATH=$NIX_LINK/lib:$LD_LIBRARY_PATH
+  export DYLD_LIBRARY_PATH=$NIX_LINK/lib:$DYLD_LIBRARY_PATH
+  export PATH=$NIX_LINK/bin:$PATH
+fi
