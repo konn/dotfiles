@@ -432,7 +432,7 @@
   "main": {
     "description": "",
     "prefix": "main",
-    "body": ["main :: IO ()\nmain = ${undefined}"]
+    "body": ["main :: IO ()\nmain = ${return ()}"]
   },
   "closed_typefamily": {
     "description": "",
