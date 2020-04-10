@@ -590,5 +590,6 @@
   "gitlens.codeLens.recentChange.enabled": false,
   "gitlens.codeLens.authors.enabled": false,
   "languageServerHaskell.completionSnippetsOn": false,
-  "terminal.integrated.allowChords": false
+  "terminal.integrated.allowChords": false,
+  "languageServerHaskell.hieExecutablePath": "~/.local/bin/haskell-language-server"
 }
