@@ -112,3 +112,4 @@ cabal.sandbox.config
 *.hp
 .stack-work/
 .config/karabiner/automatic_backups
+/.cabal/store
