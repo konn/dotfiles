@@ -39,7 +39,7 @@ world-file: /Users/hiromi/Library/Haskell/logs/world
 -- program-prefix:
 -- program-suffix:
 -- library-vanilla: True
-library-profiling: True
+library-profiling: False
 -- shared:
 -- executable-dynamic: False
 -- executable-profiling: False
