@@ -7,7 +7,6 @@
   "haskell.hlint.logLevel": "info",
   "editor.formatOnSave": true,
   "languageServerHaskell.liquidOn": true,
-  "languageServerHaskell.useCustomHieWrapperPath": "~/.local/bin/hie-wrapper",
   "haskell.hlint.executablePath": "/Users/hiromi/.local/bin/hlint",
   "editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
   "terminal.integrated.fontSize": 18,
@@ -591,5 +590,5 @@
   "gitlens.codeLens.authors.enabled": false,
   "languageServerHaskell.completionSnippetsOn": false,
   "terminal.integrated.allowChords": false,
-  "languageServerHaskell.hieExecutablePath": "~/.local/bin/haskell-language-server"
+  "languageServerHaskell.hieExecutablePath": "~/.local/bin/haskell-language-server-8.8"
 }
