@@ -113,3 +113,5 @@ cabal.sandbox.config
 .stack-work/
 .config/karabiner/automatic_backups
 /.cabal/store
+/cabal/bin
+/.cabal/bin
