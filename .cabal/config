@@ -60,7 +60,7 @@ extra-prog-path: /Users/hiromi/Library/Haskell/bin
 -- constraint:
 -- preference:
 -- solver: choose
-documentation: True
+documentation: False
 -- doc-index-file: $datadir/doc/index.html
 -- max-backjumps: 2000
 -- reorder-goals: False
