@@ -590,5 +590,7 @@
   "gitlens.codeLens.authors.enabled": false,
   "languageServerHaskell.completionSnippetsOn": false,
   "terminal.integrated.allowChords": false,
-  "languageServerHaskell.hieExecutablePath": "~/.local/bin/haskell-language-server-8.8"
+  "languageServerHaskell.hieExecutablePath": "${HOME}/.cabal/bin/haskell-language-server",
+  "languageServerHaskell.useCustomHieWrapper": true,
+  "languageServerHaskell.useCustomHieWrapperPath": "${HOME}/.cabal/bin/haskell-language-server-wrapper"
 }
