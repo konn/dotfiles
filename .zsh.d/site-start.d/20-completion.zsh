@@ -21,5 +21,11 @@ setopt extendedglob
 # For Stack
 which stack 1>/dev/null 2>/dev/null && eval "$(stack --bash-completion-script stack)"
 
+export NIX_COMP_PATH="$ZSH_HOME/completions/nix"
+source "$NIX_COMP_PATH/nix-zsh-completions.plugin.zsh"
+fpath=($NIX_COMP_PATH $fpath)
+
+
+
 # Use ssh completion for mosh.
 compdef mosh=ssh
