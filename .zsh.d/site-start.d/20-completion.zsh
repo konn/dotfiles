@@ -1,4 +1,7 @@
 ### -*- mode: shell-script; coding: utf-8 -*- ###
+export NIX_COMP_PATH="$ZSH_HOME/completions/nix"
+source "$NIX_COMP_PATH/nix-zsh-completions.plugin.zsh"
+FPATH=$NIX_COMP_PATH:$FPATH
 
 ## Setting up completion units
 autoload -U compinit && compinit
@@ -20,11 +23,6 @@ setopt extendedglob
 ## Completion settings for specific commands
 # For Stack
 which stack 1>/dev/null 2>/dev/null && eval "$(stack --bash-completion-script stack)"
-
-export NIX_COMP_PATH="$ZSH_HOME/completions/nix"
-source "$NIX_COMP_PATH/nix-zsh-completions.plugin.zsh"
-FPATH=$NIX_COMP_PATH:$FPATH
-
 
 # Use ssh completion for mosh.
 compdef mosh=ssh
