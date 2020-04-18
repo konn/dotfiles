@@ -23,8 +23,7 @@ which stack 1>/dev/null 2>/dev/null && eval "$(stack --bash-completion-script st
 
 export NIX_COMP_PATH="$ZSH_HOME/completions/nix"
 source "$NIX_COMP_PATH/nix-zsh-completions.plugin.zsh"
-fpath=($NIX_COMP_PATH $fpath)
-
+FPATH=$NIX_COMP_PATH:$FPATH
 
 
 # Use ssh completion for mosh.
