@@ -11,8 +11,8 @@ zstyle ':completion:*:approximate:*' max-errors 1 numeric
 # Use bash-style completion as well.
 autoload -U +X bashcompinit && bashcompinit
 
-# Ignore cases and regard [-_.] as surrounded by * and *.
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z} r:|[-_.]=**'
+# Ignore cases and regard [-_.:] as surrounded by * and *.
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z} r:|[-_.:]=**'
 
 # Use extended glob syntax of zsh
 setopt extendedglob
