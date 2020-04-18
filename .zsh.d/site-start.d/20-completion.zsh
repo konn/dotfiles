@@ -5,6 +5,7 @@ FPATH=$NIX_COMP_PATH:$FPATH
 
 ## Setting up completion units
 autoload -U compinit && compinit
+autoload -Uz locate_bin
 zmodload zsh/complist
 
 zstyle ':completion:*' completer _complete _match
@@ -22,7 +23,7 @@ setopt extendedglob
 
 ## Completion settings for specific commands
 # For Stack
-which stack 1>/dev/null 2>/dev/null && eval "$(stack --bash-completion-script stack)"
+locate_bin stack 1>/dev/null 2>/dev/null && eval "$(stack --bash-completion-script stack)"
 
 # Use ssh completion for mosh.
 compdef mosh=ssh
