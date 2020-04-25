@@ -11,6 +11,8 @@ if [[ $TERM != "dumb" ]]; then
   case "$(hostname)" in
       "sakura-vps")
           PROMPT=$'%{\e[38;5;100m%}%D{%a %m %d} %{\e[38;5;159m%}%n@sakura%{\e[38;5;015m%} %~\n%{\e[0m%}$ ' ;;
+      "new-sakura-vps")
+          PROMPT=$'%{\e[38;5;100m%}%D{%a %m %d} %{\e[38;5;159m%}%n@new-sakura%{\e[38;5;015m%} %~\n%{\e[0m%}$ ' ;;
       "Ubuntu-VM")
           PROMPT=$'%{\e[38;5;100m%}%D{%a %m %d} %{\e[38;5;159m%}%n@ubuntu-vm %{\e[38;5;015m%} %~\n%{\e[0m%}$ ';;
       "Jazz.local" | "Swing.local")
