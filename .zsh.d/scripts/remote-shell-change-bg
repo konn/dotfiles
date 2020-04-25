@@ -27,6 +27,7 @@ function ssh-mosh-observe() {
             fi
             case $HOSTNAME in
                 sakura-vps) set_bg "Sakura";;
+                new-sakura-vps) set_bg "Sakura";;
                 ubuntu-vm)  set_bg "VM";;
                 *)          set_bg "Pro";;
             esac;;
