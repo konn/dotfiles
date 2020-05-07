@@ -592,5 +592,6 @@
   "terminal.integrated.allowChords": false,
   "languageServerHaskell.hieExecutablePath": "${HOME}/.cabal/bin/haskell-language-server",
   "languageServerHaskell.useCustomHieWrapper": true,
-  "languageServerHaskell.useCustomHieWrapperPath": "${HOME}/.cabal/bin/haskell-language-server-wrapper"
+  "languageServerHaskell.useCustomHieWrapperPath": "${HOME}/.cabal/bin/haskell-language-server-wrapper",
+  "json.format.enable": false
 }
