@@ -115,3 +115,4 @@ cabal.sandbox.config
 /.cabal/store
 /cabal/bin
 /.cabal/bin
+.cabal/logs
