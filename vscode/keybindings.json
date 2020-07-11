@@ -48,7 +48,7 @@
   },
   {
     "key": "cmd+a",
-    "command": "selectAll"
+    "command": "editor.action.selectAll"
   },
   {
     "key": "shift+alt+n",
