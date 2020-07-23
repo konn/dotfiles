@@ -74,6 +74,13 @@
       "#if ${1:MIN_VERSION_${2:ghc}(${3:8,4,1})}\n$4${5:\n#else\n$6}\n#endif\n$0"
     ]
   },
+  "CPP if ghc": {
+    "description": "",
+    "prefix": "#ghc",
+    "body": [
+      "#if defined(__GLASGOW_HASKELL__) && ${1:__GLASGOW_HASKELL__ >= ${2:804}}\n$3${4:\n#else\n$5}\n#endif\n$0"
+    ]
+  },
   "type": {
     "description": "",
     "prefix": "type",
