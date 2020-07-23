@@ -578,7 +578,7 @@
   "editor.detectIndentation": false,
   "brittany.stackEnable": true,
   "brittany.path": "~/.local/bin/brittany",
-  "editor.defaultFormatter": "MaxGabriel.brittany",
+  "editor.defaultFormatter": "alanz.vscode-hie-server",
   "prolog.format.tabSize": 2,
   "markdown-preview-enhanced.liveUpdate": true,
   "markdown-preview-enhanced.latexEngine": "katex",
@@ -594,5 +594,6 @@
   "languageServerHaskell.useCustomHieWrapperPath": "${HOME}/.cabal/bin/haskell-language-server-wrapper",
   "json.format.enable": false,
   "languageServerHaskell.hieVariant": "haskell-language-server",
-  "languageServerHaskell.hieExecutablePath": "${HOME}/.cabal/bin/haskell-language-server-wrapper"
+  "languageServerHaskell.hieExecutablePath": "${HOME}/.cabal/bin/haskell-language-server-wrapper",
+  "haskell.formattingProvider": "stylish-haskell"
 }
