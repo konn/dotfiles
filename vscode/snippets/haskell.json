@@ -128,7 +128,7 @@
   "inline": {
     "description": "",
     "prefix": "inl",
-    "body": ["{-# INLINE ${1:fun} #-}"]
+    "body": ["{-# INLINE ${1:[${2:0}]} ${3:fun} #-}"]
   },
   "unpack-strict": {
     "description": "",
