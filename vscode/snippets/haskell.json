@@ -133,7 +133,7 @@
   "inline [n]": {
     "description": "",
     "prefix": "inln",
-    "body": ["{-# INLINE ${1:[${2:0}]} ${3:fun} #-}"]
+    "body": ["{-# INLINE [${1:0}] ${2:fun} #-}"]
   },
   "unpack-strict": {
     "description": "",
