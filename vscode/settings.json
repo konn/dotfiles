@@ -595,6 +595,5 @@
   "json.format.enable": false,
   "languageServerHaskell.hieVariant": "haskell-language-server",
   "languageServerHaskell.hieExecutablePath": "${HOME}/.cabal/bin/haskell-language-server-wrapper",
-  "haskell.formattingProvider": "none",
-  "haskell.formatOnImportOn": false
+  "haskell.formattingProvider": "none"
 }
