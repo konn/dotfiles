@@ -423,6 +423,36 @@
           "placeholder": "fontname"
         }
       ]
+    },
+    {
+      "name": "titlecontents",
+      "args": [
+        {
+          "kind": "fixed",
+          "placeholder": "section"
+        },
+        {
+          "kind": "optional",
+          "placeholder": "1\\zw"
+        },
+        {
+          "kind": "fixed"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "\\thecontentslabel"
+        },
+        {
+          "kind": "fixed"
+        },
+        {
+          "kind": "fixed",
+          "placeholder": "\\hfill\\thecontentspage"
+        },
+        {
+          "kind": "optional"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
