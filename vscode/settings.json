@@ -635,5 +635,6 @@
   "languageServerHaskell.hieExecutablePath": "${HOME}/.cabal/bin/haskell-language-server-wrapper",
   "haskell.formattingProvider": "none",
   "grammarly.dialect": "british",
-  "grammarly.domain": "technical"
+  "grammarly.domain": "technical",
+  "latex.server.autoDownload": true
 }
