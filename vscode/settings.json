@@ -453,6 +453,14 @@
           "kind": "optional"
         }
       ]
+    },
+    {
+      "name": "uwave",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
