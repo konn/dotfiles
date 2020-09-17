@@ -636,5 +636,6 @@
   "haskell.formattingProvider": "none",
   "grammarly.dialect": "british",
   "grammarly.domain": "technical",
-  "latex.server.autoDownload": true
+  "latex.server.autoDownload": true,
+  "diffEditor.ignoreTrimWhitespace": false
 }
