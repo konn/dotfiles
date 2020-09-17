@@ -637,5 +637,6 @@
   "grammarly.dialect": "british",
   "grammarly.domain": "technical",
   "latex.server.autoDownload": true,
-  "diffEditor.ignoreTrimWhitespace": false
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.startupEditor": "welcomePage"
 }
