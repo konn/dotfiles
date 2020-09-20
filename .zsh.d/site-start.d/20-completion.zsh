@@ -25,5 +25,8 @@ setopt extendedglob
 # For Stack
 locate_bin stack 1>/dev/null 2>/dev/null && eval "$(stack --bash-completion-script stack)"
 
+# gh
+locate_bin gh 1>/dev/null 2>/dev/null && eval "$(gh completion -s zsh)"
+
 # Use ssh completion for mosh.
 compdef mosh=ssh
