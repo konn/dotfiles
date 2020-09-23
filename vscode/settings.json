@@ -139,7 +139,9 @@
   "files.associations": {
     "*.el": "lisp",
     "*.satysfi-hash": "json",
-    "*.hs": "haskell"
+    "*.hs": "haskell",
+    "cabal.project": "cabal",
+    "cabal.project.local": "cabal",
   },
   "markdownlint.ignore": ["*MD033*"],
   "markdownlint.config": {
