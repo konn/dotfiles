@@ -47,7 +47,7 @@ export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:$CUDA_HOME/lib"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$CUDA_HOME/lib"
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 
-if [ "$(hostname)" = "Jazz.local" ]; then
+if [ "$(hostname)" = "Jazz.local" -o "$(hostname)" = "Swing.local"  ]; then
   export EDITOR=code    
 else
   export EDITOR=/usr/bin/emacs
