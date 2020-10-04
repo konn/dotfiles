@@ -54,6 +54,8 @@
     "**/*.o": true,
     "**/*.olean": true,
     "**/CVS": true,
+    "**/dist-newstyle": true,
+    "**/dist-newstyle/": true,
     "out": false
   },
   "rust.clippy_preference": "on",
@@ -641,5 +643,10 @@
   "latex.server.autoDownload": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "workbench.startupEditor": "welcomePage",
-  "terminal.integrated.shell.linux": "/bin/zsh"
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "search.exclude": {
+    "**/.stack-prof": true,
+    "**/.stack-work": true,
+    "**/dist-newstyle": true
+  }
 }
