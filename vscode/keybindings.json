@@ -229,5 +229,9 @@
     "key": "ctrl+shift+k",
     "command": "editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-workbench.view.extension.bazel-explorer"
   }
 ]
