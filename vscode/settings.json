@@ -620,7 +620,7 @@
   "editor.detectIndentation": false,
   "brittany.stackEnable": true,
   "brittany.path": "~/.local/bin/brittany",
-  "editor.defaultFormatter": "vigoo.stylish-haskell",
+  "editor.defaultFormatter": "haskell.haskell",
   "prolog.format.tabSize": 2,
   "markdown-preview-enhanced.liveUpdate": true,
   "markdown-preview-enhanced.latexEngine": "katex",
