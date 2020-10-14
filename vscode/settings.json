@@ -648,5 +648,6 @@
     "**/.stack-prof": true,
     "**/.stack-work": true,
     "**/dist-newstyle": true
-  }
+  },
+  "search.searchEditor.defaultNumberOfContextLines": 5
 }
