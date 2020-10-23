@@ -63,3 +63,7 @@ if [ -d $HOME/.nix-profile ]; then
   export DYLD_LIBRARY_PATH=$NIX_LINK/lib:$DYLD_LIBRARY_PATH
   export PATH=$NIX_LINK/bin:$PATH
 fi
+
+if [ -d $HOME/.poetry/bin ]; then
+  export PATH="$HOME/.poetry/bin:$PATH"
+fi
