@@ -5,7 +5,7 @@ FPATH=$NIX_COMP_PATH:$FPATH
 
 # Completions provided by zsh
 if [ -d /usr/local/share/zsh/site-functions ]; then
-  FPATH=/usr/local/share/zsh/site-functions:$FPATH
+  fpath=(/usr/local/share/zsh/site-functions $fpath)
 fi
 
 ## Setting up completion units
