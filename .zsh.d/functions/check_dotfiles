@@ -1,7 +1,7 @@
 # -*- mode: shell-script; coding: utf-8 -*-
 
 check_dotfiles () {
-    if [ -n "`git --git-dir=$HOME/.dotfiles/.git status --porcelain`" ]; then
+    if [ -n "`git -C $HOME/.dotfiles status --porcelain`" ]; then
         terminal-notifier \
             -group "check_dotfiles" -remove "check_dotfiles" \
             -title "Dotfiles" -subtitle "Updated" \
