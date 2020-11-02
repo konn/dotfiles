@@ -3,6 +3,11 @@ export NIX_COMP_PATH="$ZSH_HOME/completions/nix"
 source "$NIX_COMP_PATH/nix-zsh-completions.plugin.zsh"
 FPATH=$NIX_COMP_PATH:$FPATH
 
+# Completions provided by zsh
+if [ -d /usr/local/share/zsh/site-functions ]; then
+  $FPATH=/usr/local/share/zsh/site-functions:$FPATH
+fi
+
 ## Setting up completion units
 autoload -U compinit && compinit
 autoload -Uz locate_bin
