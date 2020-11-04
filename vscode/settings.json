@@ -637,7 +637,6 @@
   "json.format.enable": false,
   "languageServerHaskell.hieVariant": "haskell-language-server",
   "languageServerHaskell.hieExecutablePath": "${HOME}/.cabal/bin/haskell-language-server-wrapper",
-  "haskell.formattingProvider": "none",
   "grammarly.dialect": "british",
   "grammarly.domain": "technical",
   "latex.server.autoDownload": true,
