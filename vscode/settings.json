@@ -24,7 +24,7 @@
   "[haskell]": {
     "editor.fontFamily": "Liga Hasklig,Hasklig,Liga Menlo,Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
-    "editor.defaultFormatter": "vigoo.stylish-haskell"
+    "editor.defaultFormatter": "haskell.haskell"
   },
   "[redprl]": {
     "editor.fontFamily": "Fira Code,Menlo, Monaco, 'Courier New', monospace",
