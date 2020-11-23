@@ -39,37 +39,43 @@
                         ]
                     },
                     {
-                      "description": "Ctrl+W to Cmd+W (when Realforce)",
-                      "manipulators": [
-                          {
-                              "from": {
-                                  "key_code": "w",
-                                  "modifiers": {
-                                      "mandatory": [
-                                          "left_control"
-                                      ]
-                                  }
-                              },
-                              "to": [
-                                  {
-                                      "key_code": "w",
-                                      "modifiers": ["left_command"]
-                                  }
-                              ],
-                              "type": "basic"
-                          }
-                      ]
-                  },
+                        "description": "Ctrl+W to Cmd+W (when Realforce)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "w",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
                     {
                         "description": "Change spacebar to left_shift if pressed with other keys (Post spacebar when pressed alone)",
                         "manipulators": [
                             {
                                 "conditions": [
-                                  {"type": "device_if",
-                                    "identifiers": [
-                                      {"vendor_id": 2131, "product_id": 285}
-                                    ]
-                                  }
+                                    {
+                                        "identifiers": [
+                                            {
+                                                "product_id": 285,
+                                                "vendor_id": 2131
+                                            }
+                                        ],
+                                        "type": "device_if"
+                                    }
                                 ],
                                 "from": {
                                     "key_code": "spacebar",
@@ -296,6 +302,14 @@
                             },
                             "to": {
                                 "key_code": "fn"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "grave_accent_and_tilde"
+                            },
+                            "to": {
+                                "key_code": "escape"
                             }
                         }
                     ]
