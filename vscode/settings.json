@@ -648,5 +648,6 @@
     "**/.stack-work": true,
     "**/dist-newstyle": true
   },
-  "search.searchEditor.defaultNumberOfContextLines": 5
+  "search.searchEditor.defaultNumberOfContextLines": 5,
+  "haskell.formattingProvider": "fourmolu"
 }
