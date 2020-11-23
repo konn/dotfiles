@@ -109,32 +109,6 @@
                         ]
                     },
                     {
-                        "description": "Change spacebar to left_shift if pressed with other keys (Post spacebar when pressed alone)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "spacebar"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Yen to Option+Yen",
                         "manipulators": [
                             {
@@ -251,6 +225,32 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Change spacebar to left_shift if pressed with other keys (Post spacebar when pressed alone)",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "spacebar"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
@@ -273,6 +273,14 @@
                             },
                             "to": {
                                 "key_code": "right_control"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "caps_lock"
+                            },
+                            "to": {
+                                "key_code": "left_control"
                             }
                         },
                         {
@@ -330,14 +338,6 @@
                             "to": {
                                 "key_code": "fn"
                             }
-                        },
-                        {
-                            "from": {
-                                "key_code": "caps_lock"
-                            },
-                            "to": {
-                                "key_code": "left_control"
-                            }
                         }
                     ]
                 },
@@ -350,7 +350,7 @@
                         "product_id": 34304,
                         "vendor_id": 1452
                     },
-                    "ignore": true,
+                    "ignore": false,
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 },
@@ -363,7 +363,7 @@
                         "product_id": 636,
                         "vendor_id": 1452
                     },
-                    "ignore": true,
+                    "ignore": false,
                     "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 }
