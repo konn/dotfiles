@@ -649,5 +649,9 @@
     "**/dist-newstyle": true
   },
   "search.searchEditor.defaultNumberOfContextLines": 5,
-  "haskell.formattingProvider": "fourmolu"
+  "haskell.formattingProvider": "fourmolu",
+  "path-autocomplete.excludedItems": {
+    "**/.stack-work**": {"when": "**"},
+    "**/dist-newstyle": {"when": "**"}
+  }
 }
