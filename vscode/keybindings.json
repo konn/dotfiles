@@ -243,5 +243,15 @@
     "key": "shift+alt+a",
     "command": "-editor.action.blockComment",
     "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+cmd+enter",
+    "command": "todo.toggleDone",
+    "when": "editorTextFocus && editorLangId == 'todo'"
+  },
+  {
+    "key": "alt+d",
+    "command": "-todo.toggleDone",
+    "when": "editorTextFocus && editorLangId == 'todo'"
   }
 ]
