@@ -141,7 +141,7 @@
                         ]
                     },
                     {
-                        "description": "Quit Safari by pressing command-q twice",
+                        "description": "Quit Safari and VSCode by pressing command-q twice",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -152,7 +152,8 @@
                                     },
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.apple\\.Safari$"
+                                          "^com\\.microsoft\\.VSCode$",
+                                          "^com\\.apple\\.Safari$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
