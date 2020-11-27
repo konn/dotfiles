@@ -152,8 +152,7 @@
                                     },
                                     {
                                         "bundle_identifiers": [
-                                          "^com\\.microsoft\\.VSCode$",
-                                          "^com\\.apple\\.Safari$"
+                                          "^(com\\.microsoft\\.VSCode|com\\.apple\\.Safari)$"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
