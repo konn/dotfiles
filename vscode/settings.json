@@ -653,5 +653,6 @@
   "path-autocomplete.excludedItems": {
     "**/.stack-work**": {"when": "**"},
     "**/dist-newstyle": {"when": "**"}
-  }
+  },
+  "git.enableCommitSigning": true
 }
