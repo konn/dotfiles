@@ -245,13 +245,8 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+cmd+enter",
+    "key": "ctrl+alt+e",
     "command": "todo.toggleDone",
-    "when": "editorTextFocus && editorLangId == 'todo'"
-  },
-  {
-    "key": "alt+d",
-    "command": "-todo.toggleDone",
     "when": "editorTextFocus && editorLangId == 'todo'"
   }
 ]
