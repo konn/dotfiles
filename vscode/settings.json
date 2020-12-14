@@ -653,5 +653,6 @@
     "**/.stack-work**": {"when": "**"},
     "**/dist-newstyle": {"when": "**"}
   },
-  "git.enableCommitSigning": true
+  "git.enableCommitSigning": true,
+  "terminal.integrated.allowChords": false
 }
