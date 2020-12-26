@@ -157,7 +157,8 @@
     },
     "mainmatter",
     "frontmatter",
-    "backmatter"
+    "backmatter",
+    "hfill"
   ],
   "catex.section.dictionary": [
     {
@@ -463,6 +464,15 @@
       "args": [
         {
           "kind": "fixed"
+        }
+      ]
+    },
+    {
+      "name": "addbibresource",
+      "args": [
+        {
+          "kind": "fixed",
+          "placeholder": "reference.bib"
         }
       ]
     }
