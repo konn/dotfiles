@@ -664,5 +664,6 @@
     "**/dist-newstyle": {"when": "**"}
   },
   "git.enableCommitSigning": true,
-  "terminal.integrated.allowChords": false
+  "terminal.integrated.allowChords": false,
+  "latex-workshop.view.pdf.external.synctex.command": "/Applications/Skim.app/Contents/SharedSupport/displayline"
 }
