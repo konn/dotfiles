@@ -140,7 +140,8 @@
   },
   {
     "key": "ctrl+x ctrl+f",
-    "command": "-workbench.action.quickOpen"
+    "command": "-workbench.action.quickOpen",
+    "when": "editorTextFocus && editorLangId == latex"
   },
   {
     "key": "ctrl+a",
@@ -211,6 +212,10 @@
     "key": "shift+cmd+v",
     "command": "-markdown.extension.togglePreview",
     "when": "!terminalFocus"
+  },
+  {"key": "ctrl+c ctrl+f",
+    "command": "latex-workshop.synctex"
+
   },
   {
     "key": "ctrl+c b",
