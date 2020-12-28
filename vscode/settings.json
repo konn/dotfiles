@@ -607,6 +607,16 @@
         "label": ">.",
         "body": "\\gtrdot",
         "description": "⋗"
+      },
+      {
+        "label": "[[",
+        "body": "\\llbracket",
+        "description": "⟦"
+      },
+      {
+        "label": "]]",
+        "body": "\\rrbracket",
+        "description": "⟧"
       }
     ],
     "renderMode": "latex"
