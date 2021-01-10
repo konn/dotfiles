@@ -689,4 +689,5 @@
       "%TEX%",
   ],
   "gitlens.views.lineHistory.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
 }
