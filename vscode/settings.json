@@ -483,7 +483,9 @@
     },
     {
       "name": "tikzpicture",
-      "args": ["options"]
+      "args": [
+        "options"
+      ]
     },
     {
       "name": "scope",
@@ -563,6 +565,14 @@
         {
           "kind": "optional",
           "placeholder": "title"
+        }
+      ]
+    },
+    {
+      "name": "alignat*",
+      "args": [
+        {
+          "kind": "fixed"
         }
       ]
     }
