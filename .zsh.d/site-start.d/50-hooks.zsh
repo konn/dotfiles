@@ -10,3 +10,5 @@ case "$(hostname)" in
 
     add-zsh-hook zshexit check_dotfiles
 esac
+
+which direnv >/dev/null && eval "$(direnv hook zsh)"
