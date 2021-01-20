@@ -700,4 +700,5 @@
   ],
   "gitlens.views.lineHistory.enabled": true,
   "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "github-actions.workflows.pinned.refresh.enabled": true,
 }
