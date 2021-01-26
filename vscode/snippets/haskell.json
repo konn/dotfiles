@@ -422,7 +422,7 @@
       "\"${1:name}\"${2: forall ${3:xs}.}",
       "  ${4:f xs} = ${5:after}"
     ]
-  }
+  },
   "pattern": {
     "description": "",
     "prefix": "pat",
@@ -480,5 +480,10 @@
     "description": "",
     "prefix": "dvs",
     "body": ["deriving ${1|newtype,stock,anyclass|} (${2:Show})"]
+  },
+  "standalone kind signature": {
+    "description": "type Type :: Kind -> ...",
+    "prefix": "kind",
+    "body": "type ${1:Type} :: ${2:Kind}"
   }
 }
