@@ -33,7 +33,7 @@ remote-repo-cache: /Users/hiromi/Library/Haskell/repo-cache
 world-file: /Users/hiromi/Library/Haskell/logs/world
 -- verbose: 1
 -- compiler: ghc
--- with-compiler:
+with-compiler: ghc-8.8.4
 -- with-hc-pkg:
 -- scratchdir:
 -- program-prefix:
