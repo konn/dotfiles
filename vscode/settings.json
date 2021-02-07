@@ -474,6 +474,14 @@
           "placeholder": "reference.bib"
         }
       ]
+    },
+    {
+      "name": "subfile",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
