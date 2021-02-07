@@ -575,6 +575,9 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "gather*"
     }
   ],
   "catex.image-completion": {
