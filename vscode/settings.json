@@ -713,4 +713,6 @@
   "latex-workshop.latex.autoBuild.run": "onFileChange",
   "github-actions.workflows.pinned.refresh.enabled": true,
   "python.languageServer": "Pylance",
+  "todo.embedded.providers.ag.regex": "(?:%|#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)",
+  "todo.embedded.provider": "ag",
 }
