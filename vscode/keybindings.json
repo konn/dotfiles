@@ -5,26 +5,12 @@
     "command": "workbench.action.reloadWindow"
   },
   {
-    "key": "ctrl+c ctrl+l",
-    "command": "ghciHelper.reload",
-    "when": "editorLangId == haskell"
-  },
-  {
-    "key": "ctrl+c ctrl+l",
-    "command": "agda-interactive.load-file",
-    "when": "editorLangId == agda"
-  },
-  {
     "key": "alt+z 8",
     "command": "-ghciHelper.reload"
   },
   {
     "key": "ctrl+c ctrl+r",
-    "command": "ghciHelper.start"
-  },
-  {
-    "key": "alt+z 7",
-    "command": "-ghciHelper.start"
+    "command": "-ghciHelper.reload"
   },
   {
     "key": "shift+alt+down",
@@ -115,20 +101,12 @@
     "command": "-workbench.action.gotoLine"
   },
   {
-    "key": "ctrl+c ctrl+t",
-    "command": "haskero.insertType"
-  },
-  {
     "key": "ctrl+c ctrl+i",
     "command": "haskell.addImport"
   },
   {
     "key": "ctrl+c ctrl+e",
     "command": "haskell.addExtension"
-  },
-  {
-    "key": "ctrl+c ctrl+q",
-    "command": "haskero.selectTarget"
   },
   {
     "key": "ctrl+x b",
