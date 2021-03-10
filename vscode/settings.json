@@ -696,7 +696,6 @@
   "grammarly.domain": "technical",
   "latex.server.autoDownload": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.startupEditor": "welcomePage",
   "terminal.integrated.shell.linux": "/bin/zsh",
   "search.exclude": {
     "**/.stack-prof": true,
