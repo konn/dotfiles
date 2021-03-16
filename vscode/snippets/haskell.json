@@ -2,7 +2,7 @@
   "pragma_options": {
     "description": "",
     "prefix": "opts",
-    "body": ["{-# OPTIONS_GHC ${1:-Wno-type-defaults}$0 #-}"]
+    "body": ["{-# OPTIONS_GHC $0 #-}"]
   },
   "MPTC": {
     "description": "{-# LANGUAGE MultiParamTypeClasses #-}",
@@ -434,7 +434,7 @@
   "pragma_language": {
     "description": "",
     "prefix": "lang",
-    "body": ["{-# LANGUAGE ${1:OverloadedStrings}$0 #-}"]
+    "body": ["{-# LANGUAGE $0 #-}"]
   },
   "triple": {
     "description": "",
