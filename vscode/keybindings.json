@@ -233,7 +233,7 @@
     "when": "editorTextFocus && editorLangId == 'todo'"
   },
   {
-    "key": "cmd+k space",
+    "key": "cmd+shift+k",
     "command": "editor.action.insertSnippet",
     "args": { "name": "Fill selection with whitespaces"}
   }
