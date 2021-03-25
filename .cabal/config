@@ -141,7 +141,7 @@ program-default-options
   -- cpphs-options:
   -- ffihugs-options:
   -- gcc-options:
-  -- ghc-options:
+  ghc-options: -haddock
   -- ghc-pkg-options:
   -- greencard-options:
   -- haddock-options:
