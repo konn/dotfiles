@@ -731,4 +731,5 @@
   "todo.embedded.providers.ag.regex": "(?:%|#|// @|//|/\\*+|<!--|--|\\* @|\\{!|\\{\\{!--|\\{\\{!) *(TODO|FIXME|FIX|BUG|UGLY|HACK|NOTE|IDEA|REVIEW|DEBUG|OPTIMIZE)",
   "todo.embedded.provider": "ag",
   "agdaMode.agdaPath": "/Users/hiromi/.local/bin/agda",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
 }
