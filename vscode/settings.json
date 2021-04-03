@@ -732,5 +732,17 @@
   "todo.embedded.provider": "ag",
   "agdaMode.agdaPath": "/Users/hiromi/.local/bin/agda",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "nasc-touchbar.peekDefinition": true,
+  "nasc-touchbar.showCommands": false,
+  "nasc-touchbar.showReferences": true,
+  "nasc-touchbar.addCursorBelow": false,
+  "nasc-touchbar.goToDefinition": false,
+  "nasc-touchbar.nextInFiles": true,
+  "keyboard.touchbar.enabled": true,
+  "keyboard.touchbar.ignored": [
+    "workbench.action.debug.start",
+    "workbench.action.debug.run"
+  ],
+  "nasc-touchbar.copyLineDown": true
 }
