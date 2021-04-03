@@ -236,5 +236,19 @@
     "key": "cmd+shift+k",
     "command": "editor.action.insertSnippet",
     "args": { "name": "Fill selection with whitespaces"}
+  },
+  {
+    "key": "cmd+.",
+    "command": "keyboard-quickfix.openQuickFix"
+  },
+  {
+    "key": "cmd+.",
+    "command": "-problems.action.showQuickFixes",
+    "when": "problemFocus"
+  },
+  {
+    "key": "cmd+.",
+    "command": "-editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   }
 ]
