@@ -744,5 +744,7 @@
     "workbench.action.debug.start",
     "workbench.action.debug.run"
   ],
-  "nasc-touchbar.copyLineDown": true
+  "nasc-touchbar.copyLineDown": true,
+  "resmon.show.cpufreq": false,
+  "resmon.disk.format": "PercentRemaining"
 }
