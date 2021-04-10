@@ -746,5 +746,9 @@
   ],
   "nasc-touchbar.copyLineDown": true,
   "resmon.show.cpufreq": false,
-  "resmon.disk.format": "PercentRemaining"
+  "resmon.disk.format": "PercentRemaining",
+  "settingsSync.ignoredExtensions": [
+    "ms-vsliveshare.vsliveshare",
+    "coenraads.bracket-pair-colorizer-2"
+  ]
 }
