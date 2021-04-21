@@ -498,6 +498,14 @@
           "kind": "fixed"
         }
       ]
+    },
+    {
+      "name": "lstset",
+      "args": [
+        {
+          "kind": "fixed"
+        }
+      ]
     }
   ],
   "editor.minimap.enabled": false,
