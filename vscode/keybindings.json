@@ -250,5 +250,9 @@
     "key": "cmd+.",
     "command": "-editor.action.quickFix",
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+f1",
+    "command": "editor.action.referenceSearch.trigger"
   }
 ]
