@@ -69,3 +69,4 @@ dotfiles:
   - kitty
   - karabiner
   - alacritty
+  - rclone
