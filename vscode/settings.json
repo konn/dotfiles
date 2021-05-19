@@ -758,5 +758,6 @@
   "settingsSync.ignoredExtensions": [
     "ms-vsliveshare.vsliveshare",
     "coenraads.bracket-pair-colorizer-2"
-  ]
+  ],
+  "texlab.server.autoDownload": true
 }
