@@ -759,5 +759,11 @@
     "ms-vsliveshare.vsliveshare",
     "coenraads.bracket-pair-colorizer-2"
   ],
-  "texlab.server.autoDownload": true
+  "texlab.server.autoDownload": true,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ]
 }
