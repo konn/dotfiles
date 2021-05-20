@@ -765,5 +765,6 @@
       "viewType": "jupyter.notebook.ipynb",
       "filenamePattern": "*.ipynb"
     }
-  ]
+  ],
+  "redhat.telemetry.enabled": false
 }
